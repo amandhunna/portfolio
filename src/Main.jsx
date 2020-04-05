@@ -99,20 +99,25 @@ function Main() {
           If you like my work and have some cool project to work on, just send
           me direct message or contact me through social sites listed below.
         </p>
-        <button>GET IN TOUCH</button>
+        <a className="mailTo" href={"mailto:amanjotsingh260@gmail.com"}>
+          GET IN TOUCH
+        </a>
+
         <div className="links">
           <div
-            onClick={() => window.open(
-              "https://www.instagram.com/singh_amanjot.code/"
-            )}
+            onClick={() =>
+              window.open("https://www.instagram.com/singh_amanjot.code/")
+            }
           >
             INSTAGRAM
           </div>
           <span>|</span>
           <div
-            onClick={() => window.open(
-              "https://www.linkedin.com/in/amanjot-singh-398731131/"
-            )}
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/amanjot-singh-398731131/"
+              )
+            }
           >
             LINKEDIN
           </div>

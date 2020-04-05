@@ -212,14 +212,14 @@ h2 {
   padding: 7.5em 0;
   background: #d24d57;
 }
-#contact > button {
-  padding: 7rem 0;
-  border: white 2px solid;
-  background: transparent;
-  color: white;
+
+a.mailTo {
+  display: block;
+  border: 2px solid white;
+  width: max-content;
   padding: 1rem;
+  margin: auto;
   min-width: 200px;
-  font-weight: 600;
 }
 .links {
   display: flex;
