@@ -16,11 +16,6 @@ function Main() {
   const [colors, setColors] = useState(getColors());
   const [activeClass, setActiveClass] = useState("top");
 
-  /*  setInterval(() => {
-     setColors(getColors())
-   }, 3000)
-  */
-
   useEffect(() => {
     window.addEventListener("scroll", function () {
       const element = document.querySelector(".banner");
@@ -34,6 +29,10 @@ function Main() {
     });
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+    const interval = setInterval(() => {
+      setColors(getColors());
+    }, 2000);
+    return () => clearInterval(interval);
   }, []);
   return (
     <>
@@ -102,13 +101,21 @@ function Main() {
         </p>
         <button>GET IN TOUCH</button>
         <div className="links">
-          <Link to="https://www.instagram.com/singh_amanjot.code/">
+          <div
+            onClick={() => window.open(
+              "https://www.instagram.com/singh_amanjot.code/"
+            )}
+          >
             INSTAGRAM
-          </Link>
+          </div>
           <span>|</span>
-          <Link to="https://www.linkedin.com/in/amanjot-singh-398731131/">
+          <div
+            onClick={() => window.open(
+              "https://www.linkedin.com/in/amanjot-singh-398731131/"
+            )}
+          >
             LINKEDIN
-          </Link>
+          </div>
         </div>
       </section>
       <footer>This site was built with React.</footer>
