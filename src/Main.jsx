@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 
 const getColors = () => ({
@@ -12,6 +14,50 @@ const getColors = () => ({
   six: randomColor(),
 });
 
+const getRecentWork = () => {
+  const work = [
+    {
+      repoURL: "https://github.com/amanjotsinghdhunna/profileintro",
+      workTitle: "Resume",
+    },
+    {
+      repoURL: "https://github.com/amanjotsinghdhunna/HackerChallenge",
+      workTitle: "HackerChallenge",
+    },
+    {
+      repoURL: "https://github.com/amanjotsinghdhunna/Express",
+      workTitle: "Express",
+    },
+    {
+      repoURL: "https://github.com/amanjotsinghdhunna/storybook",
+      workTitle: "Story book",
+    },
+    {
+      repoURL: "https://github.com/amanjotsinghdhunna/React-demo",
+      workTitle: "React-demo",
+    },
+    {
+      repoURL: "https://github.com/amanjotsinghdhunna/Score-keeper",
+      workTitle: "Score-keeper",
+    },
+    {
+      repoURL: "https://github.com/amanjotsinghdhunna/Lambo",
+      workTitle: "Lambo",
+    },
+    {
+      repoURL: "https://github.com/amanjotsinghdhunna/Arduino",
+      workTitle: "Arduino",
+    },
+  ];
+  return work.map((ele) => {
+    return (
+      <div className="card" onClick={() => window.open(ele.repoURL)}>
+        {ele.workTitle}
+      </div>
+    );
+  });
+};
+
 function Main() {
   const [colors, setColors] = useState(getColors());
   const [activeClass, setActiveClass] = useState("top");
@@ -20,7 +66,6 @@ function Main() {
     window.addEventListener("scroll", function () {
       const element = document.querySelector(".banner");
       const scroll = this.scrollY;
-      console.log(scroll, element.scrollHeight);
       let activeClass = "top";
       if (scroll > element.scrollHeight) {
         activeClass = "normal";
@@ -36,6 +81,14 @@ function Main() {
   }, []);
   return (
     <>
+      <a
+        className="download-btn"
+        href="https://drive.google.com/file/d/1l9rwarIqq6inHa-n2-kFdAiZ4Y30To6W/view?usp=sharing"
+        download="resume_amanjotSingh"
+      >
+       {/*  <FontAwesomeIcon icon={faDownload} /> */}
+        <div>CV</div>
+      </a>
       <header className={`header ${activeClass}`}>
         <div className="logo"></div>
         <span>
@@ -51,7 +104,6 @@ function Main() {
           <Link to="/pathLink#contact"> CONTACT</Link>
         </span>
       </header>
-
       <section className="banner-main">
         <div>
           <h1>Amanjot Singh</h1>
@@ -62,8 +114,7 @@ function Main() {
         </div>
         <img className="banner" src="/landingImage.jpg" alt="no src" />
       </section>
-
-      <section id="portfolio" className="portfolio-desc">
+      <section id="portfolio" className="section">
         <h3>PORTFOLIO</h3>
         <p>
           Below you can see some projects I've been working on lately. I divide
@@ -72,8 +123,11 @@ function Main() {
           great product with client goals in mind.
         </p>
       </section>
-
-      <section id="aboutMe" className="about-me">
+      <section id="recentWork" className="section">
+        <h3>RECENT WORK</h3>
+        <div className="wrapper">{getRecentWork()}</div>
+      </section>
+      <section id="aboutMe" className="section">
         <div style={colors.wrapper} class="wrapper">
           <div style={colors.one} class="one"></div>
           <div style={colors.two} class="two"></div>
@@ -81,19 +135,64 @@ function Main() {
           <div style={colors.four} class="four"></div>
           <div style={colors.five} class="five"></div>
           <div style={colors.six} class="six"></div>
-          <div class="seven">
-            <h3>About me</h3>
+          <div class="seven section">
+            <h3>ABOUT</h3>
             <p>
               I'm full-stack developer with 2 years of professional experience.
               I'm interested in all kinds of process in software development,
               but my major focus is on designing web, mobile & tablet
-              interfaces. I also have skills in other fields like branding, icon
-              design or web development.
+              interfaces. I also have skills in other fields like IOT.
+            </p>
+            <p>
+              I have maintained, developed and launched multiple projects from
+              scratch, carrying the development of its' back-end and front-end
+              codebases.
+            </p>
+            <p>
+              My current toolset includes React, Node, Mongo and all the other
+              various frameworks, libraries and technologies related to them.
+              <ul>
+                I can help you with all the sides of your project:
+                <li>verifying good UI/UX design,</li>
+                <li>leading/co-developing the back-end and front-end,</li>
+                <li>setting up the CI/CD,</li>
+                <li>mentoring the team,</li>
+                <li>estimating tasks,</li>
+                <li>researching possible techs,</li>
+                <li>leading, launching and monitoring the project.</li>
+              </ul>
+            </p>
+            <p>
+              Recently I became also a huge fan of one-way data flow. My current
+              experience and skills in front-end includes: lead JavaScript
+              development: bootstraping, refactoring, improving the structure,
+              reliability, build setup; full integration of front-end
+              development using tools like code minifications, multiple
+              environments support, CI/CD, Storybook components library. In
+              order to improve the development speed, performance and
+              reliability, I have changed languages and frameworks already
+              multiple times, The lessons I learned while doing all these apps
+              will be useful for me forever, no matter what framework I will use
+              in the next project. What I can do for you at that side is: lead
+              development.
+            </p>
+
+            <p>
+              Splitting the back-end into microservices, cooperation with APIs,
+              remote data synchronizations, in cases where a good Project
+              Manager was missing, fullfilling his role, in order to save the
+              project from losing time on unneeded things. If your initial
+              thought is that I can’t be the best in everything, it's okay. Send
+              the design job to someone else, and I will take care of all the
+              code development, or whatever other role you see me best in. In
+              cases when you already have an existing team, but you would still
+              use some help, contact me as well. I’ll fit in very quickly, I
+              promise.
             </p>
           </div>
         </div>
       </section>
-      <section id="contact">
+      <section id="contact" className="section">
         <h3>OK, LET’S CREATE SOMETHING GREAT</h3>
         <p>
           If you like my work and have some cool project to work on, just send
@@ -123,7 +222,7 @@ function Main() {
           </div>
         </div>
       </section>
-      <footer>This site was built with React.</footer>
+      <footer className="section hide">This site is built with React.</footer>
     </>
   );
 }
