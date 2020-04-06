@@ -74,10 +74,10 @@ function Main() {
     });
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    const interval = setInterval(() => {
+    /* const interval = setInterval(() => {
       setColors(getColors());
     }, 2000);
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); */
   }, []);
   return (
     <>

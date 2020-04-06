@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .hide {
   display: none;
 }
@@ -27,30 +21,6 @@ a.download-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .banner {
@@ -83,10 +53,6 @@ img {
 
 .header.normal {
   background: #000000a0;
-}
-.random {
-  height: 2000px;
-  background: black;
 }
 
 .header > span {
@@ -177,8 +143,6 @@ h2 {
   align-items: center;
   margin: 1rem;
   cursor: pointer;
-  min-width: 300px;
-  min-height: 400px;
   background: deepskyblue;
 }
 
@@ -269,6 +233,59 @@ a.mailTo {
   background: none;
 }
 
+@media (min-width: 360px) {
+  .header {
+    height: 50px;
+  }
+  .header.top > span > a {
+    font-size: small;
+    padding: 7px;
+  }
+  .banner-main > div {
+    padding: 0;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  .banner-main > div > * {
+    margin: 2px 0.5rem;
+    letter-spacing: 1px;
+  }
+  a {
+    letter-spacing: 0px;
+  }
+  .header > span {
+    padding: 0 5px;
+    font-size: unset;
+  }
+  .section {
+    padding: 1rem 0;
+  }
+  .section > p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    line-height: 1.5rem;
+  }
+  .section > h3 {
+    font-size: 22px;
+  }
+  .card {
+    margin: 0.5rem;
+    padding: 10px;
+  }
+  .seven.section {
+    padding: 25px 1rem;
+  }
+  section#aboutMe {
+    padding: 0;
+  }
+}
+
 @media (min-width: 576px) {
   .header {
     height: 70px;
@@ -308,9 +325,54 @@ a.mailTo {
 }
 
 @media (min-width: 768px) {
+  .header {
+    height: 100px;
+  }
+
+  .header > span {
+    padding: 0 2rem;
+    font-size: large;
+    height: 100%;
+  }
+
+  a {
+    letter-spacing: 3px;
+  }
+
+  .banner-main > div {
+    padding: 1rem 0.5rem 1rem 1rem;
+  }
+  .banner-main > div > * {
+    margin: 0.5rem;
+    letter-spacing: 3px;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .banner-main > div:hover {
+    background: #00bfff;
+  }
+
+  .header.top > span > a {
+    font-size: large;
+    padding: 7px;
+  }
+  #portfolio {
+    border-bottom: 1px solid #f1f1f1;
+    background: #f8f8f8;
+    color: #808080;
+  }
 }
 
 @media (min-width: 992px) {
+  .banner-main > div {
+    padding: 2rem 0.5rem 2rem 2rem;
+  }
 }
 
 @media (min-width: 1200px) {
