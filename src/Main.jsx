@@ -5,7 +5,7 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 
 const getColors = () => ({
-  wrapper: randomColor(),
+  wrapper: { background: "#000" },
   one: randomColor(),
   two: randomColor(),
   three: randomColor(),
@@ -86,7 +86,7 @@ function Main() {
         href="https://drive.google.com/file/d/1l9rwarIqq6inHa-n2-kFdAiZ4Y30To6W/view?usp=sharing"
         download="resume_amanjotSingh"
       >
-       {/*  <FontAwesomeIcon icon={faDownload} /> */}
+        {/*  <FontAwesomeIcon icon={faDownload} /> */}
         <div>CV</div>
       </a>
       <header className={`header ${activeClass}`}>

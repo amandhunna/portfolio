@@ -240,7 +240,6 @@ ul {
 #contact {
   color: #fff;
   text-align: center;
-  padding: 7.5em 0;
   background: #d24d57;
 }
 
@@ -268,4 +267,51 @@ a.mailTo {
 }
 .links > span:hover {
   background: none;
+}
+
+@media (min-width: 576px) {
+  .header {
+    height: 70px;
+  }
+  .logo {
+    display: none;
+  }
+  .header > span {
+    padding: 0 0.8rem;
+    height: 100%;
+  }
+  .banner-main > div {
+    padding: 0rem 0rem 0rem 0rem;
+  }
+  .section {
+    padding: 3rem 0;
+  }
+  .section > p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 1rem 3rem;
+    line-height: 2rem;
+  }
+  .section > h3 {
+    font-size: 40px;
+  }
+  section#aboutMe {
+    padding: 0;
+  }
+  .card {
+    min-width: 100px;
+    min-height: 50px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
 }
