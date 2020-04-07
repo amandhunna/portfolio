@@ -21,10 +21,6 @@ code {
     "footer footer footer footer";
 }
 
-.banner {
-  transform: rotate(180deg);
-}
-
 .item-a {
   background: tomato;
   /* height: 10px;
