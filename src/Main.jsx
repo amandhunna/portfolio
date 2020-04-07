@@ -112,7 +112,7 @@ function Main() {
             user-friendly experiences.
           </h2>
         </div>
-        <img className="banner" src="/landingImage.jpg" alt="no src" />
+        <img className="banner" src="/li2.png" alt="no src" />
       </section>
       <section id="portfolio" className="section">
         <h3>PORTFOLIO</h3>

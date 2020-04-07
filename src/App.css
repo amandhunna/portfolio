@@ -22,11 +22,11 @@ a.download-btn {
   justify-content: center;
   align-items: center;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
+/* @media screen and (-webkit-min-device-pixel-ratio: 0) {
    .banner {
     transform: rotate(180deg);
   }
-}
+} */
 /* 
 img {
   image-orientation: from-image;
