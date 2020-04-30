@@ -5,6 +5,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap")
+}
+
+* {
+  font-family: sans-serif; /* sans-serif will be used as temporary font until Roboto is available */
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

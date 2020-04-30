@@ -133,7 +133,7 @@ h2 {
   letter-spacing: 5px;
 }
 
-.section > p {
+.section > p, .section > .skillSet {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
@@ -208,7 +208,7 @@ ul {
 #contact {
   color: #fff;
   text-align: center;
-  background: #d24d57;
+  background: #000;
 }
 
 a.mailTo {

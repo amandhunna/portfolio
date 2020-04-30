@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 
 const getColors = () => ({
@@ -51,7 +51,11 @@ const getRecentWork = () => {
   ];
   return work.map((ele) => {
     return (
-      <div className="card" onClick={() => window.open(ele.repoURL)}>
+      <div
+        key={"myWork" + Math.random()}
+        className="card"
+        onClick={() => window.open(ele.repoURL)}
+      >
         {ele.workTitle}
       </div>
     );
@@ -59,7 +63,7 @@ const getRecentWork = () => {
 };
 
 function Main() {
-  const [colors, setColors] = useState(getColors());
+  const [colors] = useState(getColors());
   const [activeClass, setActiveClass] = useState("top");
 
   useEffect(() => {
@@ -112,7 +116,7 @@ function Main() {
             user-friendly experiences.
           </h2>
         </div>
-        <img className="banner" src="/li2.png" alt="no src" />
+        <img className="banner" src="https://res.cloudinary.com/amanjotsingh/image/upload/v1588271313/li2_cf8iui.png" alt="no src" />
       </section>
       <section id="portfolio" className="section">
         <h3>PORTFOLIO</h3>
@@ -128,14 +132,14 @@ function Main() {
         <div className="wrapper">{getRecentWork()}</div>
       </section>
       <section id="aboutMe" className="section">
-        <div style={colors.wrapper} class="wrapper">
-          <div style={colors.one} class="one"></div>
-          <div style={colors.two} class="two"></div>
-          <div style={colors.three} class="three"></div>
-          <div style={colors.four} class="four"></div>
-          <div style={colors.five} class="five"></div>
-          <div style={colors.six} class="six"></div>
-          <div class="seven section">
+        <div style={colors.wrapper} className="wrapper">
+          <div style={colors.one} className="one"></div>
+          <div style={colors.two} className="two"></div>
+          <div style={colors.three} className="three"></div>
+          <div style={colors.four} className="four"></div>
+          <div style={colors.five} className="five"></div>
+          <div style={colors.six} className="six"></div>
+          <div className="seven section">
             <h3>ABOUT</h3>
             <p>
               I'm full-stack developer with 2 years of professional experience.
@@ -148,7 +152,7 @@ function Main() {
               scratch, carrying the development of its' back-end and front-end
               codebases.
             </p>
-            <p>
+            <div className="skillSet">
               My current toolset includes React, Node, Mongo and all the other
               various frameworks, libraries and technologies related to them.
               <ul>
@@ -161,7 +165,7 @@ function Main() {
                 <li>researching possible techs,</li>
                 <li>leading, launching and monitoring the project.</li>
               </ul>
-            </p>
+            </div>
             <p>
               Recently I became also a huge fan of one-way data flow. My current
               experience and skills in front-end includes: lead JavaScript
