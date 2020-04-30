@@ -116,7 +116,7 @@ function Main() {
             user-friendly experiences.
           </h2>
         </div>
-        <img className="banner" src="https://res.cloudinary.com/amanjotsingh/image/upload/v1588271313/li2_cf8iui.png" alt="no src" />
+        <img className="banner" src="https://res.cloudinary.com/amanjotsingh/image/upload/v1588275013/6-li2_cf8iui-min_q8qn70.webp" alt="no src" />
       </section>
       <section id="portfolio" className="section">
         <h3>PORTFOLIO</h3>
@@ -155,8 +155,8 @@ function Main() {
             <div className="skillSet">
               My current toolset includes React, Node, Mongo and all the other
               various frameworks, libraries and technologies related to them.
-              <ul>
                 I can help you with all the sides of your project:
+              <ul>
                 <li>verifying good UI/UX design,</li>
                 <li>leading/co-developing the back-end and front-end,</li>
                 <li>setting up the CI/CD,</li>
