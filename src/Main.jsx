@@ -17,6 +17,10 @@ const getColors = () => ({
 const getRecentWork = () => {
   const work = [
     {
+      repoURL: "https://github.com/amanjotsinghdhunna/sos-auth-service",
+      workTitle: "SOS-Auth-service",
+    },
+    {
       repoURL: "https://github.com/amanjotsinghdhunna/profileintro",
       workTitle: "Resume",
     },
@@ -87,7 +91,7 @@ function Main() {
     <>
       <a
         className="download-btn"
-        href="https://drive.google.com/file/d/1l9rwarIqq6inHa-n2-kFdAiZ4Y30To6W/view?usp=sharing"
+        href="https://drive.google.com/file/d/1wCoxZVEPemc1z35dY1M6nFzm8U0x4gOZ/view"
         download="resume_amanjotSingh"
       >
         {/*  <FontAwesomeIcon icon={faDownload} /> */}
