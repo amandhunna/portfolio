@@ -38,6 +38,7 @@ img {
 
 img {
   max-width: 100%;
+  width: -webkit-fill-available;
 }
 .header {
   color: white;
