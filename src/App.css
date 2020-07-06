@@ -10,10 +10,6 @@
   display: none;
 }
 
-.ml-5 {
-  margin-left: 22px;
-}
-
 a.download-btn {
   position: fixed;
   z-index: 999;
@@ -258,6 +254,9 @@ a.mailTo {
 }
 
 @media (min-width: 360px) {
+  .ml-5 {
+    margin-left: 10px;
+  }
   .header {
     height: 50px;
   }
@@ -327,7 +326,8 @@ a.mailTo {
 }
 
 @media (min-width: 576px) {
-  .logo {
+  .ml-5 {
+    margin-left: 22px;
   }
   .header > span {
     padding: 0 0.8rem;
