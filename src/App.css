@@ -163,11 +163,12 @@ h2 {
   color: white;
   border-radius: 10px;
   border-radius: 10px;
-  box-shadow: inset 0px 0px 5px 4px #fff;
+  box-shadow: 0 0 25px #808080;
+  transform: scale(0.9);
 }
 
 .card:hover {
-  box-shadow: 0 0 25px #808080;
+  transform: scale(1.1);
 }
 
 .wrapper {

@@ -3,14 +3,15 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap")
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 }
 
 * {
