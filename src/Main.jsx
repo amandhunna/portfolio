@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import "./App.css";
+import wave1 from "./waves/wave1.png";
+import wave2 from "./waves/wave2.png";
+import wave3 from "./waves/wave3.png";
 
+import "./App.css";
 const getColors = () => ({
   wrapper: { background: "#000" },
   one: randomColor(),
@@ -100,7 +103,7 @@ function Main() {
       <header className={`header ${activeClass}`}>
         <div className="logo"></div>
         <span>
-          <Link to="/pathLink#portfolio">PORTFOLIO</Link>
+          <Link to="/pathLink#portfolio">BLOG</Link>
         </span>
         <span>
           <Link to="/pathLink#recentWork"> RECENT WORK</Link>
@@ -113,21 +116,27 @@ function Main() {
         </span>
       </header>
       <section className="banner-main">
-        <div>
+        <div className="myself">
           <h1>Amanjot Singh</h1>
           <h2>
             I'm a Full-Stack developer focused on crafting stable, clean &
             user-friendly experiences.
           </h2>
         </div>
-        <img
-          className="banner"
-          src="https://res.cloudinary.com/amanjotsingh/image/upload/v1588275013/6-li2_cf8iui-min_q8qn70.webp"
-          alt="no src"
-        />
+        <div className="banner banner-waves">
+          <div className="line line-1">
+            <img className="wave wave1" src={wave1} alt="no src" />
+          </div>
+          <div className="line line-2">
+            <img className="wave wave2" src={wave2} alt="no src" />
+          </div>
+          <div className="line line-3">
+            <img className="wave wave3" src={wave3} alt="no src" />
+          </div>
+        </div>
       </section>
       <section id="portfolio" className="section">
-        <h3>PORTFOLIO</h3>
+        <h3>BLOG</h3>
         <p>
           Below you can see some projects I've been working on lately. I divide
           each project into four follow-up areas: comprehensive research,
@@ -155,8 +164,8 @@ function Main() {
                 experience. I also have interest in other fields like IOT.
               </p>
               <p>
-                I have maintained and developed multiple projects from
-                scratch, carrying the development of its' back-end and front-end
+                I have maintained and developed multiple projects from scratch,
+                carrying the development of its' back-end and front-end
                 codebases.
               </p>
               My current toolset includes React, Node, Mongo and all the other

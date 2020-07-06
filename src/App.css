@@ -87,24 +87,9 @@ span:hover {
   transition: all 0.5s ease-in-out;
 }
 .banner-main {
-  position: relative;
-  background: deepskyblue;
+  background: #E2B659;
 }
 
-.banner-main > div {
-  position: absolute;
-  bottom: 0%;
-  left: 0;
-  padding: 2rem 0.5rem 2rem 2rem;
-  z-index: 999;
-  background: #00bffff0;
-}
-.banner-main > div > * {
-  margin: 0.5rem;
-  color: white;
-  letter-spacing: 3px;
-  max-width: 820px;
-}
 h1 {
   font-weight: 500;
   font-size: 40px;
@@ -112,9 +97,6 @@ h1 {
 h2 {
   font-size: 20px;
   font-weight: 300;
-}
-.banner-main > div:hover {
-  background: #00bfff;
 }
 
 #portfolio {
@@ -250,18 +232,11 @@ a.mailTo {
     font-size: small;
     padding: 7px;
   }
-  .banner-main > div {
-    padding: 0;
-  }
   h1 {
     font-size: 24px;
   }
   h2 {
     font-size: 15px;
-  }
-  .banner-main > div > * {
-    margin: 2px 0.5rem;
-    letter-spacing: 1px;
   }
   a {
     letter-spacing: 0px;
@@ -295,6 +270,17 @@ a.mailTo {
   }
 }
 
+.myself {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+  width: 100%;
+}
+
 @media (min-width: 576px) {
   .header {
     height: 70px;
@@ -307,7 +293,6 @@ a.mailTo {
     height: 100%;
   }
   .banner-main > div {
-    padding: 0rem 0rem 0rem 0rem;
   }
   .section {
     padding: 3rem 0;
@@ -349,11 +334,8 @@ a.mailTo {
   }
 
   .banner-main > div {
-    padding: 1rem 0.5rem 1rem 1rem;
   }
   .banner-main > div > * {
-    margin: 0.5rem;
-    letter-spacing: 3px;
   }
   h1 {
     font-weight: 500;
@@ -364,7 +346,6 @@ a.mailTo {
     font-weight: 300;
   }
   .banner-main > div:hover {
-    background: #00bfff;
   }
 
   .header.top > span > a {
@@ -379,10 +360,79 @@ a.mailTo {
 }
 
 @media (min-width: 992px) {
-  .banner-main > div {
-    padding: 2rem 0.5rem 2rem 2rem;
+  .banner-main {
+    position: relative;
+    height: 600px;
+  }
+  .banner-main > * {
+    position: absolute;
   }
 }
 
 @media (min-width: 1200px) {
+}
+
+.banner.banner-waves {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 150px;
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+
+  overflow: hidden;
+  height: 100%;
+ /*  background: deepskyblue; */
+}
+.line-1 {
+  z-index: 15;
+  opacity: 0.5;
+}
+.line-2 {
+  z-index: 10;
+  opacity: 0.7;
+}
+.line-3 {
+  z-index: 5;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  background-repeat: repeat no-repeat;
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.wave1 {
+  -webkit-background-size: 50%;
+  background-size: 50% 80px;
+  animation: animate 18s linear infinite;
+}
+
+.wave2 {
+  -webkit-background-size: 50%;
+  background-size: 50% 100px;
+  animation: animate 12s linear infinite;
+}
+
+.wave3 {
+  -webkit-background-size: 50%;
+  background-size: 50% 80px;
+  animation: animate 18s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(0) translateZ(0) scaleY(0.5);
+  }
+  100% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
 }
