@@ -49,6 +49,12 @@ header.header.normal > #logo {
   padding: 0.5rem;
   border-radius: 50%;
 }
+
+header.header > #logo {
+  background: #000000a0;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
 em {
   font-size: 30px;
   font-style: normal;
