@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import wave1 from "./waves/wave1.png";
 import wave2 from "./waves/wave2.png";
 import wave3 from "./waves/wave3.png";
@@ -98,6 +96,7 @@ const getRecentBlogs = () => {
     );
   });
 };
+
 function Main() {
   const [colors] = useState(getColors());
   const [activeClass, setActiveClass] = useState("top");
@@ -130,19 +129,23 @@ function Main() {
         <div>CV</div>
       </a>
       <header className={`header ${activeClass}`}>
-        <div className="logo"></div>
-        <span>
-          <Link to="/pathLink#portfolio">BLOGS</Link>
-        </span>
-        <span>
-          <Link to="/pathLink#recentWork"> RECENT WORK</Link>
-        </span>
-        <span>
-          <Link to="/pathLink#aboutMe"> ABOUT</Link>
-        </span>
-        <span>
-          <Link to="/pathLink#contact"> CONTACT</Link>
-        </span>
+        <div id="logo" className="center-middle">
+          AS
+        </div>
+        <div className="center-middle">
+          <span className="ml-5">
+            <Link to="/pathLink#portfolio">BLOGS</Link>
+          </span>
+          <span className="ml-5">
+            <Link to="/pathLink#recentWork"> RECENT WORK</Link>
+          </span>
+          <span className="ml-5">
+            <Link to="/pathLink#aboutMe"> ABOUT</Link>
+          </span>
+          <span className="ml-5">
+            <Link to="/pathLink#contact"> CONTACT</Link>
+          </span>
+        </div>
       </header>
       <section className="banner-main">
         <div className="myself">
