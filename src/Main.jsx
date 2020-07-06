@@ -178,11 +178,6 @@ function Main() {
       <section id="portfolio" className="section">
         <h3>BLOGS</h3>
         <div className="wrapper">{getRecentBlogs()}</div>
-        <p className="blog">
-          <a href="https://medium.com/@amanjotsingh260/cross-origin-communication-between-window-55369facd73">
-            cross-origin-communication-between-window
-          </a>
-        </p>
       </section>
       <section id="recentWork" className="section">
         <h3>RECENT WORK</h3>
