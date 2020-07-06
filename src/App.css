@@ -9,7 +9,9 @@
 .hide {
   display: none;
 }
-
+h3 {
+  text-decoration: underline;
+}
 a.download-btn {
   position: fixed;
   z-index: 999;
@@ -269,7 +271,7 @@ a.mailTo {
     height: 400px;
   }
   .banner.banner-waves {
-    height: 60px;
+    height: 50px;
   }
   h1 {
     font-size: 24px;
@@ -334,14 +336,16 @@ a.mailTo {
     padding: 0 0.8rem;
     height: 100%;
   }
-
+  .banner.banner-waves {
+    height: 60px;
+  }
   .section {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
   .section > p {
     font-size: 16px;
     letter-spacing: 1px;
-    padding: 1rem 3rem;
+    /*  padding: 1rem 3rem; */
     line-height: 2rem;
   }
   .section > h3 {
