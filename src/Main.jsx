@@ -97,10 +97,14 @@ const getRecentBlogs = () => {
   });
 };
 
+const scrollTop = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+
 function Main() {
   const [colors] = useState(getColors());
   const [activeClass, setActiveClass] = useState("top");
-
   useEffect(() => {
     window.addEventListener("scroll", function () {
       const element = document.querySelector(".banner");
@@ -111,8 +115,7 @@ function Main() {
       }
       setActiveClass(activeClass);
     });
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    scrollTop();
     /* const interval = setInterval(() => {
       setColors(getColors());
     }, 2000);
@@ -129,7 +132,7 @@ function Main() {
         <div>CV</div>
       </a>
       <header className={`header ${activeClass}`}>
-        <div id="logo" className="center-middle">
+        <div id="logo" className="center-middle" onClick={scrollTop}>
           AS
         </div>
         <div className="center-middle">
