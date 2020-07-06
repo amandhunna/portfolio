@@ -133,12 +133,17 @@ h2 {
   letter-spacing: 5px;
 }
 
-.section > p, .section > .skillSet {
+.section > p {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
   padding: 1rem 5rem;
   line-height: 3rem;
+}
+
+.skillSet {
+  line-height: 30px;
+  padding: 15px;
 }
 
 .card {

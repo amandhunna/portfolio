@@ -120,7 +120,11 @@ function Main() {
             user-friendly experiences.
           </h2>
         </div>
-        <img className="banner" src="https://res.cloudinary.com/amanjotsingh/image/upload/v1588275013/6-li2_cf8iui-min_q8qn70.webp" alt="no src" />
+        <img
+          className="banner"
+          src="https://res.cloudinary.com/amanjotsingh/image/upload/v1588275013/6-li2_cf8iui-min_q8qn70.webp"
+          alt="no src"
+        />
       </section>
       <section id="portfolio" className="section">
         <h3>PORTFOLIO</h3>
@@ -145,63 +149,31 @@ function Main() {
           <div style={colors.six} className="six"></div>
           <div className="seven section">
             <h3>ABOUT</h3>
-            <p>
-              I'm full-stack developer with 2 years of professional experience.
-              I'm interested in all kinds of process in software development,
-              but my major focus is on designing web, mobile & tablet
-              interfaces. I also have skills in other fields like IOT.
-            </p>
-            <p>
-              I have maintained, developed and launched multiple projects from
-              scratch, carrying the development of its' back-end and front-end
-              codebases.
-            </p>
             <div className="skillSet">
+              <p>
+                I'm full-stack developer with 2+ years of professional
+                experience. I also have interest in other fields like IOT.
+              </p>
+              <p>
+                I have maintained and developed multiple projects from
+                scratch, carrying the development of its' back-end and front-end
+                codebases.
+              </p>
               My current toolset includes React, Node, Mongo and all the other
-              various frameworks, libraries and technologies related to them.
-                I can help you with all the sides of your project:
+              various frameworks, libraries and technologies related to them. I
+              can help you with all the sides of your project:
               <ul>
-                <li>verifying good UI/UX design,</li>
-                <li>leading/co-developing the back-end and front-end,</li>
-                <li>setting up the CI/CD,</li>
-                <li>mentoring the team,</li>
-                <li>estimating tasks,</li>
-                <li>researching possible techs,</li>
-                <li>leading, launching and monitoring the project.</li>
+                <li>Leading/co-developing the back-end and front-end</li>
+                <li>Estimating tasks</li>
+                <li>Researching possible techs</li>
+                <li>Leading, launching and monitoring the project</li>
               </ul>
             </div>
-            <p>
-              Recently I became also a huge fan of one-way data flow. My current
-              experience and skills in front-end includes: lead JavaScript
-              development: bootstraping, refactoring, improving the structure,
-              reliability, build setup; full integration of front-end
-              development using tools like code minifications, multiple
-              environments support, CI/CD, Storybook components library. In
-              order to improve the development speed, performance and
-              reliability, I have changed languages and frameworks already
-              multiple times, The lessons I learned while doing all these apps
-              will be useful for me forever, no matter what framework I will use
-              in the next project. What I can do for you at that side is: lead
-              development.
-            </p>
-
-            <p>
-              Splitting the back-end into microservices, cooperation with APIs,
-              remote data synchronizations, in cases where a good Project
-              Manager was missing, fullfilling his role, in order to save the
-              project from losing time on unneeded things. If your initial
-              thought is that I can’t be the best in everything, it's okay. Send
-              the design job to someone else, and I will take care of all the
-              code development, or whatever other role you see me best in. In
-              cases when you already have an existing team, but you would still
-              use some help, contact me as well. I’ll fit in very quickly, I
-              promise.
-            </p>
           </div>
         </div>
       </section>
       <section id="contact" className="section">
-        <h3>OK, LET’S CREATE SOMETHING GREAT</h3>
+        <h3>LET’S CREATE SOMETHING GREAT</h3>
         <p>
           If you like my work and have some cool project to work on, just send
           me direct message or contact me through social sites listed below.
