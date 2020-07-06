@@ -1,10 +1,19 @@
 .App {
   text-align: center;
 }
-
+.center-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .hide {
   display: none;
 }
+
+.ml-5 {
+  margin-left: 10px;
+}
+
 a.download-btn {
   position: fixed;
   z-index: 999;
@@ -35,6 +44,11 @@ img {
   padding: 0;
   box-sizing: border-box;
 }
+header.header.normal > #logo {
+  background: #e2b659;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
 em {
   font-size: 30px;
   font-style: normal;
@@ -51,8 +65,8 @@ em {
   width: 100%;
   z-index: 100;
   align-items: center;
-  justify-content: flex-end;
-  background: #00000020;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .header.normal {
@@ -145,6 +159,9 @@ h2 {
   cursor: pointer;
   background: #2c3a47;
   color: white;
+  border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px 4px #fff;
 }
 
 .card:hover {
@@ -304,11 +321,7 @@ a.mailTo {
 }
 
 @media (min-width: 576px) {
-  .header {
-    height: 70px;
-  }
   .logo {
-    display: none;
   }
   .header > span {
     padding: 0 0.8rem;
@@ -325,7 +338,7 @@ a.mailTo {
     line-height: 2rem;
   }
   .section > h3 {
-    font-size: 40px;
+    font-size: 30px;
   }
   section#aboutMe {
     padding: 0;
@@ -340,10 +353,6 @@ a.mailTo {
 }
 
 @media (min-width: 768px) {
-  .header {
-    height: 100px;
-  }
-
   .header > span {
     padding: 0 2rem;
     font-size: large;
