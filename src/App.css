@@ -35,10 +35,10 @@ img {
   padding: 0;
   box-sizing: border-box;
 }
-
-img {
-  max-width: 100%;
-  width: -webkit-fill-available;
+em {
+  font-size: 30px;
+  font-style: normal;
+  color: #2f4858;
 }
 .header {
   color: white;
@@ -86,25 +86,22 @@ span:hover {
   color: tomato;
   transition: all 0.5s ease-in-out;
 }
+
 .banner-main {
+  background: #e2b659;
   position: relative;
-  background: deepskyblue;
+  height: 600px;
+}
+.banner-main > * {
+  position: absolute;
+}
+.banner.banner-waves {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 180px;
 }
 
-.banner-main > div {
-  position: absolute;
-  bottom: 0%;
-  left: 0;
-  padding: 2rem 0.5rem 2rem 2rem;
-  z-index: 999;
-  background: #00bffff0;
-}
-.banner-main > div > * {
-  margin: 0.5rem;
-  color: white;
-  letter-spacing: 3px;
-  max-width: 820px;
-}
 h1 {
   font-weight: 500;
   font-size: 40px;
@@ -113,14 +110,8 @@ h2 {
   font-size: 20px;
   font-weight: 300;
 }
-.banner-main > div:hover {
-  background: #00bfff;
-}
 
 #portfolio {
-  border-bottom: 1px solid #f1f1f1;
-  background: #f8f8f8;
-  color: #808080;
 }
 .section {
   text-align: center;
@@ -133,12 +124,17 @@ h2 {
   letter-spacing: 5px;
 }
 
-.section > p, .section > .skillSet {
+.section > p {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
   padding: 1rem 5rem;
   line-height: 3rem;
+}
+
+.skillSet {
+  line-height: 30px;
+  padding: 15px;
 }
 
 .card {
@@ -147,7 +143,8 @@ h2 {
   align-items: center;
   margin: 1rem;
   cursor: pointer;
-  background: deepskyblue;
+  background: #2c3a47;
+  color: white;
 }
 
 .card:hover {
@@ -245,18 +242,17 @@ a.mailTo {
     font-size: small;
     padding: 7px;
   }
-  .banner-main > div {
-    padding: 0;
+  .banner-main {
+    height: 400px;
+  }
+  .banner.banner-waves {
+    height: 60px;
   }
   h1 {
     font-size: 24px;
   }
   h2 {
     font-size: 15px;
-  }
-  .banner-main > div > * {
-    margin: 2px 0.5rem;
-    letter-spacing: 1px;
   }
   a {
     letter-spacing: 0px;
@@ -278,6 +274,11 @@ a.mailTo {
   .section > h3 {
     font-size: 22px;
   }
+  section#portfolio > .wrapper,
+  section#recentWork > .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
   .card {
     margin: 0.5rem;
     padding: 10px;
@@ -288,6 +289,18 @@ a.mailTo {
   section#aboutMe {
     padding: 0;
   }
+}
+
+.myself {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  color: #1f646f;
+  width: 100%;
+  padding: 80px;
 }
 
 @media (min-width: 576px) {
@@ -301,9 +314,7 @@ a.mailTo {
     padding: 0 0.8rem;
     height: 100%;
   }
-  .banner-main > div {
-    padding: 0rem 0rem 0rem 0rem;
-  }
+
   .section {
     padding: 3rem 0;
   }
@@ -338,18 +349,13 @@ a.mailTo {
     font-size: large;
     height: 100%;
   }
-
+  .banner.banner-waves {
+    height: 71px;
+  }
   a {
     letter-spacing: 3px;
   }
 
-  .banner-main > div {
-    padding: 1rem 0.5rem 1rem 1rem;
-  }
-  .banner-main > div > * {
-    margin: 0.5rem;
-    letter-spacing: 3px;
-  }
   h1 {
     font-weight: 500;
     font-size: 40px;
@@ -358,26 +364,83 @@ a.mailTo {
     font-size: 20px;
     font-weight: 300;
   }
-  .banner-main > div:hover {
-    background: #00bfff;
-  }
 
   .header.top > span > a {
     font-size: large;
     padding: 7px;
   }
-  #portfolio {
-    border-bottom: 1px solid #f1f1f1;
-    background: #f8f8f8;
-    color: #808080;
-  }
 }
 
 @media (min-width: 992px) {
-  .banner-main > div {
-    padding: 2rem 0.5rem 2rem 2rem;
+  .banner.banner-waves {
+    height: 120px;
+  }
+  section#portfolio > .wrapper,
+  section#recentWork > .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
   }
 }
 
 @media (min-width: 1200px) {
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+
+  overflow: hidden;
+  height: 100%;
+  /*  background: deepskyblue; */
+}
+.line-1 {
+  z-index: 15;
+  opacity: 0.5;
+}
+.line-2 {
+  z-index: 10;
+  opacity: 0.7;
+}
+.line-3 {
+  z-index: 5;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  background-repeat: repeat no-repeat;
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.wave1 {
+  -webkit-background-size: 50%;
+  background-size: 50% 80px;
+  animation: animate 18s linear infinite;
+}
+
+.wave2 {
+  -webkit-background-size: 50%;
+  background-size: 50% 100px;
+  animation: animate 12s linear infinite;
+}
+
+.wave3 {
+  -webkit-background-size: 50%;
+  background-size: 50% 80px;
+  animation: animate 18s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(0) translateZ(0) scaleY(0.5);
+  }
+  100% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
 }

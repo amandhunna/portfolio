@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import "./App.css";
+import wave1 from "./waves/wave1.png";
+import wave2 from "./waves/wave2.png";
+import wave3 from "./waves/wave3.png";
 
+import "./App.css";
 const getColors = () => ({
   wrapper: { background: "#000" },
   one: randomColor(),
@@ -21,29 +24,18 @@ const getRecentWork = () => {
       workTitle: "SOS-Auth-service",
     },
     {
-      repoURL: "https://github.com/amanjotsinghdhunna/profileintro",
-      workTitle: "Resume",
+      repoURL: "https://github.com/amanjotsinghdhunna/storybook",
+      workTitle: "Story book",
     },
     {
-      repoURL: "https://github.com/amanjotsinghdhunna/HackerChallenge",
-      workTitle: "HackerChallenge",
+      repoURL: "https://github.com/amanjotsinghdhunna/profileintro",
+      workTitle: "Resume",
     },
     {
       repoURL: "https://github.com/amanjotsinghdhunna/Express",
       workTitle: "Express",
     },
-    {
-      repoURL: "https://github.com/amanjotsinghdhunna/storybook",
-      workTitle: "Story book",
-    },
-    {
-      repoURL: "https://github.com/amanjotsinghdhunna/React-demo",
-      workTitle: "React-demo",
-    },
-    {
-      repoURL: "https://github.com/amanjotsinghdhunna/Score-keeper",
-      workTitle: "Score-keeper",
-    },
+
     {
       repoURL: "https://github.com/amanjotsinghdhunna/Lambo",
       workTitle: "Lambo",
@@ -66,6 +58,46 @@ const getRecentWork = () => {
   });
 };
 
+const getRecentBlogs = () => {
+  const blog = [
+    {
+      repoURL:
+        "https://medium.com/@amanjotsingh260/cross-origin-communication-between-window-55369facd73",
+      workTitle: "Cross-origin communication between window",
+    },
+    {
+      repoURL:
+        "https://medium.com/@amanjotsingh260/overwriting-and-appending-children-props-using-reactclone-4c69f88dc235",
+      workTitle:
+        "Overwriting and Appending children props using React.cloneElement",
+    },
+    {
+      repoURL:
+        "https://medium.com/@amanjotsingh260/add-console-to-the-code-fbef21e2024d",
+      workTitle: "Add Console to the code",
+    },
+    {
+      repoURL:
+        "https://medium.com/@amanjotsingh260/string-operations-using-slice-substring-and-substr-c4364265d0a5",
+      workTitle: "String operations using slice, substring and substr",
+    },
+    {
+      repoURL: "https://medium.com/@amanjotsingh260/communication-76651c3019a4",
+      workTitle: "Communication",
+    },
+  ];
+  return blog.map((ele) => {
+    return (
+      <div
+        key={"myblog" + Math.random()}
+        className="card"
+        onClick={() => window.open(ele.repoURL)}
+      >
+        {ele.workTitle}
+      </div>
+    );
+  });
+};
 function Main() {
   const [colors] = useState(getColors());
   const [activeClass, setActiveClass] = useState("top");
@@ -100,7 +132,7 @@ function Main() {
       <header className={`header ${activeClass}`}>
         <div className="logo"></div>
         <span>
-          <Link to="/pathLink#portfolio">PORTFOLIO</Link>
+          <Link to="/pathLink#portfolio">BLOGS</Link>
         </span>
         <span>
           <Link to="/pathLink#recentWork"> RECENT WORK</Link>
@@ -113,22 +145,37 @@ function Main() {
         </span>
       </header>
       <section className="banner-main">
-        <div>
-          <h1>Amanjot Singh</h1>
-          <h2>
-            I'm a Full-Stack developer focused on crafting stable, clean &
-            user-friendly experiences.
-          </h2>
+        <div className="myself">
+          <div>
+            <h1>Hi!</h1>
+            <h2>
+              I'm <em>Amanjot Singh.</em>
+            </h2>
+            <h2>
+              I'm a full-Stack developer focused on crafting stable, clean &
+              user-friendly experiences.
+            </h2>
+          </div>
         </div>
-        <img className="banner" src="https://res.cloudinary.com/amanjotsingh/image/upload/v1588275013/6-li2_cf8iui-min_q8qn70.webp" alt="no src" />
+        <div className="banner banner-waves">
+          <div className="line line-1">
+            <img className="wave wave1" src={wave1} alt="no src" />
+          </div>
+          <div className="line line-2">
+            <img className="wave wave2" src={wave2} alt="no src" />
+          </div>
+          <div className="line line-3">
+            <img className="wave wave3" src={wave3} alt="no src" />
+          </div>
+        </div>
       </section>
       <section id="portfolio" className="section">
-        <h3>PORTFOLIO</h3>
-        <p>
-          Below you can see some projects I've been working on lately. I divide
-          each project into four follow-up areas: comprehensive research,
-          wireframing, design & development. This process allows me to create
-          great product with client goals in mind.
+        <h3>BLOGS</h3>
+        <div className="wrapper">{getRecentBlogs()}</div>
+        <p className="blog">
+          <a href="https://medium.com/@amanjotsingh260/cross-origin-communication-between-window-55369facd73">
+            cross-origin-communication-between-window
+          </a>
         </p>
       </section>
       <section id="recentWork" className="section">
@@ -145,63 +192,31 @@ function Main() {
           <div style={colors.six} className="six"></div>
           <div className="seven section">
             <h3>ABOUT</h3>
-            <p>
-              I'm full-stack developer with 2 years of professional experience.
-              I'm interested in all kinds of process in software development,
-              but my major focus is on designing web, mobile & tablet
-              interfaces. I also have skills in other fields like IOT.
-            </p>
-            <p>
-              I have maintained, developed and launched multiple projects from
-              scratch, carrying the development of its' back-end and front-end
-              codebases.
-            </p>
             <div className="skillSet">
+              <p>
+                I'm full-stack developer with 2+ years of professional
+                experience. I also have interest in other fields like IOT.
+              </p>
+              <p>
+                I have maintained and developed multiple projects from scratch,
+                carrying the development of its' back-end and front-end
+                codebases.
+              </p>
               My current toolset includes React, Node, Mongo and all the other
-              various frameworks, libraries and technologies related to them.
-                I can help you with all the sides of your project:
+              various frameworks, libraries and technologies related to them. I
+              can help you with all the sides of your project:
               <ul>
-                <li>verifying good UI/UX design,</li>
-                <li>leading/co-developing the back-end and front-end,</li>
-                <li>setting up the CI/CD,</li>
-                <li>mentoring the team,</li>
-                <li>estimating tasks,</li>
-                <li>researching possible techs,</li>
-                <li>leading, launching and monitoring the project.</li>
+                <li>Leading/co-developing the back-end and front-end</li>
+                <li>Estimating tasks</li>
+                <li>Researching possible techs</li>
+                <li>Leading, launching and monitoring the project</li>
               </ul>
             </div>
-            <p>
-              Recently I became also a huge fan of one-way data flow. My current
-              experience and skills in front-end includes: lead JavaScript
-              development: bootstraping, refactoring, improving the structure,
-              reliability, build setup; full integration of front-end
-              development using tools like code minifications, multiple
-              environments support, CI/CD, Storybook components library. In
-              order to improve the development speed, performance and
-              reliability, I have changed languages and frameworks already
-              multiple times, The lessons I learned while doing all these apps
-              will be useful for me forever, no matter what framework I will use
-              in the next project. What I can do for you at that side is: lead
-              development.
-            </p>
-
-            <p>
-              Splitting the back-end into microservices, cooperation with APIs,
-              remote data synchronizations, in cases where a good Project
-              Manager was missing, fullfilling his role, in order to save the
-              project from losing time on unneeded things. If your initial
-              thought is that I can’t be the best in everything, it's okay. Send
-              the design job to someone else, and I will take care of all the
-              code development, or whatever other role you see me best in. In
-              cases when you already have an existing team, but you would still
-              use some help, contact me as well. I’ll fit in very quickly, I
-              promise.
-            </p>
           </div>
         </div>
       </section>
       <section id="contact" className="section">
-        <h3>OK, LET’S CREATE SOMETHING GREAT</h3>
+        <h3>LET’S CREATE SOMETHING GREAT</h3>
         <p>
           If you like my work and have some cool project to work on, just send
           me direct message or contact me through social sites listed below.
