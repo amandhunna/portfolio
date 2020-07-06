@@ -35,10 +35,10 @@ img {
   padding: 0;
   box-sizing: border-box;
 }
-
-img {
-  max-width: 100%;
-  width: -webkit-fill-available;
+em {
+  font-size: 30px;
+  font-style: normal;
+  color: #2f4858;
 }
 .header {
   color: white;
@@ -86,8 +86,20 @@ span:hover {
   color: tomato;
   transition: all 0.5s ease-in-out;
 }
+
 .banner-main {
-  background: #E2B659;
+  background: #e2b659;
+  position: relative;
+  height: 600px;
+}
+.banner-main > * {
+  position: absolute;
+}
+.banner.banner-waves {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 180px;
 }
 
 h1 {
@@ -100,9 +112,6 @@ h2 {
 }
 
 #portfolio {
-  border-bottom: 1px solid #f1f1f1;
-  background: #f8f8f8;
-  color: #808080;
 }
 .section {
   text-align: center;
@@ -134,7 +143,8 @@ h2 {
   align-items: center;
   margin: 1rem;
   cursor: pointer;
-  background: deepskyblue;
+  background: #2c3a47;
+  color: white;
 }
 
 .card:hover {
@@ -232,6 +242,12 @@ a.mailTo {
     font-size: small;
     padding: 7px;
   }
+  .banner-main {
+    height: 400px;
+  }
+  .banner.banner-waves {
+    height: 60px;
+  }
   h1 {
     font-size: 24px;
   }
@@ -258,6 +274,11 @@ a.mailTo {
   .section > h3 {
     font-size: 22px;
   }
+  section#portfolio > .wrapper,
+  section#recentWork > .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
   .card {
     margin: 0.5rem;
     padding: 10px;
@@ -277,8 +298,9 @@ a.mailTo {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  color: #fff;
+  color: #1f646f;
   width: 100%;
+  padding: 80px;
 }
 
 @media (min-width: 576px) {
@@ -292,8 +314,7 @@ a.mailTo {
     padding: 0 0.8rem;
     height: 100%;
   }
-  .banner-main > div {
-  }
+
   .section {
     padding: 3rem 0;
   }
@@ -328,15 +349,13 @@ a.mailTo {
     font-size: large;
     height: 100%;
   }
-
+  .banner.banner-waves {
+    height: 71px;
+  }
   a {
     letter-spacing: 3px;
   }
 
-  .banner-main > div {
-  }
-  .banner-main > div > * {
-  }
   h1 {
     font-weight: 500;
     font-size: 40px;
@@ -345,38 +364,27 @@ a.mailTo {
     font-size: 20px;
     font-weight: 300;
   }
-  .banner-main > div:hover {
-  }
 
   .header.top > span > a {
     font-size: large;
     padding: 7px;
   }
-  #portfolio {
-    border-bottom: 1px solid #f1f1f1;
-    background: #f8f8f8;
-    color: #808080;
-  }
 }
 
 @media (min-width: 992px) {
-  .banner-main {
-    position: relative;
-    height: 600px;
+  .banner.banner-waves {
+    height: 120px;
   }
-  .banner-main > * {
-    position: absolute;
+  section#portfolio > .wrapper,
+  section#recentWork > .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
   }
 }
 
 @media (min-width: 1200px) {
-}
-
-.banner.banner-waves {
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  height: 150px;
 }
 
 .line {
@@ -385,7 +393,7 @@ a.mailTo {
 
   overflow: hidden;
   height: 100%;
- /*  background: deepskyblue; */
+  /*  background: deepskyblue; */
 }
 .line-1 {
   z-index: 15;

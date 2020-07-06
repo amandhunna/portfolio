@@ -24,29 +24,18 @@ const getRecentWork = () => {
       workTitle: "SOS-Auth-service",
     },
     {
-      repoURL: "https://github.com/amanjotsinghdhunna/profileintro",
-      workTitle: "Resume",
+      repoURL: "https://github.com/amanjotsinghdhunna/storybook",
+      workTitle: "Story book",
     },
     {
-      repoURL: "https://github.com/amanjotsinghdhunna/HackerChallenge",
-      workTitle: "HackerChallenge",
+      repoURL: "https://github.com/amanjotsinghdhunna/profileintro",
+      workTitle: "Resume",
     },
     {
       repoURL: "https://github.com/amanjotsinghdhunna/Express",
       workTitle: "Express",
     },
-    {
-      repoURL: "https://github.com/amanjotsinghdhunna/storybook",
-      workTitle: "Story book",
-    },
-    {
-      repoURL: "https://github.com/amanjotsinghdhunna/React-demo",
-      workTitle: "React-demo",
-    },
-    {
-      repoURL: "https://github.com/amanjotsinghdhunna/Score-keeper",
-      workTitle: "Score-keeper",
-    },
+
     {
       repoURL: "https://github.com/amanjotsinghdhunna/Lambo",
       workTitle: "Lambo",
@@ -69,6 +58,46 @@ const getRecentWork = () => {
   });
 };
 
+const getRecentBlogs = () => {
+  const blog = [
+    {
+      repoURL:
+        "https://medium.com/@amanjotsingh260/cross-origin-communication-between-window-55369facd73",
+      workTitle: "Cross-origin communication between window",
+    },
+    {
+      repoURL:
+        "https://medium.com/@amanjotsingh260/overwriting-and-appending-children-props-using-reactclone-4c69f88dc235",
+      workTitle:
+        "Overwriting and Appending children props using React.cloneElement",
+    },
+    {
+      repoURL:
+        "https://medium.com/@amanjotsingh260/add-console-to-the-code-fbef21e2024d",
+      workTitle: "Add Console to the code",
+    },
+    {
+      repoURL:
+        "https://medium.com/@amanjotsingh260/string-operations-using-slice-substring-and-substr-c4364265d0a5",
+      workTitle: "String operations using slice, substring and substr",
+    },
+    {
+      repoURL: "https://medium.com/@amanjotsingh260/communication-76651c3019a4",
+      workTitle: "Communication",
+    },
+  ];
+  return blog.map((ele) => {
+    return (
+      <div
+        key={"myblog" + Math.random()}
+        className="card"
+        onClick={() => window.open(ele.repoURL)}
+      >
+        {ele.workTitle}
+      </div>
+    );
+  });
+};
 function Main() {
   const [colors] = useState(getColors());
   const [activeClass, setActiveClass] = useState("top");
@@ -103,7 +132,7 @@ function Main() {
       <header className={`header ${activeClass}`}>
         <div className="logo"></div>
         <span>
-          <Link to="/pathLink#portfolio">BLOG</Link>
+          <Link to="/pathLink#portfolio">BLOGS</Link>
         </span>
         <span>
           <Link to="/pathLink#recentWork"> RECENT WORK</Link>
@@ -117,11 +146,16 @@ function Main() {
       </header>
       <section className="banner-main">
         <div className="myself">
-          <h1>Amanjot Singh</h1>
-          <h2>
-            I'm a Full-Stack developer focused on crafting stable, clean &
-            user-friendly experiences.
-          </h2>
+          <div>
+            <h1>Hi!</h1>
+            <h2>
+              I'm <em>Amanjot Singh.</em>
+            </h2>
+            <h2>
+              I'm a full-Stack developer focused on crafting stable, clean &
+              user-friendly experiences.
+            </h2>
+          </div>
         </div>
         <div className="banner banner-waves">
           <div className="line line-1">
@@ -136,12 +170,12 @@ function Main() {
         </div>
       </section>
       <section id="portfolio" className="section">
-        <h3>BLOG</h3>
-        <p>
-          Below you can see some projects I've been working on lately. I divide
-          each project into four follow-up areas: comprehensive research,
-          wireframing, design & development. This process allows me to create
-          great product with client goals in mind.
+        <h3>BLOGS</h3>
+        <div className="wrapper">{getRecentBlogs()}</div>
+        <p className="blog">
+          <a href="https://medium.com/@amanjotsingh260/cross-origin-communication-between-window-55369facd73">
+            cross-origin-communication-between-window
+          </a>
         </p>
       </section>
       <section id="recentWork" className="section">
