@@ -1,13 +1,14 @@
 import React from 'react';
-import { Route, BrowserRouter } from 'react-router-dom'
+import { Route, BrowserRouter,Switch } from 'react-router-dom'
 import Main from "./Main";
 import "./ga";
 
 function App() {
   return (<>
     <BrowserRouter>
-      <Route path="/" component={Main} >
-      </Route>
+      <Switch>
+        <Route path="/" component={Main} />
+      </Switch>
     </BrowserRouter>
   </>
   );
