@@ -229,7 +229,7 @@ function Main() {
         <div className="links">
           <div
             onClick={() =>
-              window.open("https://www.instagram.com/singh_amanjot.code/")
+              window.open("https://www.instagram.com/amanjotsinghdhunna/")
             }
           >
             INSTAGRAM
