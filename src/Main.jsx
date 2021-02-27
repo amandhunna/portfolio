@@ -58,29 +58,34 @@ const getRecentWork = () => {
 
 const getRecentBlogs = () => {
   const blog = [
+    {  
+    repoURL:
+    "https://amanjotsinghdhunna.medium.com/dynamically-add-suggestion-list-to-input-fields-b0a6e33c7e29",
+    workTitle: "Dynamically add suggestion list to input fields",
+    },
     {
       repoURL:
-        "https://medium.com/@amanjotsingh260/cross-origin-communication-between-window-55369facd73",
+        "https://amanjotsinghdhunna.medium.com/cross-origin-communication-between-window-55369facd73",
       workTitle: "Cross-origin communication between window",
     },
     {
       repoURL:
-        "https://medium.com/@amanjotsingh260/overwriting-and-appending-children-props-using-reactclone-4c69f88dc235",
+        "https://amanjotsinghdhunna.medium.com/overwriting-and-appending-children-props-using-reactclone-4c69f88dc235",
       workTitle:
         "Overwriting and Appending children props using React.cloneElement",
     },
     {
       repoURL:
-        "https://medium.com/@amanjotsingh260/add-console-to-the-code-fbef21e2024d",
+        "https://amanjotsinghdhunna.medium.com/add-console-to-the-code-fbef21e2024d",
       workTitle: "Add Console to the code",
     },
     {
       repoURL:
-        "https://medium.com/@amanjotsingh260/string-operations-using-slice-substring-and-substr-c4364265d0a5",
+        "https://amanjotsinghdhunna.medium.com/string-operations-using-slice-substring-and-substr-c4364265d0a5",
       workTitle: "String operations using slice, substring and substr",
     },
     {
-      repoURL: "https://medium.com/@amanjotsingh260/communication-76651c3019a4",
+      repoURL: "https://amanjotsinghdhunna.medium.com/communication-76651c3019a4",
       workTitle: "Communication",
     },
   ];
@@ -125,7 +130,7 @@ function Main() {
     <>
       <a
         className="download-btn"
-        href="https://drive.google.com/file/d/1wCoxZVEPemc1z35dY1M6nFzm8U0x4gOZ/view"
+        href="https://drive.google.com/file/d/1bfcp9no13ONLMbQowGJA6iaX15uoxM4x/view?usp=sharing"
         download="resume_amanjotSingh"
       >
         {/*  <FontAwesomeIcon icon={faDownload} /> */}
