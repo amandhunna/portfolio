@@ -140,7 +140,7 @@ function Main() {
             <Link to="/pathLink#portfolio">BLOGS</Link>
           </span>
           <span className="ml-5">
-            <Link to="/pathLink#recentWork"> RECENT WORK</Link>
+            <Link to="/pathLink#recentWork">WORK</Link>
           </span>
           <span className="ml-5">
             <Link to="/pathLink#aboutMe"> ABOUT</Link>
@@ -180,7 +180,7 @@ function Main() {
         <div className="wrapper">{getRecentBlogs()}</div>
       </section>
       <section id="recentWork" className="section">
-        <h3>RECENT WORK</h3>
+        <h3>WORK</h3>
         <div className="wrapper">{getRecentWork()}</div>
       </section>
       <section id="aboutMe" className="section">
