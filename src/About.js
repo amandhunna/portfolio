@@ -20,6 +20,11 @@ const randomColor = () => {
     };
     return { background: getDefaultColor() };
 };
+const randomGrid = () => {
+        const defaultGridClasses = [ 'one', 'two', 'three', 'four', 'five', 'six' ];
+        const randomGenerator = Math.ceil(Math.random() * 10)%6
+        return defaultGridClasses[randomGenerator];
+}
 
 const getColors = () => ({
     wrapper: { background: "#000" },
@@ -31,13 +36,23 @@ const getColors = () => ({
     six: randomColor(),
   });
 
+const getGrid =() => ({
+    one: randomGrid(),
+    two: randomGrid(),
+    three: randomGrid(),
+    four: randomGrid(),
+    five: randomGrid(),
+    six: randomGrid(),
+});
 
 function About(props) {
     const [ colors, setColors ] = useState(getColors());
+    const [grid, setGrid ] =useState(getGrid())
     useEffect(() => {
         const interval = setInterval(() => {
           setColors(getColors());
-        }, 250);
+          setGrid(getGrid());
+        }, 1000);
         return () => clearInterval(interval);
       }, []);
     return (
@@ -45,12 +60,12 @@ function About(props) {
         <Header />
         <section id="aboutMe" className="section">
         <div style={colors.wrapper} className="wrapper">
-          <div style={colors.one} className="one"></div>
-          <div style={colors.two} className="two"></div>
-          <div style={colors.three} className="three"></div>
-          <div style={colors.four} className="four"></div>
-          <div style={colors.five} className="five"></div>
-          <div style={colors.six} className="six"></div>
+          <div style={colors.one} className={grid.one}></div>
+          <div style={colors.two} className={grid.two}></div>
+          <div style={colors.three} className={grid.three}></div>
+          <div style={colors.four} className={grid.four}></div>
+          <div style={colors.five} className={grid.five}></div>
+          <div style={colors.six} className={grid.six}></div>
           <div className="seven section">
             <h3>ABOUT</h3>
             <div className="skillSet">
