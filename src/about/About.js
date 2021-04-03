@@ -1,5 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import Header from '../header/Header';
+import './about.css';
 
 const randomColor = () => {
     const getDefaultColor = () => {
@@ -45,29 +46,13 @@ const getGrid =() => ({
     six: randomGrid(),
 });
 
-function About(props) {
-    const [ colors, setColors ] = useState(getColors());
-    const [grid, setGrid ] =useState(getGrid())
-    useEffect(() => {
-        const interval = setInterval(() => {
-          setColors(getColors());
-          setGrid(getGrid());
-        }, 1000);
-        return () => clearInterval(interval);
-      }, []);
+function About() {
+   
     return (
         <>
         <Header />
         <section id="aboutMe" className="section">
-        <div style={colors.wrapper} className="wrapper">
-          <div style={colors.one} className={grid.one}></div>
-          <div style={colors.two} className={grid.two}></div>
-          <div style={colors.three} className={grid.three}></div>
-          <div style={colors.four} className={grid.four}></div>
-          <div style={colors.five} className={grid.five}></div>
-          <div style={colors.six} className={grid.six}></div>
-          <div className="seven section">
-            <h3>ABOUT</h3>
+            <h3 className="underline">ABOUT</h3>
             <div className="skillSet">
               <p>
                 I'm full-stack developer with 2.5 years of professional
@@ -88,8 +73,6 @@ function About(props) {
                 <li>Leading, launching and monitoring the project</li>
               </ul>
             </div>
-          </div>
-        </div>
       </section>
       </>
     );
