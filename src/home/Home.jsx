@@ -1,13 +1,12 @@
 import React from "react";
-import Header from "./Header";
+import Header from "../header/Header";
 import wave1 from "./waves/wave1.png";
 import wave2 from "./waves/wave2.png";
 import wave3 from "./waves/wave3.png";
 
+import './home.css';
 
-
-
-function Main() {
+function Home() {
 
   return (
     <>
@@ -15,12 +14,12 @@ function Main() {
       <section className="banner-main">
         <div className="myself">
           <div>
-            <h1>Hi!</h1>
-            <h2>
+            <h3>Hi!</h3>
+            <h1>
               I'm <em>Amanjot Singh.</em>
-            </h2>
+            </h1>
             <h2>
-              I'm a full-Stack developer focused on crafting stable, clean &
+              I'm a <em>full-Stack developer</em> focused on crafting stable, clean &
               user-friendly experiences.
             </h2>
           </div>
@@ -51,4 +50,4 @@ function Main() {
 }
 
 
-export default Main;
+export default Home;

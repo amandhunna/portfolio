@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from 'react';
-import Header from './Header';
+import Header from '../header/Header';
 
 const randomColor = () => {
     const getDefaultColor = () => {
@@ -15,14 +15,14 @@ const randomColor = () => {
         "#FD7554",
         "#9D83F4",
       ];
-      const randomGenerator = randomColor[Math.ceil(Math.random() * 10) - 1];
+      const randomGenerator = randomColor[Math.ceil(Math.random() * 10) -1 ];
       return randomGenerator;
     };
     return { background: getDefaultColor() };
 };
 const randomGrid = () => {
         const defaultGridClasses = [ 'one', 'two', 'three', 'four', 'five', 'six' ];
-        const randomGenerator = Math.ceil(Math.random() * 10)%6
+        const randomGenerator = Math.ceil(Math.random() * 10)%6;
         return defaultGridClasses[randomGenerator];
 }
 
