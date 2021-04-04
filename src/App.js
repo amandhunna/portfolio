@@ -12,7 +12,7 @@ import "./ga";
 function App() {
   const [showResume, setShowResume ] = useState(false);
   return (<>
-    <button className="resume-btn" onClick={() => setShowResume(prev => !prev)} className="download-btn">CV</button>
+    <button onClick={() => setShowResume(prev => !prev)} className="download-btn">CV</button>
     {!!showResume && <object className="resumeObject" data={resume} type="application/pdf">
         {/* <embed src={resume} type="application/pdf" /> */}
         <iframe src={resume}></iframe>
