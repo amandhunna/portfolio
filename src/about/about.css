@@ -2,9 +2,57 @@
   background: #000;
   color: white;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
+  padding-top: 4rem;
+}
+
+.skillSet > ul {
+  display: flex;
+  justify-content: center;
+}
+
+.skillSet > ul > li {
+  list-style-type: none;
+  border: 1px solid;
+  padding: 10px;
+  margin: 10px;
+  color: #2f4858f0;
+}
+
+.skillSet > .responsibilities {
+  color: #2f4858f0;
+  text-align: start;
+  margin: 4% 0 1% 1%;
+}
+
+.aboutWork {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutWork > button {
+  background: #fff;
+  padding: 5px;
+  height: 100px;
+  width: 100px;
+}
+.aboutWork > button:nth-child(even) {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.aboutWork > * > i {
+  font-size: 55px;
+}
+@media (min-width: 256px) {
+  .skillSet > ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .skillSet > ul {

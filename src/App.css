@@ -255,9 +255,6 @@ a.mailTo {
 }
 
 @media (min-width: 576px) {
-  .ml-5 {
-    margin-left: 22px;
-  }
   .header > span {
     padding: 0 0.8rem;
     height: 100%;
@@ -271,18 +268,11 @@ a.mailTo {
   .section > p {
     font-size: 16px;
     letter-spacing: 1px;
-    /*  padding: 1rem 3rem; */
     line-height: 2rem;
+    padding: 1rem 3rem;
   }
   .section > h3 {
     font-size: 30px;
-  }
-  section#aboutMe {
-    padding: 0;
-  }
-  .card {
-    min-width: 100px;
-    min-height: 50px;
   }
   h1 {
     font-size: 35px;
