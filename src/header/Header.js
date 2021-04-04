@@ -31,13 +31,13 @@ function Header() {
         </div>
         <div className="center-middle">
         <span className="ml-5">
-            <Link to="/"> HOME</Link>
+            <Link to="/"> Home</Link>
           </span>
           <span className="ml-5">
-            <Link to="/about"> ABOUT</Link>
+            <Link to="/about"> About</Link>
           </span>
           <span className="ml-5">
-            <Link to="/contact"> CONTACT</Link>
+            <Link to="/contact"> Contact</Link>
           </span>
         </div>
       </header>
