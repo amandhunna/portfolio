@@ -33,9 +33,9 @@ button.download-btn {
 .resumeObject {
   position: absolute;
   top: 10%;
-  left: 25%;
+  left: 18%;
   z-index: 2;
-  height: 60vh;
+  height: 80vh;
   width: 70%;
 }
 /* @media screen and (-webkit-min-device-pixel-ratio: 0) {
