@@ -9,7 +9,7 @@
 .hide {
   display: none;
 }
-h3 {
+.underline {
   text-decoration: underline;
 }
 a.download-btn {
@@ -53,11 +53,19 @@ header.header > #logo {
   padding: 0.5rem;
   border-radius: 50%;
 }
-em {
-  font-size: 30px;
+
+h1 > em {
+  font-size: 60px;
   font-style: normal;
-  color: #2f4858;
+  color: #fff;
 }
+
+h2 > em {
+  font-size: 20px;
+  font-style: normal;
+  color: #2f4858f0;
+}
+
 .header {
   color: white;
   display: flex;
@@ -96,28 +104,12 @@ a {
   text-decoration: none;
   display: flex;
   align-items: center;
-  height: 100%;
   letter-spacing: 3px;
 }
 span:hover {
   background: #000000a0;
   color: tomato;
   transition: all 0.5s ease-in-out;
-}
-
-.banner-main {
-  background: #e2b659;
-  position: relative;
-  height: 600px;
-}
-.banner-main > * {
-  position: absolute;
-}
-.banner.banner-waves {
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  height: 180px;
 }
 
 h1 {
@@ -129,11 +121,10 @@ h2 {
   font-weight: 300;
 }
 
-#portfolio {
-}
 .section {
   text-align: center;
   padding: 6em 0;
+  height: 100vh;
 }
 
 .section > h3 {
@@ -155,71 +146,6 @@ h2 {
   padding: 15px;
 }
 
-.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  cursor: pointer;
-  background: #2c3a47;
-  color: white;
-  border-radius: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 25px #808080;
-  transform: scale(0.9);
-}
-
-.card:hover {
-  transform: scale(1.1);
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
-.one {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-.two {
-  grid-column: 2/4;
-  grid-row: 1 / 4;
-}
-.three {
-  grid-column: 1;
-  grid-row: 2 / 5;
-}
-.four {
-  grid-column: 3;
-  grid-row: 3;
-}
-.five {
-  grid-column: 2;
-  grid-row: 4;
-}
-.six {
-  grid-column: 3;
-  grid-row: 4;
-}
-
-.seven {
-  grid-column: 1/4;
-  grid-row: 1/5;
-  background: #00000090;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.seven > * {
-  color: white;
-}
-
 ul {
   text-align: initial;
 }
@@ -228,6 +154,10 @@ ul {
   color: #fff;
   text-align: center;
   background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a.mailTo {
@@ -235,7 +165,7 @@ a.mailTo {
   border: 2px solid white;
   width: max-content;
   padding: 1rem;
-  margin: auto;
+  margin-top: 5%;
   min-width: 200px;
 }
 .links {
@@ -268,7 +198,7 @@ a.mailTo {
     padding: 7px;
   }
   .banner-main {
-    height: 400px;
+    height: 100vh;
   }
   .banner.banner-waves {
     height: 50px;
@@ -298,21 +228,6 @@ a.mailTo {
   }
   .section > h3 {
     font-size: 22px;
-  }
-  section#portfolio > .wrapper,
-  section#recentWork > .wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  .card {
-    margin: 0.5rem;
-    padding: 10px;
-  }
-  .seven.section {
-    padding: 25px 1rem;
-  }
-  section#aboutMe {
-    padding: 0;
   }
 }
 
@@ -405,62 +320,4 @@ a.mailTo {
 }
 
 @media (min-width: 1200px) {
-}
-
-.line {
-  position: absolute;
-  width: 100%;
-
-  overflow: hidden;
-  height: 100%;
-  /*  background: deepskyblue; */
-}
-.line-1 {
-  z-index: 15;
-  opacity: 0.5;
-}
-.line-2 {
-  z-index: 10;
-  opacity: 0.7;
-}
-.line-3 {
-  z-index: 5;
-}
-
-.wave {
-  position: absolute;
-  left: 0;
-  width: 200%;
-  background-repeat: repeat no-repeat;
-  background-repeat: repeat-x;
-  background-position: 0 bottom;
-  transform-origin: center bottom;
-}
-.wave1 {
-  -webkit-background-size: 50%;
-  background-size: 50% 80px;
-  animation: animate 18s linear infinite;
-}
-
-.wave2 {
-  -webkit-background-size: 50%;
-  background-size: 50% 100px;
-  animation: animate 12s linear infinite;
-}
-
-.wave3 {
-  -webkit-background-size: 50%;
-  background-size: 50% 80px;
-  animation: animate 18s linear infinite;
-}
-@keyframes animate {
-  0% {
-    transform: translateX(0) translateZ(0) scaleY(1);
-  }
-  50% {
-    transform: translateX(0) translateZ(0) scaleY(0.5);
-  }
-  100% {
-    transform: translateX(0) translateZ(0) scaleY(1);
-  }
 }
