@@ -2,9 +2,10 @@
   background: #000;
   color: white;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
+  padding-top: 4rem;
 }
 
 .skillSet > ul {
@@ -27,7 +28,7 @@
 }
 
 .aboutWork {
-  margin-top: 10%;
+  margin-top: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,4 +46,11 @@
 }
 .aboutWork > * > i {
   font-size: 55px;
+}
+@media (min-width: 256px) {
+  .skillSet > ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
