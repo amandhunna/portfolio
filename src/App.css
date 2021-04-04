@@ -64,6 +64,7 @@ h2 > em {
   font-size: 20px;
   font-style: normal;
   color: #2f4858f0;
+  text-decoration: underline;
 }
 
 .header {
