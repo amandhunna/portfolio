@@ -19,7 +19,7 @@ function Home() {
               I'm <em>Amanjot Singh.</em>
             </h1>
             <h2>
-              I'm a <em>full-Stack developer</em> focused on crafting stable, clean &
+              I'm a <em>MERN Stack</em> developer focused on crafting stable, clean &
               user-friendly experiences.
             </h2>
           </div>

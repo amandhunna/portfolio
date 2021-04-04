@@ -12,7 +12,8 @@
 .underline {
   text-decoration: underline;
 }
-a.download-btn {
+button.download-btn {
+  outline: none;
   position: fixed;
   z-index: 999;
   right: 2%;

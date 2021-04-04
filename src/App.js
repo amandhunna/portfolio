@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, BrowserRouter,Switch } from 'react-router-dom'
 import Main from "./home/Home";
 import About from "./about/About";
@@ -10,20 +10,13 @@ import "./App.css";
 import "./ga";
 
 function App() {
+  const [showResume, setShowResume ] = useState(false);
   return (<>
-    <a
-      className="download-btn"
-      href={resume}
-      download="resume_amanjotSinghDhunna"
-      target="_blank"
-      rel="noopener noreferrer"
-      ><div>CV</div>
-    </a>
-    <div ></div>
-    <object className="resumeObject" data={resume} type="application/pdf">
+    <button className="resume-btn" onClick={() => setShowResume(prev => !prev)} className="download-btn">CV</button>
+    {!!showResume && <object className="resumeObject" data={resume} type="application/pdf">
         {/* <embed src={resume} type="application/pdf" /> */}
         <iframe src={resume}></iframe>
-    </object>
+    </object>}
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Main} />
