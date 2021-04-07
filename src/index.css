@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  display: grid;
+}
+.container {
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 10% auto 10%;
+  grid-template-areas:
+    "header header header header" "main main . sidebar"
+    "footer footer footer footer";
+}
+
+.item-a {
+  background: tomato;
+  /* height: 10px;
+  width: 20px; */
+  grid-column-start: 2;
+  grid-column-end: five;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
+}

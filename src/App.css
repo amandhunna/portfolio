@@ -1,0 +1,262 @@
+.App {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.hide {
+  display: none;
+}
+a.download-btn {
+  position: fixed;
+  z-index: 999;
+  right: 2%;
+  bottom: 3%;
+  font-size: x-large;
+  background: deepskyblue;
+  padding: 1.2rem;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid white;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.banner {
+  /* transform: rotate(180deg); */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+.header {
+  color: white;
+  display: flex;
+  height: 100px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  z-index: 100;
+  align-items: center;
+  justify-content: flex-end;
+  background: #00000020;
+}
+
+.header.normal {
+  background: #000000a0;
+}
+.random {
+  height: 2000px;
+  background: black;
+}
+
+.header > span {
+  padding: 0 2rem;
+  font-size: large;
+  height: 100%;
+}
+
+.header.top > span > a {
+  color: White;
+}
+
+span:hover {
+  border-bottom: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  letter-spacing: 3px;
+}
+span:hover {
+  background: #000000a0;
+  color: tomato;
+  transition: all 0.5s ease-in-out;
+}
+.banner-main {
+  position: relative;
+  background: deepskyblue;
+}
+
+.banner-main > div {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  padding: 2rem 0.5rem 2rem 2rem;
+  z-index: 999;
+  background: #00bffff0;
+}
+.banner-main > div > * {
+  margin: 0.5rem;
+  color: white;
+  letter-spacing: 3px;
+  max-width: 820px;
+}
+h1 {
+  font-weight: 500;
+  font-size: 40px;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 300;
+}
+.banner-main > div:hover {
+  background: #00bfff;
+}
+
+#portfolio {
+  border-bottom: 1px solid #f1f1f1;
+  background: #f8f8f8;
+  color: #808080;
+}
+.section {
+  text-align: center;
+  padding: 6em 0;
+}
+
+.section > h3 {
+  font-size: 45px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.section > p {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 1rem 5rem;
+  line-height: 3rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  cursor: pointer;
+  min-width: 300px;
+  min-height: 400px;
+  background: deepskyblue;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px #808080;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.one {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.two {
+  grid-column: 2/4;
+  grid-row: 1 / 4;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+}
+.five {
+  grid-column: 2;
+  grid-row: 4;
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.seven {
+  grid-column: 1/4;
+  grid-row: 1/5;
+  background: #00000090;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seven > * {
+  color: white;
+}
+
+ul {
+  text-align: initial;
+}
+
+#contact {
+  color: #fff;
+  text-align: center;
+  padding: 7.5em 0;
+  background: #d24d57;
+}
+
+a.mailTo {
+  display: block;
+  border: 2px solid white;
+  width: max-content;
+  padding: 1rem;
+  margin: auto;
+  min-width: 200px;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.links > div {
+  cursor: pointer;
+}
+
+.links > span {
+  padding: 0 1.5rem;
+}
+.links > span:hover {
+  background: none;
+}
