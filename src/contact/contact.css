@@ -8,11 +8,12 @@
 }
 
 .wave {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  bottom: 0;
+  bottom: -28px;
   width: 100%;
   left: 0;
+  overflow: hidden;
 }
 
 @keyframes animate {

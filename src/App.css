@@ -52,16 +52,17 @@ img {
   padding: 0;
   box-sizing: border-box;
 }
-header.header.normal > #logo {
-  background: #e2b659;
+
+#resume {
   padding: 0.5rem;
-  border-radius: 50%;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: none;
 }
 
-header.header > #logo {
-  background: #000000a0;
-  padding: 0.5rem;
-  border-radius: 50%;
+#resume:focus {
+  outline: none;
 }
 
 h1 > em {

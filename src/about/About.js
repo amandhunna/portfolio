@@ -42,16 +42,13 @@ function About() {
               </ul>
               <div className="aboutWork" onClick={() => openWindow('github')}>
                 <button>
-                  <i class="fab fa-github"></i>
-                  <p>GitHub</p>
+                  <i className="fab fa-github"></i>
                 </button>
                 <button onClick={() => openWindow('medium')}>
-                  <i class="fab fa-medium"></i>
-                  <p>Medium</p>
+                  <i className="fab fa-medium"></i>
                 </button>
                 <button onClick={() => openWindow('linkedin')}>
-                  <i class="fab fa-linkedin"></i>
-                  <p>Linkedin</p>
+                  <i className="fab fa-linkedin"></i>
                 </button>
               </div>
             </div>

@@ -1,34 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { HashLink as Link } from "react-router-hash-link";
-/* 
-// depreciated
-const scrollTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-};
- */
-function Header() {
-    const [activeClass/* , setActiveClass */] = useState("top");
-    useEffect(() => {
-        /*    
-        // depreciated
-        window.addEventListener("scroll", function () {
-            const element = document.querySelector(".banner");
-            const scroll = this.scrollY;
-            let activeClass = "top";
-            if (scroll > element.scrollHeight) {
-              activeClass = "normal";
-            }
-            setActiveClass(activeClass);
-        });
-        scrollTop(); */
-    }, []);
+import resume from "./../assets/Resume.pdf";
 
+function Header() {
+  const [ showResume, setShowResume ] = useState(false);
     return (
-        <header className={`header ${activeClass}`}>
-        <div id="logo" className="center-middle" /*onClick={scrollTop}*/>
-          AS
-        </div>
+        <header className={`header`}>
         <div className="center-middle">
         <span className="ml-5">
             <Link to="/"> Home</Link>
@@ -40,6 +17,12 @@ function Header() {
             <Link to="/contact"> Contact</Link>
           </span>
         </div>
+        <button id="resume" onClick={() => setShowResume(prev => !prev)} >Resume</button>
+        {!!showResume && 
+          <object className="resumeObject" data={resume} type="application/pdf">
+            {/* <embed src={resume} type="application/pdf" /> */}
+            <iframe src={resume}></iframe>
+        </object>}
       </header>
     );
 }
