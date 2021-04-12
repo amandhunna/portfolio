@@ -1,6 +1,8 @@
-import React,  { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import Header from '../header/Header';
-import Clouds from 'vanta/dist/vanta.rings.min';
+import wave1 from "./../assets/waves/wave1.png";
+import wave2 from "./../assets/waves/wave2.png";
+import wave3 from "./../assets/waves/wave3.png";
 import './about.css';
 
 function About() {
@@ -12,22 +14,6 @@ function About() {
     }
     window.open(link[type]);
   }
-
-/* 
-  const [vantaEffect, setVantaEffect] = useState(0);
-  const myRef = useRef(null);
-
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(Clouds({
-        el: myRef.current
-      }))
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect]);
- */
 
     return (
         <>
@@ -69,6 +55,17 @@ function About() {
                 </button>
               </div>
             </div>
+            <div className="banner banner-waves">
+          <div className="line line-1">
+            <img className="wave wave1" src={wave1} alt="no src" />
+          </div>
+          <div className="line line-2">
+            <img className="wave wave2" src={wave2} alt="no src" />
+          </div>
+          <div className="line line-3">
+            <img className="wave wave3" src={wave3} alt="no src" />
+          </div>
+        </div>
       </section>
       </>
     );
