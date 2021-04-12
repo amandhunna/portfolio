@@ -65,7 +65,7 @@ function About() {
                 </button>
                 <button onClick={() => openWindow('linkedin')}>
                   <i class="fab fa-linkedin"></i>
-                  <p>Medium</p>
+                  <p>Linkedin</p>
                 </button>
               </div>
             </div>
