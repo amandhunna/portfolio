@@ -11,33 +11,14 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 18px;
+  color: #1f646f;
 }
 
 body {
   margin: 0;
-  background-color: #000;
+  background-color: #ace4fc;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-}
-.App {
-  display: grid;
-}
-.container {
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 10% auto 10%;
-  grid-template-areas:
-    "header header header header" "main main . sidebar"
-    "footer footer footer footer";
-}
-
-.item-a {
-  background: tomato;
-  /* height: 10px;
-  width: 20px; */
-  grid-column-start: 2;
-  grid-column-end: five;
-  grid-row-start: row1-start;
-  grid-row-end: 3;
 }

@@ -1,20 +1,24 @@
 import React from 'react';
 import Header from '../header/Header';
+import wave1 from "./../assets/waves/wave1.png";
+import wave2 from "./../assets/waves/wave2.png";
+import wave3 from "./../assets/waves/wave3.png";
 import './about.css';
 
 function About() {
   const openWindow =(type) => {
     const link = {
-      linkedin: "https://www.linkedin.com/in/amanjot-singh-398731131/",
-      medium: "https://amanjotsinghdhunna.medium.com/",
-      github: "https://github.com/amanjotsinghdhunna",
+      linkedin: "https://www.linkedin.com/in/amandhunna-ln/",
+      medium: "https://amandhunna.medium.com/",
+      github: "https://github.com/amandhunna",
     }
     window.open(link[type]);
   }
+
     return (
         <>
         <Header />
-        <section id="aboutMe" className="section">
+        <section id="aboutMe" className="section"  >
             <h1 className="underline">ABOUT</h1>
             <div className="skillSet">
               <h2>
@@ -38,19 +42,27 @@ function About() {
               </ul>
               <div className="aboutWork" onClick={() => openWindow('github')}>
                 <button>
-                  <i class="fab fa-github"></i>
-                  <p>GitHub</p>
+                  <i className="fab fa-github"></i>
                 </button>
                 <button onClick={() => openWindow('medium')}>
-                  <i class="fab fa-medium"></i>
-                  <p>Medium</p>
+                  <i className="fab fa-medium"></i>
                 </button>
                 <button onClick={() => openWindow('linkedin')}>
-                  <i class="fab fa-linkedin"></i>
-                  <p>Linkedin</p>
+                  <i className="fab fa-linkedin"></i>
                 </button>
               </div>
             </div>
+            <div className="banner banner-waves">
+          <div className="line line-1">
+            <img className="wave wave1" src={wave1} alt="no src" />
+          </div>
+          <div className="line line-2">
+            <img className="wave wave2" src={wave2} alt="no src" />
+          </div>
+          <div className="line line-3">
+            <img className="wave wave3" src={wave3} alt="no src" />
+          </div>
+        </div>
       </section>
       </>
     );

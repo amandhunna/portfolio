@@ -1,5 +1,9 @@
 import React from 'react';
+import wave1 from "./../assets/waves/wave1.png";
+import wave2 from "./../assets/waves/wave2.png";
+import wave3 from "./../assets/waves/wave3.png";
 import Header from "../header/Header";
+import './contact.css';
 
 function Contact(props) {
     return (
@@ -34,6 +38,17 @@ function Contact(props) {
                 LINKEDIN
               </div>
             </div>
+            <div className="banner banner-waves">
+          <div className="line line-1">
+            <img className="wave wave1" src={wave1} alt="no src" />
+          </div>
+          <div className="line line-2">
+            <img className="wave wave2" src={wave2} alt="no src" />
+          </div>
+          <div className="line line-3">
+            <img className="wave wave3" src={wave3} alt="no src" />
+          </div>
+        </div>
       </section>
       </>
     );

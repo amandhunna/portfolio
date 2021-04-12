@@ -4,24 +4,14 @@
   height: 100vh;
 }
 
-.banner-main > * {
+/* .line {
+  width: 100%; */
+/*  
   position: absolute;
-}
-.banner.banner-waves {
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  height: 180px;
-}
-
-.line {
-  position: absolute;
-  width: 100%;
-
   overflow: hidden;
   height: 100%;
-  /*  background: deepskyblue; */
-}
+  */ /*  background: deepskyblue; */
+/* }
 .line-1 {
   z-index: 15;
   opacity: 0.5;
@@ -32,9 +22,9 @@
 }
 .line-3 {
   z-index: 5;
-}
+} */
 
-.wave {
+/* .wave {
   position: absolute;
   left: 0;
   width: 200%;
@@ -42,8 +32,8 @@
   background-repeat: repeat-x;
   background-position: 0 bottom;
   transform-origin: center bottom;
-}
-
+} */
+/* 
 @keyframes animate {
   0% {
     transform: translateX(0) translateZ(0) scaleY(1);
@@ -72,4 +62,36 @@
   -webkit-background-size: 50%;
   background-size: 50% 80px;
   animation: animate 18s linear infinite;
+} */
+
+button.btn-knowMore {
+  padding: 1rem;
+  background: no-repeat;
+  border: 1px solid #ecf0f1;
+  margin-top: 2%;
+  color: #ecf0f1;
+  border-style: double;
+}
+
+button.btn-knowMore:hover {
+  outline: auto;
+  background: none;
+  font-weight: 600;
+  animation-name: bounce;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+button.btn-knowMore:focus {
+  outline: auto;
+}
+
+@keyframes bounce {
+  0% {
+    background-color: rgb(170, 170, 216);
+  }
+  /* percentage of time */
+  100% {
+    background-color: rgb(63, 63, 131);
+  }
 }

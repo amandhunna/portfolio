@@ -1,0 +1,47 @@
+#contact {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wave {
+  position: fixed;
+  bottom: 0;
+  bottom: -28px;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(0) translateZ(0) scaleY(0.5);
+  }
+  100% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+}
+
+.wave1 {
+  -webkit-background-size: 50%;
+  background-size: 50% 80px;
+  animation: animate 18s linear infinite;
+}
+
+.wave2 {
+  -webkit-background-size: 50%;
+  background-size: 50% 100px;
+  animation: animate 12s linear infinite;
+}
+
+.wave3 {
+  -webkit-background-size: 50%;
+  background-size: 50% 80px;
+  animation: animate 18s linear infinite;
+}
