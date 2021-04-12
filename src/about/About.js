@@ -1,20 +1,38 @@
-import React from 'react';
+import React,  { useState, useEffect, useRef } from 'react';
 import Header from '../header/Header';
+import Clouds from 'vanta/dist/vanta.rings.min';
 import './about.css';
 
 function About() {
   const openWindow =(type) => {
     const link = {
-      linkedin: "https://www.linkedin.com/in/amanjot-singh-398731131/",
-      medium: "https://amanjotsinghdhunna.medium.com/",
-      github: "https://github.com/amanjotsinghdhunna",
+      linkedin: "https://www.linkedin.com/in/amandhunna-ln/",
+      medium: "https://amandhunna.medium.com/",
+      github: "https://github.com/amandhunna",
     }
     window.open(link[type]);
   }
+
+/* 
+  const [vantaEffect, setVantaEffect] = useState(0);
+  const myRef = useRef(null);
+
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(Clouds({
+        el: myRef.current
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect]);
+ */
+
     return (
         <>
         <Header />
-        <section id="aboutMe" className="section">
+        <section id="aboutMe" className="section"  >
             <h1 className="underline">ABOUT</h1>
             <div className="skillSet">
               <h2>

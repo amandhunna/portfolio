@@ -67,7 +67,7 @@ header.header > #logo {
 h1 > em {
   font-size: 60px;
   font-style: normal;
-  color: #fff;
+  /*  color: #f39c12; */
 }
 
 h2 > em {
