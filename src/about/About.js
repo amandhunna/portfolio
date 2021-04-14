@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import Header from '../header/Header';
-import wave1 from "./../assets/waves/wave1.png";
-import wave2 from "./../assets/waves/wave2.png";
-import wave3 from "./../assets/waves/wave3.png";
+import Clouds from 'vanta/dist/vanta.clouds.min';
 import './about.css';
 
 function About() {
+  const [vantaEffect, setVantaEffect] = useState(0);
+  const myRef = useRef(null);
+
   const openWindow =(type) => {
     const link = {
       linkedin: "https://www.linkedin.com/in/amandhunna-ln/",
@@ -15,11 +16,21 @@ function About() {
     window.open(link[type]);
   }
 
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(Clouds({
+        el: myRef.current
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect]);
     return (
         <>
         <Header />
-        <section id="aboutMe" className="section"  >
-            <h1 className="underline">ABOUT</h1>
+        <section id="aboutMe" className="section"  ref={myRef} >
+            <h1 className="underline">About</h1>
             <div className="skillSet">
               <h2>
                 I'm full-stack developer with <em>2.5 years</em> of professional
@@ -52,17 +63,6 @@ function About() {
                 </button>
               </div>
             </div>
-            <div className="banner banner-waves">
-          <div className="line line-1">
-            <img className="wave wave1" src={wave1} alt="no src" />
-          </div>
-          <div className="line line-2">
-            <img className="wave wave2" src={wave2} alt="no src" />
-          </div>
-          <div className="line line-3">
-            <img className="wave wave3" src={wave3} alt="no src" />
-          </div>
-        </div>
       </section>
       </>
     );

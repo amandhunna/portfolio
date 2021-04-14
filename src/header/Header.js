@@ -17,12 +17,7 @@ function Header() {
             <Link to="/contact"> Contact</Link>
           </span>
         </div>
-        <button id="resume" onClick={() => setShowResume(prev => !prev)} >Resume</button>
-        {!!showResume && 
-          <object className="resumeObject" data={resume} type="application/pdf">
-            {/* <embed src={resume} type="application/pdf" /> */}
-            <iframe src={resume}></iframe>
-        </object>}
+        <a href={resume} target="_blank" id="resume">Resume</a>
       </header>
     );
 }
