@@ -4,25 +4,50 @@
   height: 100vh;
 }
 
-.myself {
+.myself2 {
   animation-iteration-count: infinite;
   animation-name: swe;
   position: fixed;
 }
 
-@keyframes swe {
+.ballContainer {
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+}
+
+#ball {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation-name: bounce;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  position: fixed; /* ball with move with reference to this */
+  z-index: 10;
+}
+/* changing the */
+@keyframes bounce {
   /* percentage of time */
   0% {
-    background-color: red;
-    height: 0px; /* top of parent */
+    top: 0px; /* top of parent */
+    background-color: white;
   }
   40% {
-    background-color: blue;
-    height: 150px; /*height of parent */
+    top: 50%; /* height of parent */
+    background-color: black;
+  }
+  50% {
+    top: 55%;
+    background-color: black;
+  }
+  90% {
+    top: 100%;
+    background-color: #137e40;
   }
   100% {
-    background-color: yellow;
-    height: 300px;
+    top: 0px;
+    background-color: rgb(63, 63, 131);
   }
 }
 

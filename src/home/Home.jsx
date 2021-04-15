@@ -20,6 +20,9 @@ function Home(props) {
   return (
     <>
      {/*  <Header /> */}
+     <div class="ballContainer">
+       <div id='ball'></div>
+     </div>
       <section className="banner-main" ref={myRef}>
         <div className="myself">
           <div>
