@@ -16,38 +16,21 @@
   height: 100vh;
 }
 
-#ball {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  animation-name: bounce;
-  animation-duration: 10s;
+#moveHome {
+  animation-name: bbounce;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   position: fixed; /* ball with move with reference to this */
   z-index: 10;
 }
 /* changing the */
-@keyframes bounce {
+@keyframes bbounce {
   /* percentage of time */
   0% {
-    top: 0px; /* top of parent */
-    background-color: white;
-  }
-  40% {
-    top: 50%; /* height of parent */
-    background-color: black;
-  }
-  50% {
-    top: 55%;
-    background-color: black;
-  }
-  90% {
-    top: 100%;
-    background-color: #137e40;
+    right: -100vh; /* top of parent */
   }
   100% {
-    top: 0px;
-    background-color: rgb(63, 63, 131);
+    right: 0px;
   }
 }
 

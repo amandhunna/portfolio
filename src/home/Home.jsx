@@ -21,10 +21,9 @@ function Home(props) {
     <>
      {/*  <Header /> */}
      <div class="ballContainer">
-       <div id='ball'></div>
      </div>
       <section className="banner-main" ref={myRef}>
-        <div className="myself">
+        <div className="myself" id="moveHome">
           <div>
             <h3>Hi!</h3>
             <h1>
