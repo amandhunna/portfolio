@@ -23,7 +23,7 @@ function Home(props) {
      <div class="ballContainer">
      </div>
       <section className="banner-main" ref={myRef}>
-        <div className="myself" id="moveHome">
+        <div className="myself" id="move">
           <div>
             <h3>Hi!</h3>
             <h1>

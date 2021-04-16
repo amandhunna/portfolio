@@ -16,10 +16,11 @@
   height: 100vh;
 }
 
-#moveHome {
+#move {
   animation-name: bbounce;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  transition-timing-function: ease-in;
   position: fixed; /* ball with move with reference to this */
   z-index: 10;
 }
