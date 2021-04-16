@@ -47,17 +47,11 @@ button.download-btn {
 img {
   image-orientation: from-image;
 }  */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 #resume {
   padding: 0.5rem;
   border-radius: 10px;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid #1f646f;
   background: none;
 }
 
@@ -112,7 +106,6 @@ span:hover {
 }
 
 a {
-  color: white;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -163,14 +156,6 @@ ul {
   text-align: initial;
 }
 
-a.mailTo {
-  display: block;
-  border: 2px solid white;
-  width: max-content;
-  padding: 1rem;
-  margin-top: 5%;
-  min-width: 200px;
-}
 .links {
   display: flex;
   justify-content: center;
@@ -256,13 +241,13 @@ a.mailTo {
   .section {
     padding: 2rem 0;
   }
-  .section > p {
+  .section > * > p {
     font-size: 16px;
     letter-spacing: 1px;
     line-height: 2rem;
     padding: 1rem 3rem;
   }
-  .section > h3 {
+  .section > * > h3 {
     font-size: 30px;
   }
   h1 {

@@ -23,33 +23,25 @@ function Contact(props) {
         <>
         <Header />
         <section id="contact" className="section" ref={myRef}>
+        <div id='move'>
             <h3>LET’S CREATE SOMETHING GREAT</h3>
             <p>
               If you like my work and have some cool project to work on, just send
               me direct message or contact me through social sites listed below.
             </p>
-            <a className="mailTo" href={"mailto:amanjotsingh260@gmail.com"}>
+            <a className="mailTo" href={"mailto:amandhunna.dev@gmail.com"}>
                 GET IN TOUCH
             </a>
 
             <div className="links">
-              <div
-                onClick={() =>
-                  window.open("https://www.instagram.com/amanjotsinghdhunna/")
-                }
-              >
+              <a href={"https://www.instagram.com/amandhunna.dev/"} target="_blank">
                 INSTAGRAM
-              </div>
+              </a>
               <span>|</span>
-              <div
-                onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/amanjot-singh-398731131/"
-                  )
-                }
-              >
+              <a href={"https://www.linkedin.com/in/amandhunna-ln/"} target="_blank">
                 LINKEDIN
-              </div>
+              </a>
+            </div>
             </div>
       </section>
       </>

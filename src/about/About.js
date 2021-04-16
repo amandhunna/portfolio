@@ -13,7 +13,7 @@ function About() {
       medium: "https://amandhunna.medium.com/",
       github: "https://github.com/amandhunna",
     }
-    window.open(link[type]);
+    return link[type]
   }
 
   useEffect(() => {
@@ -29,7 +29,8 @@ function About() {
     return (
         <>
         <Header />
-        <section id="aboutMe" className="section"  ref={myRef} >
+        <section  className="section aboutMe"  ref={myRef} >
+          <div id="move">
             <h1 className="underline">About</h1>
             <div className="skillSet">
               <h2>
@@ -51,17 +52,18 @@ function About() {
                 <li>Researching possible techs</li>
                 <li>Leading, launching and monitoring the project</li>
               </ul>
-              <div className="aboutWork" onClick={() => openWindow('github')}>
-                <button>
-                  <i className="fab fa-github"></i>
-                </button>
-                <button onClick={() => openWindow('medium')}>
+              <div className="aboutWork">
+                <a href={openWindow('medium')}  target="_blank">
                   <i className="fab fa-medium"></i>
-                </button>
-                <button onClick={() => openWindow('linkedin')}>
+                </a>
+                <a href={openWindow('github')} target="_blank">
+                  <i className="fab fa-github"></i>
+                </a>
+                <a href={openWindow('linkedin')}  target="_blank">
                   <i className="fab fa-linkedin"></i>
-                </button>
+                </a>
               </div>
+            </div>
             </div>
       </section>
       </>
