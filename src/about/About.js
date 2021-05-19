@@ -29,8 +29,8 @@ function About() {
     return (
         <>
         <Header />
-        <section  className="section aboutMe"  ref={myRef} >
-          <div id="move">
+        <section  className="section aboutME"  ref={myRef} >
+          <div id="aboutMe">
             <h1 className="underline">About</h1>
             <div className="skillSet">
               <h2>
@@ -53,13 +53,13 @@ function About() {
                 <li>Leading, launching and monitoring the project</li>
               </ul>
               <div className="aboutWork">
-                <a href={openWindow('medium')}  target="_blank">
+                <a rel="noopener noreferrer" href={openWindow('medium')}  target="_blank">
                   <i className="fab fa-medium"></i>
                 </a>
-                <a href={openWindow('github')} target="_blank">
+                <a rel="noopener noreferrer" id='github' href={openWindow('github')} target="_blank">
                   <i className="fab fa-github"></i>
                 </a>
-                <a href={openWindow('linkedin')}  target="_blank">
+                <a rel="noopener noreferrer" href={openWindow('linkedin')}  target="_blank">
                   <i className="fab fa-linkedin"></i>
                 </a>
               </div>

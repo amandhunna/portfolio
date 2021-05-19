@@ -1,12 +1,21 @@
-.aboutMe {
+.aboutME {
+  height: 100vh;
+}
+#aboutMe {
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0 0.6em;
+  height: 100%;
   flex-direction: column;
-  padding-top: 4rem;
+  overflow: scroll;
+  width: 100%;
 }
-
+#aboutMe > h1 {
+  margin-top: 100px;
+}
+#github {
+  margin: 0 5%;
+}
 .skillSet > ul {
   display: flex;
   justify-content: center;

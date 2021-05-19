@@ -5,11 +5,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 a.mailTo {
   border: 1px solid #1f646f;
   width: max-content;
-  padding: 1rem;
-  min-width: 200px;
+  padding: 0.7rem;
+  min-width: 1em;
   margin: 5% auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact-h3 {
+  margin-bottom: 3em;
 }

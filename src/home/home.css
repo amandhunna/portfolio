@@ -4,6 +4,17 @@
   height: 100vh;
 }
 
+.myself {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 80px;
+}
+
 .myself2 {
   animation-iteration-count: infinite;
   animation-name: swe;
@@ -35,7 +46,7 @@
   }
 }
 
-button.btn-knowMore {
+.btn-knowMore {
   padding: 1rem;
   background: no-repeat;
   border: 1px solid #ecf0f1;
@@ -44,7 +55,7 @@ button.btn-knowMore {
   border-style: double;
 }
 
-button.btn-knowMore:hover {
+.btn-knowMore:hover {
   outline: auto;
   background: none;
   font-weight: 600;
@@ -65,4 +76,37 @@ button.btn-knowMore:focus {
   100% {
     background-color: rgb(63, 63, 131);
   }
+}
+
+@media (min-width: 360px) {
+  h2 {
+    margin: 1em 0;
+    letter-spacing: 0.1em;
+  }
+  h1 > em {
+    font-size: 14vw;
+  }
+}
+
+@media (min-width: 576px) {
+  h1 > em {
+    font-size: 16vw;
+  }
+  .btn-knowMore {
+    padding: 0.3em;
+  }
+  .myself {
+  }
+}
+
+@media (min-width: 768px) {
+  h1 > em {
+    font-size: 16vw;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
 }

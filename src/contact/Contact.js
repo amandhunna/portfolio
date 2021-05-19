@@ -23,8 +23,8 @@ function Contact(props) {
         <>
         <Header />
         <section id="contact" className="section" ref={myRef}>
-        <div id='move'>
-            <h3>LET’S CREATE SOMETHING GREAT</h3>
+        <div id='move' >
+            <h3 id='contact-h3'>LET’S CREATE SOMETHING GREAT</h3>
             <p>
               If you like my work and have some cool project to work on, just send
               me direct message or contact me through social sites listed below.
@@ -34,11 +34,11 @@ function Contact(props) {
             </a>
 
             <div className="links">
-              <a href={"https://www.instagram.com/amandhunna.dev/"} target="_blank">
+              <a rel="noopener noreferrer" href={"https://www.instagram.com/amandhunna.dev/"} target="_blank">
                 INSTAGRAM
               </a>
               <span>|</span>
-              <a href={"https://www.linkedin.com/in/amandhunna-ln/"} target="_blank">
+              <a rel="noopener noreferrer" href={"https://www.linkedin.com/in/amandhunna-ln/"} target="_blank">
                 LINKEDIN
               </a>
             </div>
