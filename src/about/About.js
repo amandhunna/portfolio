@@ -53,13 +53,13 @@ function About() {
                 <li>Leading, launching and monitoring the project</li>
               </ul>
               <div className="aboutWork">
-                <a href={openWindow('medium')}  target="_blank">
+                <a href={openWindow('medium')}  target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-medium"></i>
                 </a>
-                <a href={openWindow('github')} target="_blank">
+                <a href={openWindow('github')} target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github"></i>
                 </a>
-                <a href={openWindow('linkedin')}  target="_blank">
+                <a href={openWindow('linkedin')}  target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-linkedin"></i>
                 </a>
               </div>
