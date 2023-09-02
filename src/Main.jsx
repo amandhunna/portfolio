@@ -128,14 +128,13 @@ function Main() {
   }, []);
   return (
     <>
-      <a
+      {/* <a
         className="download-btn"
         href="https://drive.google.com/file/d/1bfcp9no13ONLMbQowGJA6iaX15uoxM4x/view?usp=sharing"
         download="resume_amanjotSingh"
       >
-        {/*  <FontAwesomeIcon icon={faDownload} /> */}
         <div>CV</div>
-      </a>
+      </a> */}
       <header className={`header ${activeClass}`}>
         <div id="logo" className="center-middle" onClick={scrollTop}>
           AS
@@ -180,14 +179,6 @@ function Main() {
           </div>
         </div>
       </section>
-      <section id="portfolio" className="section">
-        <h3>BLOGS</h3>
-        <div className="wrapper">{getRecentBlogs()}</div>
-      </section>
-      <section id="recentWork" className="section">
-        <h3>WORK</h3>
-        <div className="wrapper">{getRecentWork()}</div>
-      </section>
       <section id="aboutMe" className="section">
         <div style={colors.wrapper} className="wrapper">
           <div style={colors.one} className="one"></div>
@@ -197,10 +188,10 @@ function Main() {
           <div style={colors.five} className="five"></div>
           <div style={colors.six} className="six"></div>
           <div className="seven section">
-            <h3>ABOUT</h3>
+            <h3></h3>
             <div className="skillSet">
               <p>
-                I'm full-stack developer with 2+ years of professional
+                I'm full-stack developer with 5+ years of professional
                 experience. I also have interest in other fields like IOT.
               </p>
               <p>
@@ -221,29 +212,44 @@ function Main() {
           </div>
         </div>
       </section>
+      <section id="portfolio" className="section">
+        <h3>BLOGS</h3>
+        <div className="wrapper">{getRecentBlogs()}</div>
+      </section>
+      <section id="recentWork" className="section">
+        <h3>GITHUB SAMPLES</h3>
+        <div className="wrapper">{getRecentWork()}</div>
+      </section>
+
       <section id="contact" className="section">
         <h3>LET’S CREATE SOMETHING GREAT</h3>
         <p>
           If you like my work and have some cool project to work on, just send
           me direct message or contact me through social sites listed below.
         </p>
-        <a className="mailTo" href={"mailto:amanjotsingh260@gmail.com"}>
+        {/* <a className="mailTo" href={"mailto:amandhunna.dev@gmail.com"}>
           GET IN TOUCH
-        </a>
+        </a> */}
 
         <div className="links">
-          <div
+          {/* <div
             onClick={() =>
-              window.open("https://www.instagram.com/amanjotsinghdhunna/")
+              window.open("https://www.instagram.com/amandhunna-dev/")
             }
           >
             INSTAGRAM
+          </div> */}
+           <div
+            style={{cursor: 'copy'}}
+            onClick={() => {navigator.clipboard.writeText('amandhunna.dev@gmail.com')}}
+          >
+            Gmail: amandhunna.dev@gmail.com
           </div>
           <span>|</span>
           <div
             onClick={() =>
               window.open(
-                "https://www.linkedin.com/in/amanjot-singh-398731131/"
+                "www.linkedin.com/in/amandhunna-ln/"
               )
             }
           >
