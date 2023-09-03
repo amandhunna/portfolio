@@ -188,7 +188,6 @@ function Main() {
           <div style={colors.five} className="five"></div>
           <div style={colors.six} className="six"></div>
           <div className="seven section">
-            <h3></h3>
             <div className="skillSet">
               <p>
                 I'm full-stack developer with 5+ years of professional
@@ -232,13 +231,14 @@ function Main() {
         </a> */}
 
         <div className="links">
-          {/* <div
+          <div
             onClick={() =>
-              window.open("https://www.instagram.com/amandhunna-dev/")
+              window.open("https://www.instagram.com/amandhunna.dev/")
             }
           >
             INSTAGRAM
-          </div> */}
+          </div>
+          <span>|</span>
            <div
             style={{cursor: 'copy'}}
             onClick={() => {navigator.clipboard.writeText('amandhunna.dev@gmail.com')}}
@@ -249,7 +249,7 @@ function Main() {
           <div
             onClick={() =>
               window.open(
-                "www.linkedin.com/in/amandhunna-ln/"
+                "https://www.linkedin.com/in/amandhunna-ln/", "_blank"
               )
             }
           >
