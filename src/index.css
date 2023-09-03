@@ -1,44 +1,24 @@
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+  background-color: black;
+  color: white;
+  padding: 10px;
 }
 
 * {
-  font-family: sans-serif; /* sans-serif will be used as temporary font until Roboto is available */
+  font-family: 'Source Code Pro', monospace;
 }
-code {
+  code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.App {
-  display: grid;
-}
-.container {
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 10% auto 10%;
-  grid-template-areas:
-    "header header header header" "main main . sidebar"
-    "footer footer footer footer";
-}
 
-.item-a {
-  background: tomato;
-  /* height: 10px;
-  width: 20px; */
-  grid-column-start: 2;
-  grid-column-end: five;
-  grid-row-start: row1-start;
-  grid-row-end: 3;
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: navajowhite;
 }

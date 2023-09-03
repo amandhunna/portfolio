@@ -1,12 +1,13 @@
 const resume = {
     "name": "Amanjot Singh",
-    "experience": "5 years",
+    "title": "Software engineer",
+    "totalExperience": "5 years",
     "location": "Delhi, India",
     "phone": "+91-7042458977",
     "mail": "amandhunna.dev@gmail.com",
-    "gitHub": "github.com/amandhunna/",
-    "linkedIn": "linkedin.com/in/amandhunna-ln/",
-    "website": "amandhunna.netlify.app/",
+    "gitHub": "https://www.github.com/amandhunna/",
+    "linkedIn": "https://www.linkedin.com/in/amandhunna-ln/",
+    "website": "https://amandhunna.netlify.app/",
   
     "summary": "MERN stack/Full stack developer with 5+ years of experience in building web applications using JavaScript, Reactjs, and related technologies. Seeking a challenging position as a JavaScript developer.",
   
@@ -128,7 +129,6 @@ const resume = {
         "Tech Stack": "Express, React, MongoDB, HTML, CSS"
       }
     ]
-  };
-  
-  console.log(resume);
-  
+};
+
+export default resume
