@@ -31,6 +31,30 @@ body {
   overflow-x: hidden;
 }
 
+/* Dark theme: dotted background using accent color */
+[data-theme="dark"] body {
+  background-color: var(--dominant-bg);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    var(--accent-base) 0.5px,
+    transparent 0
+  );
+  background-size: 24px 24px;
+  background-position: 0 0;
+}
+
+/* Light theme: same dotted pattern using accent color */
+[data-theme="light"] body {
+  background-color: var(--dominant-bg);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    var(--accent-base) 0.5px,
+    transparent 0
+  );
+  background-size: 24px 24px;
+  background-position: 0 0;
+}
+
 a {
   color: var(--accent-base);
   text-decoration: none;
@@ -121,11 +145,11 @@ a:hover {
 
 /* Globe: lower opacity on small viewport */
 #globe-container {
-  opacity: 0.18;
+  opacity: 0.28;
 }
 
 [data-theme="dark"] #globe-container {
-  opacity: 0.25;
+  opacity: 0.4;
 }
 
 /* Tablet and up (min-width: 768px) */
@@ -163,11 +187,11 @@ a:hover {
   }
 
   #globe-container {
-    opacity: 0.35;
+    opacity: 0.48;
   }
 
   [data-theme="dark"] #globe-container {
-    opacity: 0.5;
+    opacity: 0.6;
   }
 }
 

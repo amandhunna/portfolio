@@ -59,7 +59,7 @@ export function Globe() {
       color: wireColor,
       wireframe: true,
       transparent: true,
-      opacity: 0.1,
+      opacity: 0.18,
     });
     const sphere = new THREE.Mesh(new THREE.IcosahedronGeometry(1.8, 3), wireMat);
     globeGroup.add(sphere);
@@ -67,7 +67,7 @@ export function Globe() {
     const atmMat = new THREE.MeshBasicMaterial({
       color: wireColor.clone(),
       transparent: true,
-      opacity: 0.02,
+      opacity: 0.05,
       side: THREE.BackSide,
     });
     globeGroup.add(new THREE.Mesh(new THREE.SphereGeometry(1.76, 32, 32), atmMat));
@@ -75,7 +75,7 @@ export function Globe() {
     const ringMat = new THREE.LineBasicMaterial({
       color: wireColor.clone(),
       transparent: true,
-      opacity: 0.06,
+      opacity: 0.12,
     });
     function makeCircle(r: number, segs: number) {
       const pts: THREE.Vector3[] = [];
@@ -133,7 +133,7 @@ export function Globe() {
         map: glowTex,
         color: nodeColor.clone(),
         transparent: true,
-        opacity: 0.7,
+        opacity: 0.85,
         blending: THREE.AdditiveBlending,
       });
       const sp = new THREE.Sprite(sm);
@@ -181,7 +181,7 @@ export function Globe() {
       const mat = new THREE.LineBasicMaterial({
         color: arcColor.clone(),
         transparent: true,
-        opacity: 0.25,
+        opacity: 0.35,
         blending: THREE.AdditiveBlending,
       });
       const line = new THREE.Line(geo, mat);
@@ -257,21 +257,21 @@ export function Globe() {
       const sc = 1.0 + scrollProg * 0.3;
       data.globeGroup.scale.set(sc, sc, sc);
 
-      data.wireMat.opacity = 0.08 + scrollProg * 0.1;
+      data.wireMat.opacity = 0.14 + scrollProg * 0.14;
 
       nodeSprites.forEach((ns) => {
         const ud = (ns as THREE.Sprite & { userData: { baseScale: number; po: number; ps: number } }).userData;
         const pv = 0.6 + 0.4 * Math.sin(t * ud.ps + ud.po);
         const s = ud.baseScale * pv * (1 + scrollProg * 0.3);
         ns.scale.set(s, s, s);
-        (ns.material as THREE.SpriteMaterial).opacity = 0.4 + 0.5 * pv;
+        (ns.material as THREE.SpriteMaterial).opacity = 0.55 + 0.45 * pv;
       });
 
       arcs.forEach((arc, a) => {
         const ud = arcUserData[a];
         ud.prog += ud.spd * (1 + scrollProg * 2.5);
         if (ud.prog > 1) ud.prog = 0;
-        (arc.material as THREE.LineBasicMaterial).opacity = 0.12 + 0.18 * Math.sin(t * 0.4 + a);
+        (arc.material as THREE.LineBasicMaterial).opacity = 0.2 + 0.22 * Math.sin(t * 0.4 + a);
 
         const ps = pulses[a];
         const idx = Math.floor(ud.prog * (ud.pts.length - 1));
@@ -337,7 +337,7 @@ export function Globe() {
         height: "100%",
         zIndex: 0,
         pointerEvents: "none",
-        opacity: 0.35,
+        opacity: 0.52,
         transition: "opacity 0.8s ease",
       }}
       aria-hidden="true"

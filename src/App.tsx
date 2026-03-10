@@ -62,7 +62,12 @@ function Portfolio() {
       <section
         id="hero"
         className="section fade-up"
-        style={{ minHeight: "100vh", display: "flex", alignItems: "center", paddingTop: layoutRem.navHeight }}
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          paddingTop: layoutRem.navHeight,
+        }}
       >
         <div className="container">
           <div
@@ -116,8 +121,15 @@ function Portfolio() {
             Geospatial systems, scalable frontends, and cloud-native backends
             &#x2014; from climate risk platforms to design systems at scale.
           </Typography>
-          <div style={{ display: "flex", gap: spacingRem.xs, flexWrap: "wrap" }}>
-            <Button variant="primary" size="lg" href="#spatial" icon={<FaGlobeAmericas size={16} />}>
+          <div
+            style={{ display: "flex", gap: spacingRem.xs, flexWrap: "wrap" }}
+          >
+            <Button
+              variant="secondary"
+              size="lg"
+              href="#spatial"
+              icon={<FaGlobeAmericas size={16} />}
+            >
               Spatial &#x26; GIS
             </Button>
             <Button variant="secondary" size="lg" href="#contact">
@@ -147,7 +159,10 @@ function Portfolio() {
               </Typography>
               <Typography
                 variant="h3"
-                style={{ marginTop: spacingRem.xs, marginBottom: spacingRem.sm }}
+                style={{
+                  marginTop: spacingRem.xs,
+                  marginBottom: spacingRem.sm,
+                }}
               >
                 Building the web, one system at a time.
               </Typography>
@@ -192,7 +207,7 @@ function Portfolio() {
           <div className="grid-3">
             <Card transparent className="reveal-item">
               <Typography variant="h4" style={{ marginBottom: spacingRem.xs }}>
-                QGIS & Desktop GIS
+                QGIS & Desktop GIS (GIS)
               </Typography>
               <Typography
                 variant="mono"
@@ -292,7 +307,10 @@ function Portfolio() {
           </Typography>
           <Timeline className="timeline-wrap">
             <TimelineItem isFirst>
-              <div className="job-header" style={{ marginBottom: spacingRem.xs }}>
+              <div
+                className="job-header"
+                style={{ marginBottom: spacingRem.xs }}
+              >
                 <Typography variant="body" style={{ fontWeight: 600 }}>
                   Software Engineer ·{" "}
                   <span style={{ color: "var(--accent-base)" }}>AiDash</span>
@@ -321,7 +339,10 @@ function Portfolio() {
               </div>
             </TimelineItem>
             <TimelineItem>
-              <div className="job-header" style={{ marginBottom: spacingRem.xs }}>
+              <div
+                className="job-header"
+                style={{ marginBottom: spacingRem.xs }}
+              >
                 <Typography variant="body" style={{ fontWeight: 600 }}>
                   Software Engineer ·{" "}
                   <span style={{ color: "var(--accent-base)" }}>Swiggy</span>
@@ -336,7 +357,10 @@ function Portfolio() {
               </Typography>
             </TimelineItem>
             <TimelineItem>
-              <div className="job-header" style={{ marginBottom: spacingRem.xs }}>
+              <div
+                className="job-header"
+                style={{ marginBottom: spacingRem.xs }}
+              >
                 <Typography variant="body" style={{ fontWeight: 600 }}>
                   Deputy Manager ·{" "}
                   <span style={{ color: "var(--accent-base)" }}>Jio</span>
@@ -351,7 +375,10 @@ function Portfolio() {
               </Typography>
             </TimelineItem>
             <TimelineItem>
-              <div className="job-header" style={{ marginBottom: spacingRem.xs }}>
+              <div
+                className="job-header"
+                style={{ marginBottom: spacingRem.xs }}
+              >
                 <Typography variant="body" style={{ fontWeight: 600 }}>
                   Associate SE ·{" "}
                   <span style={{ color: "var(--accent-base)" }}>
@@ -481,8 +508,8 @@ function Portfolio() {
                 Node, Express, Docker
               </Typography>
               <Typography variant="small" color="var(--dominant-text-muted)">
-                Geospatial pipeline: shapefile &#x2192; GeoJSON &#x2192;
-                mbtiles &#x2192; Mapbox. Web UI for uploads and pipeline runs.
+                Geospatial pipeline: shapefile &#x2192; GeoJSON &#x2192; mbtiles
+                &#x2192; Mapbox. Web UI for uploads and pipeline runs.
               </Typography>
               <div
                 style={{
@@ -673,16 +700,54 @@ function Portfolio() {
           >
             Hack The Box
           </Typography>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: spacingRem.sm }}>
-            <Badge icon={<FaCrosshairs size={18} />} name="AI Red Teamer" source="AI Security Path · Hard" />
-            <Badge icon={<FaBookOpen size={18} />} name="Philomath" source="Learning Process · Completed" />
-            <Badge icon={<FaGraduationCap size={18} />} name="Academician" source="Academy · Completed" />
-            <Badge icon={<FaNetworkWired size={18} />} name="Everything is Connected" source="Networking · Completed" />
-            <Badge icon={<FaShieldAlt size={18} />} name="Your Request is My Demand" source="Web Requests · Completed" />
-            <Badge icon={<FaJs size={18} />} name="Playing with the Mess" source="JS Deobfuscation · Completed" />
-            <Badge icon={<FaCode size={18} />} name="Developer" source="Web Applications · Completed" />
-            <Badge icon={<FaToolbox size={18} />} name="Start Building Your Arsenal" source="Setting Up · Completed" />
-            <Badge icon={<FaRobot size={18} />} name="Superior Intelligence" source="Fundamentals of AI · Completed" />
+          <div
+            style={{ display: "flex", flexWrap: "wrap", gap: spacingRem.sm }}
+          >
+            <Badge
+              icon={<FaCrosshairs size={18} />}
+              name="AI Red Teamer"
+              source="AI Security Path · Hard"
+            />
+            <Badge
+              icon={<FaBookOpen size={18} />}
+              name="Philomath"
+              source="Learning Process · Completed"
+            />
+            <Badge
+              icon={<FaGraduationCap size={18} />}
+              name="Academician"
+              source="Academy · Completed"
+            />
+            <Badge
+              icon={<FaNetworkWired size={18} />}
+              name="Everything is Connected"
+              source="Networking · Completed"
+            />
+            <Badge
+              icon={<FaShieldAlt size={18} />}
+              name="Your Request is My Demand"
+              source="Web Requests · Completed"
+            />
+            <Badge
+              icon={<FaJs size={18} />}
+              name="Playing with the Mess"
+              source="JS Deobfuscation · Completed"
+            />
+            <Badge
+              icon={<FaCode size={18} />}
+              name="Developer"
+              source="Web Applications · Completed"
+            />
+            <Badge
+              icon={<FaToolbox size={18} />}
+              name="Start Building Your Arsenal"
+              source="Setting Up · Completed"
+            />
+            <Badge
+              icon={<FaRobot size={18} />}
+              name="Superior Intelligence"
+              source="Fundamentals of AI · Completed"
+            />
           </div>
         </div>
       </section>
@@ -712,7 +777,9 @@ function Portfolio() {
               href="https://amandhunna.medium.com/understanding-the-browser-rendering-process-from-parsing-to-painting-0e779f68bb9d"
               date="Oct 2024"
               title="Understanding the Browser Rendering Process"
-              excerpt={"From parsing to painting \u2014 how browsers turn code into visuals."}
+              excerpt={
+                "From parsing to painting \u2014 how browsers turn code into visuals."
+              }
               tag="Web Performance"
               tagIcon={<FaGlobe size={12} />}
             />
@@ -758,7 +825,14 @@ function Portfolio() {
           >
             Open to roles in full-stack, geospatial, and frontend architecture.
           </Typography>
-          <div style={{ display: "flex", gap: spacingRem.xs, flexWrap: "wrap", marginBottom: spacingRem.md }}>
+          <div
+            style={{
+              display: "flex",
+              gap: spacingRem.xs,
+              flexWrap: "wrap",
+              marginBottom: spacingRem.md,
+            }}
+          >
             <Button
               variant="secondary"
               size="md"
@@ -789,14 +863,32 @@ function Portfolio() {
             >
               Medium
             </Button>
-            <Button variant="secondary" size="md" href="mailto:aman.dhunna@gmail.com" icon={<FaEnvelope size={16} />}>
+            <Button
+              variant="secondary"
+              size="md"
+              href="mailto:aman.dhunna@gmail.com"
+              icon={<FaEnvelope size={16} />}
+            >
               Email
             </Button>
-            <Button variant="secondary" size="md" href="tel:+917042458977" icon={<FaPhone size={16} />}>
+            <Button
+              variant="secondary"
+              size="md"
+              href="tel:+917042458977"
+              icon={<FaPhone size={16} />}
+            >
               +91 7042458977
             </Button>
           </div>
-          <Typography variant="small" color="var(--dominant-text-muted)" style={{ display: "flex", alignItems: "center", gap: spacingRem.xs }}>
+          <Typography
+            variant="small"
+            color="var(--dominant-text-muted)"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: spacingRem.xs,
+            }}
+          >
             <FaMapMarkerAlt size={14} /> Based in India
           </Typography>
         </div>
@@ -811,7 +903,8 @@ function Portfolio() {
           borderTop: "1px solid var(--secondary-border)",
         }}
       >
-        &#x00A9; {new Date().getFullYear()} Amanjot Singh. B.Tech IT, GTBIT Delhi.
+        &#x00A9; {new Date().getFullYear()} Amanjot Singh. B.Tech IT, GTBIT
+        Delhi.
       </footer>
     </>
   );
