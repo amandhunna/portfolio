@@ -1,0 +1,64 @@
+{
+  "spacing": {
+    "xs": { "value": "8", "type": "spacing" },
+    "sm": { "value": "16", "type": "spacing" },
+    "md": { "value": "24", "type": "spacing" },
+    "lg": { "value": "32", "type": "spacing" },
+    "xl": { "value": "40", "type": "spacing" },
+    "2xl": { "value": "48", "type": "spacing" },
+    "3xl": { "value": "64", "type": "spacing" }
+  },
+  "radius": {
+    "sm": { "value": "8", "type": "borderRadius" },
+    "md": { "value": "16", "type": "borderRadius" },
+    "full": { "value": "9999", "type": "borderRadius" }
+  },
+  "color": {
+    "light": {
+      "dominant-bg": { "value": "#F5F3F9", "type": "color" },
+      "dominant-text": { "value": "#2D2A38", "type": "color" },
+      "dominant-text-muted": { "value": "#6B6780", "type": "color" },
+      "secondary-bg": { "value": "#FDFCFF", "type": "color" },
+      "secondary-border": { "value": "#E5E0ED", "type": "color" },
+      "accent-base": { "value": "#6B8FD4", "type": "color" },
+      "accent-hover": { "value": "#5A7BC4", "type": "color" },
+      "accent-light": { "value": "#E8EEFA", "type": "color" },
+      "error": { "value": "#D4A0A0", "type": "color" },
+      "success": { "value": "#8FC99F", "type": "color" },
+      "warning": { "value": "#D4C078", "type": "color" }
+    },
+    "dark": {
+      "dominant-bg": { "value": "#0A0D12", "type": "color" },
+      "dominant-text": { "value": "#E6EDF3", "type": "color" },
+      "dominant-text-muted": { "value": "#8B949E", "type": "color" },
+      "secondary-bg": { "value": "#12161E", "type": "color" },
+      "secondary-border": { "value": "#1E2330", "type": "color" },
+      "accent-base": { "value": "#38BDF8", "type": "color" },
+      "accent-hover": { "value": "#7DD3FC", "type": "color" },
+      "accent-light": { "value": "rgba(56,189,248,0.12)", "type": "color" },
+      "error": { "value": "#F87171", "type": "color" },
+      "success": { "value": "#4ADE80", "type": "color" },
+      "warning": { "value": "#FBBF24", "type": "color" }
+    }
+  },
+  "typography": {
+    "h1": { "value": { "fontFamily": "DM Sans", "fontSize": "49", "lineHeight": "1.1", "fontWeight": "700" }, "type": "typography" },
+    "h2": { "value": { "fontFamily": "DM Sans", "fontSize": "39", "lineHeight": "1.1", "fontWeight": "700" }, "type": "typography" },
+    "h3": { "value": { "fontFamily": "DM Sans", "fontSize": "31", "lineHeight": "1.2", "fontWeight": "700" }, "type": "typography" },
+    "h4": { "value": { "fontFamily": "DM Sans", "fontSize": "25", "lineHeight": "1.2", "fontWeight": "600" }, "type": "typography" },
+    "body": { "value": { "fontFamily": "DM Sans", "fontSize": "16", "lineHeight": "1.5", "fontWeight": "400" }, "type": "typography" },
+    "small": { "value": { "fontFamily": "DM Sans", "fontSize": "13", "lineHeight": "1.5", "fontWeight": "400" }, "type": "typography" },
+    "label": { "value": { "fontFamily": "DM Sans", "fontSize": "13", "lineHeight": "1.5", "fontWeight": "500" }, "type": "typography" },
+    "mono": { "value": { "fontFamily": "JetBrains Mono", "fontSize": "14", "lineHeight": "1.5", "fontWeight": "400" }, "type": "typography" }
+  },
+  "component": {
+    "button-sm": { "value": "32", "type": "sizing", "description": "Button small height" },
+    "button-md": { "value": "40", "type": "sizing", "description": "Button medium height" },
+    "button-lg": { "value": "48", "type": "sizing", "description": "Button large height" },
+    "input-md": { "value": "40", "type": "sizing", "description": "Input medium height" },
+    "input-lg": { "value": "48", "type": "sizing", "description": "Input large height" },
+    "table-comfortable": { "value": "48", "type": "sizing", "description": "Table row comfortable" },
+    "table-compact": { "value": "40", "type": "sizing", "description": "Table row compact" },
+    "table-dense": { "value": "32", "type": "sizing", "description": "Table row dense" }
+  }
+}

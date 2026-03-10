@@ -1,0 +1,25 @@
+---
+description: Which agent skills to use for this portfolio design system project
+alwaysApply: true
+---
+
+# Agent Skills for This Project
+
+When working on this repo, prefer these skills/behaviors:
+
+**Frontend architecture, refactors, performance**
+- Use senior frontend staff engineer guidance: component APIs, extracting sections from App.tsx, performance (Three.js, scroll animations), design system scaling.
+
+**Rules and conventions**
+- Use create-rule when adding or changing Cursor rules, AGENTS.md, or file-specific patterns. Enforce 8pt grid, tokens, and Rule 11 (hex/Unicode for special characters).
+
+**Figma ↔ code** (when Figma MCP is available)
+- Code Connect: link Figma components to React components (Button, Card, Badge, Typography, etc.).
+- Create design system rules: generate or refine project-specific design rules from CONTEXT and .claude/rules.md.
+- Implement design: turn Figma screens into React with 1:1 fidelity (Hero, nav, new sections).
+
+**Editor and version control**
+- Use update-cursor-settings for theme, format-on-save, tab size. Use using-git for repo/branch/commit workflows.
+
+**Discovering or adding skills**
+- Use find-skills when asking "is there a skill for X?". Use create-skill for custom project skills (e.g. token usage, section structure).
