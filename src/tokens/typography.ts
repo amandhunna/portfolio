@@ -1,6 +1,8 @@
-// Typography — modular scale 1.25x — Rule 3
+// Typography — modular scale 1.25x — Rule 3. Rule 13: use rem via fontSizeRem or toRem().
 // Base 16px → 13, 16, 20, 25, 31, 39, 49
 // Figma: Create text styles named text/h1 through text/mono
+
+import { toRem } from "./units";
 
 export const fontFamily = "'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif";
 export const fontFamilyMono = "'JetBrains Mono', 'Fira Code', monospace";
@@ -14,6 +16,18 @@ export const fontSize = {
   xxl: 31,
   xxxl: 39,
   display: 49,
+} as const;
+
+/** Rem values for font-size in styles (Rule 13). */
+export const fontSizeRem = {
+  xs: toRem(13),
+  sm: toRem(14),
+  base: toRem(16),
+  lg: toRem(20),
+  xl: toRem(25),
+  xxl: toRem(31),
+  xxxl: toRem(39),
+  display: toRem(49),
 } as const;
 
 export const lineHeight = {

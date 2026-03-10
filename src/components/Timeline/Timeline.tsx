@@ -1,32 +1,53 @@
 import React, { ReactNode } from "react";
-import { spacing } from "../../tokens/spacing";
-import { radii } from "../../tokens/radii";
+import { spacingRem } from "../../tokens/spacing";
+import { radiiRem } from "../../tokens/radii";
+import { toRem } from "../../tokens/units";
 
 interface TimelineItemProps {
   isFirst?: boolean;
   children: ReactNode;
 }
 
-export const Timeline: React.FC<{ children: ReactNode }> = ({ children }) => (
-  <div style={{ position: "relative", display: "flex", flexDirection: "column", paddingLeft: spacing.lg }}>
-    {/* Vertical line */}
-    <div style={{ position: "absolute", left: 7, top: 0, bottom: 0, width: 3, background: "var(--secondary-border)", borderRadius: 2 }} />
+interface TimelineProps {
+  children: ReactNode;
+  className?: string;
+}
+
+export const Timeline: React.FC<TimelineProps> = ({ children, className }) => (
+  <div
+    className={className}
+    style={{ position: "relative", display: "flex", flexDirection: "column", paddingLeft: spacingRem.lg }}
+  >
+    {/* Vertical line — position overridden in CSS for .timeline-wrap so it aligns with dots on mobile */}
+    <div
+      className="timeline-line"
+      style={{
+        position: "absolute",
+        left: toRem(7),
+        top: 0,
+        bottom: 0,
+        width: toRem(3),
+        background: "var(--secondary-border)",
+        borderRadius: toRem(2),
+      }}
+    />
     {children}
   </div>
 );
 
 export const TimelineItem: React.FC<TimelineItemProps> = ({ isFirst = false, children }) => (
-  <div style={{ position: "relative", paddingBottom: spacing.md, paddingLeft: spacing.sm }}>
+  <div style={{ position: "relative", paddingBottom: spacingRem.md, paddingLeft: spacingRem.sm }}>
     {/* Dot */}
     <div
+      className="timeline-dot"
       style={{
         position: "absolute",
-        left: -spacing.lg,
-        top: 4,
-        width: isFirst ? 19 : 17,
-        height: isFirst ? 19 : 17,
-        borderRadius: radii.full,
-        border: `3px solid var(--accent-base)`,
+        left: `-${spacingRem.lg}`,
+        top: toRem(4),
+        width: isFirst ? toRem(19) : toRem(17),
+        height: isFirst ? toRem(19) : toRem(17),
+        borderRadius: radiiRem.full,
+        border: "3px solid var(--accent-base)",
         background: isFirst ? "var(--accent-base)" : "var(--dominant-bg)",
         boxShadow: isFirst ? "0 0 0 4px var(--accent-light)" : undefined,
         zIndex: 2,
@@ -35,10 +56,10 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({ isFirst = false, chi
     {/* Content card */}
     <div
       style={{
-        padding: `${spacing.sm}px ${spacing.md}px`,
+        padding: `${spacingRem.sm} ${spacingRem.md}`,
         background: "transparent",
         border: "1px solid var(--secondary-border)",
-        borderRadius: radii.md,
+        borderRadius: radiiRem.md,
         backdropFilter: "blur(8px)",
         transition: "all 0.2s ease",
       }}

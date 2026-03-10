@@ -1,4 +1,10 @@
 {
+  "breakpoint": {
+    "sm": { "value": "640", "type": "sizing", "description": "Small (phone landscape)" },
+    "md": { "value": "768", "type": "sizing", "description": "Medium (tablet)" },
+    "lg": { "value": "1024", "type": "sizing", "description": "Large (desktop)" },
+    "xl": { "value": "1280", "type": "sizing", "description": "Extra large (wide)" }
+  },
   "spacing": {
     "xs": { "value": "8", "type": "spacing" },
     "sm": { "value": "16", "type": "spacing" },
@@ -6,7 +12,8 @@
     "lg": { "value": "32", "type": "spacing" },
     "xl": { "value": "40", "type": "spacing" },
     "2xl": { "value": "48", "type": "spacing" },
-    "3xl": { "value": "64", "type": "spacing" }
+    "3xl": { "value": "64", "type": "spacing" },
+    "4xl": { "value": "80", "type": "spacing" }
   },
   "radius": {
     "sm": { "value": "8", "type": "borderRadius" },

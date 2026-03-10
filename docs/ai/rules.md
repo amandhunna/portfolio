@@ -9,7 +9,7 @@ These rules apply to every file in this project. They enforce the Mathematical U
 ```
 src/
   tokens/           → Design tokens (spacing, color, type, radii, shadows)
-  components/       → One folder per component: Name/Name.tsx + Name.css.ts + index.ts
+  components/       → One folder per component: Name/Name.tsx + index.ts
   sections/         → Page-level sections (Hero, About, Experience, etc.)
   styles/           → Global CSS, theme CSS variables
   App.tsx           → Root layout
@@ -131,6 +131,33 @@ Use **HTML hex entities** or **Unicode escapes** for special characters instead 
 **In JS/TS strings:** use `\uNNNN` (e.g. `'\u2014'` for em dash).
 
 **Avoid:** typing raw — · © • … in source. Prefer entities in JSX and `\uNNNN` in string literals.
+
+---
+
+## Rule 12 — Mobile-First
+
+Develop for **small screens first**, then enhance for larger viewports.
+
+- **Default CSS** = mobile (single column, compact padding, touch-friendly targets).
+- **Breakpoints** = `min-width` only. Use `@media (min-width: 768px)` for tablet, `@media (min-width: 1024px)` for desktop. Never rely only on `max-width` to define the base experience.
+- **Breakpoint tokens:** Import from `tokens/breakpoints.ts`. Values: `sm = 640`, `md = 768`, `lg = 1024`, `xl = 1280` (units: px). Map in Figma as viewport/breakpoint variables.
+- **Touch targets:** On mobile, interactive elements must be at least 44px (Rule 4 / 10). Buttons and nav items use 44px min height on small viewports when appropriate.
+- **Layout:** Single column by default. Grids and multi-column layouts apply from `md` (768px) upward. Container padding: 16px mobile, 32px from 768px up.
+- **Typography:** Base font size 16px on mobile (no smaller). Scale up for readability on large screens if needed; prefer clamp() or min-width overrides for headings.
+- **Navigation:** Mobile = hamburger + drawer; desktop = horizontal nav. Hide/show via breakpoint classes or CSS, not JS viewport sniffing.
+
+---
+
+## Rule 13 — Units (rem / em)
+
+Use **rem** for layout and typography so the UI scales with the user’s root font size. Use **em** when a value should scale with the current element’s font size.
+
+- **Root:** Set `font-size: 16px` on `html` (or leave browser default). All rem values are relative to this (1rem = 16px).
+- **Use rem for:** spacing (padding, margin, gap), font-size, border-radius, width/height of components, max-width, top/left/right/bottom when used for layout.
+- **Use em for:** padding/margin that should scale with the component’s font-size (e.g. button padding in em so it grows with the button’s font-size), or media queries in em if you want breakpoints to respond to user font size.
+- **In code:** Import `toRem` from `tokens/units.ts` and use `toRem(spacing.xxl)` (or use precomputed `spacingRem`, `radiiRem`, `fontSizeRem` from token files) so component inline styles use rem strings.
+- **In CSS:** Prefer rem (e.g. `padding: 1.5rem`, `font-size: 1rem`). Avoid raw px for layout and type; px is acceptable for borders (1px), shadows, or decorative values that should not scale.
+- **Figma:** Token exports can stay in px for design; the app converts to rem at use site via `toRem()` or rem token maps.
 
 ---
 

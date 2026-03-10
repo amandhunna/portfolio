@@ -44,7 +44,10 @@ import { SkillGroup } from "./components/SkillGroup";
 import { Globe } from "./components/Globe";
 import { Nav } from "./components/Nav";
 import { useScrollReveal } from "./hooks/useScrollReveal";
-import { spacing } from "./tokens/spacing";
+import { spacingRem } from "./tokens/spacing";
+import { layoutRem } from "./tokens/layout";
+import { fontSizeRem, fontWeight } from "./tokens/typography";
+import { radiiRem } from "./tokens/radii";
 import "./styles/global.css";
 
 function Portfolio() {
@@ -59,7 +62,7 @@ function Portfolio() {
       <section
         id="hero"
         className="section fade-up"
-        style={{ minHeight: "100vh", display: "flex", alignItems: "center", paddingTop: 64 }}
+        style={{ minHeight: "100vh", display: "flex", alignItems: "center", paddingTop: layoutRem.navHeight }}
       >
         <div className="container">
           <div
@@ -67,21 +70,21 @@ function Portfolio() {
             style={{
               display: "inline-flex",
               alignItems: "center",
-              gap: spacing.xs,
+              gap: spacingRem.xs,
               background: "var(--accent-light)",
               color: "var(--accent-base)",
-              fontSize: 13,
-              fontWeight: 600,
-              padding: "6px 16px",
-              borderRadius: 100,
-              marginBottom: spacing.sm,
+              fontSize: fontSizeRem.xs,
+              fontWeight: fontWeight.semibold,
+              padding: `${spacingRem.xs} ${spacingRem.sm}`,
+              borderRadius: radiiRem.full,
+              marginBottom: spacingRem.sm,
             }}
           >
             <span
               className="hero-badge-dot"
               style={{
-                width: 8,
-                height: 8,
+                width: spacingRem.xs,
+                height: spacingRem.xs,
                 borderRadius: "50%",
                 background: "#22c55e",
                 flexShrink: 0,
@@ -91,6 +94,7 @@ function Portfolio() {
           </div>
           <Typography
             variant="h1"
+            className="hero-title"
             style={{
               background:
                 "linear-gradient(135deg, var(--accent-base), #7c3aed)",
@@ -105,14 +109,14 @@ function Portfolio() {
             color="var(--dominant-text-muted)"
             style={{
               maxWidth: 480,
-              marginTop: spacing.sm,
-              marginBottom: spacing.md,
+              marginTop: spacingRem.sm,
+              marginBottom: spacingRem.md,
             }}
           >
             Geospatial systems, scalable frontends, and cloud-native backends
             &#x2014; from climate risk platforms to design systems at scale.
           </Typography>
-          <div style={{ display: "flex", gap: spacing.xs, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: spacingRem.xs, flexWrap: "wrap" }}>
             <Button variant="primary" size="lg" href="#spatial" icon={<FaGlobeAmericas size={16} />}>
               Spatial &#x26; GIS
             </Button>
@@ -136,14 +140,14 @@ function Portfolio() {
       {/* About + Stats */}
       <section id="about" className="section">
         <div className="container fade-up">
-          <Layout split="60-40" gap="lg">
+          <Layout split="60-40" gap="lg" className="layout-60-40">
             <div>
               <Typography variant="label" color="var(--accent-base)">
                 ABOUT
               </Typography>
               <Typography
                 variant="h3"
-                style={{ marginTop: spacing.xs, marginBottom: spacing.sm }}
+                style={{ marginTop: spacingRem.xs, marginBottom: spacingRem.sm }}
               >
                 Building the web, one system at a time.
               </Typography>
@@ -154,11 +158,7 @@ function Portfolio() {
                 developer tooling.
               </Typography>
             </div>
-            <Layout
-              split="3-col"
-              gap="sm"
-              style={{ gridTemplateColumns: "1fr 1fr 1fr" }}
-            >
+            <Layout split="3-col" gap="sm" className="layout-3-col">
               <StatCard value={7} suffix="+" label="Years Experience" />
               <StatCard
                 value={1500000}
@@ -185,19 +185,19 @@ function Portfolio() {
           </Typography>
           <Typography
             variant="h3"
-            style={{ marginTop: spacing.xs, marginBottom: spacing.md }}
+            style={{ marginTop: spacingRem.xs, marginBottom: spacingRem.md }}
           >
             Geospatial Engineering
           </Typography>
           <div className="grid-3">
             <Card transparent className="reveal-item">
-              <Typography variant="h4" style={{ marginBottom: spacing.xs }}>
+              <Typography variant="h4" style={{ marginBottom: spacingRem.xs }}>
                 QGIS & Desktop GIS
               </Typography>
               <Typography
                 variant="mono"
                 color="var(--dominant-text-muted)"
-                style={{ marginBottom: spacing.xs }}
+                style={{ marginBottom: spacingRem.xs }}
               >
                 Vector/raster layers, PyQGIS
               </Typography>
@@ -208,8 +208,8 @@ function Portfolio() {
               <div
                 style={{
                   display: "flex",
-                  gap: spacing.xs,
-                  marginTop: spacing.xs,
+                  gap: spacingRem.xs,
+                  marginTop: spacingRem.xs,
                   flexWrap: "wrap",
                 }}
               >
@@ -219,13 +219,13 @@ function Portfolio() {
               </div>
             </Card>
             <Card transparent className="reveal-item">
-              <Typography variant="h4" style={{ marginBottom: spacing.xs }}>
+              <Typography variant="h4" style={{ marginBottom: spacingRem.xs }}>
                 Geospatial Pipelines
               </Typography>
               <Typography
                 variant="mono"
                 color="var(--dominant-text-muted)"
-                style={{ marginBottom: spacing.xs }}
+                style={{ marginBottom: spacingRem.xs }}
               >
                 Shapefile → GeoJSON → mbtiles
               </Typography>
@@ -236,8 +236,8 @@ function Portfolio() {
               <div
                 style={{
                   display: "flex",
-                  gap: spacing.xs,
-                  marginTop: spacing.xs,
+                  gap: spacingRem.xs,
+                  marginTop: spacingRem.xs,
                   flexWrap: "wrap",
                 }}
               >
@@ -247,13 +247,13 @@ function Portfolio() {
               </div>
             </Card>
             <Card transparent className="reveal-item">
-              <Typography variant="h4" style={{ marginBottom: spacing.xs }}>
+              <Typography variant="h4" style={{ marginBottom: spacingRem.xs }}>
                 Web Mapping
               </Typography>
               <Typography
                 variant="mono"
                 color="var(--dominant-text-muted)"
-                style={{ marginBottom: spacing.xs }}
+                style={{ marginBottom: spacingRem.xs }}
               >
                 Mapbox GL, React, MTS
               </Typography>
@@ -264,8 +264,8 @@ function Portfolio() {
               <div
                 style={{
                   display: "flex",
-                  gap: spacing.xs,
-                  marginTop: spacing.xs,
+                  gap: spacingRem.xs,
+                  marginTop: spacingRem.xs,
                   flexWrap: "wrap",
                 }}
               >
@@ -286,20 +286,13 @@ function Portfolio() {
           </Typography>
           <Typography
             variant="h3"
-            style={{ marginTop: spacing.xs, marginBottom: spacing.md }}
+            style={{ marginTop: spacingRem.xs, marginBottom: spacingRem.md }}
           >
             Where I've worked
           </Typography>
-          <Timeline>
+          <Timeline className="timeline-wrap">
             <TimelineItem isFirst>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexWrap: "wrap",
-                  marginBottom: spacing.xs,
-                }}
-              >
+              <div className="job-header" style={{ marginBottom: spacingRem.xs }}>
                 <Typography variant="body" style={{ fontWeight: 600 }}>
                   Software Engineer ·{" "}
                   <span style={{ color: "var(--accent-base)" }}>AiDash</span>
@@ -315,8 +308,8 @@ function Portfolio() {
               <div
                 style={{
                   display: "flex",
-                  gap: spacing.xs,
-                  marginTop: spacing.xs,
+                  gap: spacingRem.xs,
+                  marginTop: spacingRem.xs,
                   flexWrap: "wrap",
                 }}
               >
@@ -328,14 +321,7 @@ function Portfolio() {
               </div>
             </TimelineItem>
             <TimelineItem>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexWrap: "wrap",
-                  marginBottom: spacing.xs,
-                }}
-              >
+              <div className="job-header" style={{ marginBottom: spacingRem.xs }}>
                 <Typography variant="body" style={{ fontWeight: 600 }}>
                   Software Engineer ·{" "}
                   <span style={{ color: "var(--accent-base)" }}>Swiggy</span>
@@ -350,14 +336,7 @@ function Portfolio() {
               </Typography>
             </TimelineItem>
             <TimelineItem>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexWrap: "wrap",
-                  marginBottom: spacing.xs,
-                }}
-              >
+              <div className="job-header" style={{ marginBottom: spacingRem.xs }}>
                 <Typography variant="body" style={{ fontWeight: 600 }}>
                   Deputy Manager ·{" "}
                   <span style={{ color: "var(--accent-base)" }}>Jio</span>
@@ -372,14 +351,7 @@ function Portfolio() {
               </Typography>
             </TimelineItem>
             <TimelineItem>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  flexWrap: "wrap",
-                  marginBottom: spacing.xs,
-                }}
-              >
+              <div className="job-header" style={{ marginBottom: spacingRem.xs }}>
                 <Typography variant="body" style={{ fontWeight: 600 }}>
                   Associate SE ·{" "}
                   <span style={{ color: "var(--accent-base)" }}>
@@ -407,26 +379,26 @@ function Portfolio() {
           </Typography>
           <Typography
             variant="h3"
-            style={{ marginTop: spacing.xs, marginBottom: spacing.md }}
+            style={{ marginTop: spacingRem.xs, marginBottom: spacingRem.md }}
           >
             Selected Projects
           </Typography>
           <Typography
             variant="body"
             color="var(--dominant-text-muted)"
-            style={{ marginBottom: spacing.lg }}
+            style={{ marginBottom: spacingRem.lg }}
           >
             Enterprise-scale products and tools I&apos;ve built.
           </Typography>
           <div className="grid-3">
             <Card transparent>
-              <Typography variant="h4" style={{ marginBottom: spacing.xs }}>
+              <Typography variant="h4" style={{ marginBottom: spacingRem.xs }}>
                 Climate Risk Intelligence System
               </Typography>
               <Typography
                 variant="mono"
                 color="var(--dominant-text-muted)"
-                style={{ marginBottom: spacing.xs }}
+                style={{ marginBottom: spacingRem.xs }}
               >
                 AiDash &#x26; Geospatial, Node.js, Spring Boot, AWS
               </Typography>
@@ -434,7 +406,7 @@ function Portfolio() {
                 Full-stack CRIS: 1.5M+ assets, 100K+ segments. Lambda, S3, API
                 Gateway, Python shapefile processing.
               </Typography>
-              <div style={{ marginTop: spacing.sm }}>
+              <div style={{ marginTop: spacingRem.sm }}>
                 <Button
                   variant="ghost"
                   size="sm"
@@ -448,8 +420,8 @@ function Portfolio() {
               <div
                 style={{
                   display: "flex",
-                  gap: spacing.xs,
-                  marginTop: spacing.sm,
+                  gap: spacingRem.xs,
+                  marginTop: spacingRem.sm,
                   flexWrap: "wrap",
                 }}
               >
@@ -460,13 +432,13 @@ function Portfolio() {
               </div>
             </Card>
             <Card transparent>
-              <Typography variant="h4" style={{ marginBottom: spacing.xs }}>
+              <Typography variant="h4" style={{ marginBottom: spacingRem.xs }}>
                 Asset Inspection &#x26; Monitoring
               </Typography>
               <Typography
                 variant="mono"
                 color="var(--dominant-text-muted)"
-                style={{ marginBottom: spacing.xs }}
+                style={{ marginBottom: spacingRem.xs }}
               >
                 MapGL.js, GeoJSON, shapefiles
               </Typography>
@@ -474,7 +446,7 @@ function Portfolio() {
                 Visualization of 500K+ road segments. Hazard layers, clustering,
                 and real-time monitoring.
               </Typography>
-              <div style={{ marginTop: spacing.sm }}>
+              <div style={{ marginTop: spacingRem.sm }}>
                 <Button
                   variant="ghost"
                   size="sm"
@@ -488,8 +460,8 @@ function Portfolio() {
               <div
                 style={{
                   display: "flex",
-                  gap: spacing.xs,
-                  marginTop: spacing.sm,
+                  gap: spacingRem.xs,
+                  marginTop: spacingRem.sm,
                   flexWrap: "wrap",
                 }}
               >
@@ -498,13 +470,13 @@ function Portfolio() {
               </div>
             </Card>
             <Card transparent>
-              <Typography variant="h4" style={{ marginBottom: spacing.xs }}>
+              <Typography variant="h4" style={{ marginBottom: spacingRem.xs }}>
                 AiDash Maptiler
               </Typography>
               <Typography
                 variant="mono"
                 color="var(--dominant-text-muted)"
-                style={{ marginBottom: spacing.xs }}
+                style={{ marginBottom: spacingRem.xs }}
               >
                 Node, Express, Docker
               </Typography>
@@ -515,8 +487,8 @@ function Portfolio() {
               <div
                 style={{
                   display: "flex",
-                  gap: spacing.xs,
-                  marginTop: spacing.sm,
+                  gap: spacingRem.xs,
+                  marginTop: spacingRem.sm,
                   flexWrap: "wrap",
                 }}
               >
@@ -537,26 +509,26 @@ function Portfolio() {
           </Typography>
           <Typography
             variant="h3"
-            style={{ marginTop: spacing.xs, marginBottom: spacing.md }}
+            style={{ marginTop: spacingRem.xs, marginBottom: spacingRem.md }}
           >
             AI-Augmented Tooling
           </Typography>
           <Typography
             variant="body"
             color="var(--dominant-text-muted)"
-            style={{ marginBottom: spacing.lg, maxWidth: "50ch" }}
+            style={{ marginBottom: spacingRem.lg, maxWidth: "50ch" }}
           >
             Model Context Protocol integrations and creative automation.
           </Typography>
           <div className="grid-3">
             <Card transparent>
-              <Typography variant="h4" style={{ marginBottom: spacing.xs }}>
+              <Typography variant="h4" style={{ marginBottom: spacingRem.xs }}>
                 AI RCA &#x26; MCP
               </Typography>
               <Typography
                 variant="mono"
                 color="var(--dominant-text-muted)"
-                style={{ marginBottom: spacing.xs }}
+                style={{ marginBottom: spacingRem.xs }}
               >
                 Hackathon 2nd Prize &#x26; Log analysis
               </Typography>
@@ -564,7 +536,7 @@ function Portfolio() {
                 AI-powered Root Cause Analysis wired to MCP for automated log
                 parsing and error aggregation.
               </Typography>
-              <div style={{ marginTop: spacing.sm }}>
+              <div style={{ marginTop: spacingRem.sm }}>
                 <Button
                   variant="ghost"
                   size="sm"
@@ -577,13 +549,13 @@ function Portfolio() {
               </div>
             </Card>
             <Card transparent>
-              <Typography variant="h4" style={{ marginBottom: spacing.xs }}>
+              <Typography variant="h4" style={{ marginBottom: spacingRem.xs }}>
                 QGIS MCP
               </Typography>
               <Typography
                 variant="mono"
                 color="var(--dominant-text-muted)"
-                style={{ marginBottom: spacing.xs }}
+                style={{ marginBottom: spacingRem.xs }}
               >
                 Cursor / IDE integration
               </Typography>
@@ -593,13 +565,13 @@ function Portfolio() {
               </Typography>
             </Card>
             <Card transparent>
-              <Typography variant="h4" style={{ marginBottom: spacing.xs }}>
+              <Typography variant="h4" style={{ marginBottom: spacingRem.xs }}>
                 Agent Skills &#x26; Tooling
               </Typography>
               <Typography
                 variant="mono"
                 color="var(--dominant-text-muted)"
-                style={{ marginBottom: spacing.xs }}
+                style={{ marginBottom: spacingRem.xs }}
               >
                 Design systems, MCP builder, skill creator
               </Typography>
@@ -621,7 +593,7 @@ function Portfolio() {
           </Typography>
           <Typography
             variant="h3"
-            style={{ marginTop: spacing.xs, marginBottom: spacing.md }}
+            style={{ marginTop: spacingRem.xs, marginBottom: spacingRem.md }}
           >
             My toolkit
           </Typography>
@@ -629,7 +601,7 @@ function Portfolio() {
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-              gap: spacing.sm,
+              gap: spacingRem.sm,
             }}
           >
             <SkillGroup
@@ -697,11 +669,11 @@ function Portfolio() {
           </Typography>
           <Typography
             variant="h3"
-            style={{ marginTop: spacing.xs, marginBottom: spacing.md }}
+            style={{ marginTop: spacingRem.xs, marginBottom: spacingRem.md }}
           >
             Hack The Box
           </Typography>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: spacing.sm }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: spacingRem.sm }}>
             <Badge icon={<FaCrosshairs size={18} />} name="AI Red Teamer" source="AI Security Path · Hard" />
             <Badge icon={<FaBookOpen size={18} />} name="Philomath" source="Learning Process · Completed" />
             <Badge icon={<FaGraduationCap size={18} />} name="Academician" source="Academy · Completed" />
@@ -723,7 +695,7 @@ function Portfolio() {
           </Typography>
           <Typography
             variant="h3"
-            style={{ marginTop: spacing.xs, marginBottom: spacing.md }}
+            style={{ marginTop: spacingRem.xs, marginBottom: spacingRem.md }}
           >
             Writing & Insights
           </Typography>
@@ -753,7 +725,7 @@ function Portfolio() {
               tagIcon={<FaDatabase size={12} />}
             />
           </div>
-          <div style={{ marginTop: spacing.md }}>
+          <div style={{ marginTop: spacingRem.md }}>
             <Button
               variant="secondary"
               size="md"
@@ -775,18 +747,18 @@ function Portfolio() {
           </Typography>
           <Typography
             variant="h3"
-            style={{ marginTop: spacing.xs, marginBottom: spacing.sm }}
+            style={{ marginTop: spacingRem.xs, marginBottom: spacingRem.sm }}
           >
             Let&apos;s connect
           </Typography>
           <Typography
             variant="body"
             color="var(--dominant-text-muted)"
-            style={{ marginBottom: spacing.md, maxWidth: "40ch" }}
+            style={{ marginBottom: spacingRem.md, maxWidth: "40ch" }}
           >
             Open to roles in full-stack, geospatial, and frontend architecture.
           </Typography>
-          <div style={{ display: "flex", gap: spacing.xs, flexWrap: "wrap", marginBottom: spacing.md }}>
+          <div style={{ display: "flex", gap: spacingRem.xs, flexWrap: "wrap", marginBottom: spacingRem.md }}>
             <Button
               variant="secondary"
               size="md"
@@ -824,7 +796,7 @@ function Portfolio() {
               +91 7042458977
             </Button>
           </div>
-          <Typography variant="small" color="var(--dominant-text-muted)" style={{ display: "flex", alignItems: "center", gap: spacing.xs }}>
+          <Typography variant="small" color="var(--dominant-text-muted)" style={{ display: "flex", alignItems: "center", gap: spacingRem.xs }}>
             <FaMapMarkerAlt size={14} /> Based in India
           </Typography>
         </div>
@@ -833,9 +805,9 @@ function Portfolio() {
       <footer
         style={{
           textAlign: "center",
-          padding: spacing.md,
+          padding: spacingRem.md,
           color: "var(--dominant-text-muted)",
-          fontSize: 13,
+          fontSize: fontSizeRem.xs,
           borderTop: "1px solid var(--secondary-border)",
         }}
       >

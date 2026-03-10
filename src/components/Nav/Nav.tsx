@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useTheme } from "../ThemeProvider";
 import { useActiveSection } from "../../hooks/useActiveSection";
-import { spacing } from "../../tokens/spacing";
-import { radii } from "../../tokens/radii";
+import { spacingRem } from "../../tokens/spacing";
+import { radiiRem } from "../../tokens/radii";
+import { layout, layoutRem } from "../../tokens/layout";
+import { componentSizesRem } from "../../tokens/componentSizes";
 
 const LINKS: { href: string; label: string }[] = [
   { href: "#about", label: "About" },
@@ -26,24 +28,25 @@ export function Nav() {
       style={{
         position: "fixed",
         top: 0,
-        width: "100%",
+        left: 0,
+        right: 0,
         zIndex: 100,
         background: "var(--secondary-bg)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
         borderBottom: "1px solid var(--secondary-border)",
-        padding: `0 ${spacing.lg}px`,
         transition: "background 0.3s ease, border-color 0.3s ease",
       }}
     >
       <div
+        className="nav-container"
         style={{
-          maxWidth: 1100,
+          maxWidth: layoutRem.maxWidth,
           margin: "0 auto",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          height: 64,
+          height: layoutRem.navHeight,
         }}
       >
         <a
@@ -59,17 +62,12 @@ export function Nav() {
           AS<span style={{ color: "var(--accent-base)" }}>.</span>
         </a>
 
-        <div style={{ display: "flex", alignItems: "center", gap: spacing.md }}>
+        <div style={{ display: "flex", alignItems: "center", gap: spacingRem.sm }}>
           <ul
             id="navLinks"
             className={`nav-links ${menuOpen ? "open" : ""}`}
-            style={{
-              display: "flex",
-              gap: 28,
-              listStyle: "none",
-              margin: 0,
-              padding: 0,
-            }}
+            style={{ listStyle: "none", margin: 0, padding: 0 }}
+            aria-hidden={!menuOpen}
           >
             {LINKS.map(({ href, label }) => {
               const id = href.slice(1);
@@ -94,16 +92,15 @@ export function Nav() {
               );
             })}
           </ul>
-
           <button
             type="button"
             className="theme-toggle"
             onClick={toggle}
             aria-label="Toggle theme"
             style={{
-              width: 40,
-              height: 40,
-              borderRadius: radii.sm,
+              width: componentSizesRem.iconButton,
+              height: componentSizesRem.iconButton,
+              borderRadius: radiiRem.sm,
               background: "var(--secondary-bg)",
               border: "1px solid var(--secondary-border)",
               cursor: "pointer",
@@ -128,22 +125,26 @@ export function Nav() {
 
           <button
             type="button"
-            className="hamburger"
+            className={`hamburger ${menuOpen ? "is-open" : ""}`}
             onClick={() => setMenuOpen((o) => !o)}
-            aria-label="Menu"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
             style={{
-              display: "none",
               flexDirection: "column",
               gap: 5,
               cursor: "pointer",
               background: "none",
               border: "none",
-              padding: 4,
+              padding: spacingRem.xs,
+              minHeight: componentSizesRem.touchTargetMin,
+              minWidth: componentSizesRem.touchTargetMin,
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
-            <span style={{ display: "block", width: 22, height: 2, background: "var(--dominant-text)", borderRadius: 2 }} />
-            <span style={{ display: "block", width: 22, height: 2, background: "var(--dominant-text)", borderRadius: 2 }} />
-            <span style={{ display: "block", width: 22, height: 2, background: "var(--dominant-text)", borderRadius: 2 }} />
+            <span className="hamburger-line" />
+            <span className="hamburger-line" />
+            <span className="hamburger-line" />
           </button>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import React, { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
-import { spacing } from "../../tokens/spacing";
-import { radii } from "../../tokens/radii";
-import { fontFamily, fontSize, fontWeight } from "../../tokens/typography";
+import { spacingRem } from "../../tokens/spacing";
+import { radiiRem } from "../../tokens/radii";
+import { componentSizesRem } from "../../tokens/componentSizes";
+import { fontFamily, fontSizeRem, fontWeight } from "../../tokens/typography";
 
 type Size = "sm" | "md" | "lg";
 type Variant = "primary" | "secondary" | "ghost";
@@ -20,22 +21,22 @@ type Props = BaseProps &
     | (AnchorHTMLAttributes<HTMLAnchorElement> & { href: string })
   );
 
-// Heights: 32, 40, 48 — Rule 4
-const h: Record<Size, number> = { sm: 32, md: 40, lg: 48 };
-const px: Record<Size, number> = { sm: spacing.sm, md: spacing.md, lg: spacing.lg };
-const fs: Record<Size, number> = { sm: fontSize.xs, md: fontSize.sm, lg: fontSize.base };
+// Rule 4, Rule 13 — rem units
+const h: Record<Size, string> = componentSizesRem.buttonHeight;
+const px: Record<Size, string> = { sm: spacingRem.sm, md: spacingRem.md, lg: spacingRem.lg };
+const fs: Record<Size, string> = { sm: fontSizeRem.xs, md: fontSizeRem.sm, lg: fontSizeRem.base };
 
 const baseStyle = (size: Size, variant: Variant, fullWidth: boolean) => ({
   height: h[size],
-  padding: `0 ${px[size]}px`,
+  padding: `0 ${px[size]}`,
   fontSize: fs[size],
   fontFamily,
   fontWeight: fontWeight.semibold,
-  borderRadius: radii.sm,
+  borderRadius: radiiRem.sm,
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  gap: spacing.xs,
+  gap: spacingRem.xs,
   cursor: "pointer",
   transition: "all 0.2s ease",
   border: variant === "secondary" ? "1px solid var(--secondary-border)" : "none",

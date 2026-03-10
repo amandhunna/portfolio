@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { fontFamily, fontFamilyMono, textStyle, TextStyleKey } from "../../tokens/typography";
+import { fontFamily, fontFamilyMono, textStyle, fontSizeRem, TextStyleKey } from "../../tokens/typography";
 
 interface Props {
   variant?: TextStyleKey;
@@ -15,6 +15,11 @@ const tagMap: Record<TextStyleKey, string> = {
   body: "p", small: "p", label: "span", mono: "code",
 };
 
+const variantToSizeKey: Record<TextStyleKey, keyof typeof fontSizeRem> = {
+  h1: "display", h2: "xxxl", h3: "xxl", h4: "xl",
+  body: "base", small: "xs", label: "xs", mono: "sm",
+};
+
 export const Typography: React.FC<Props> = ({
   variant = "body", as, color, children, style, className,
 }) => {
@@ -25,7 +30,7 @@ export const Typography: React.FC<Props> = ({
       className={className}
       style={{
         fontFamily: variant === "mono" ? fontFamilyMono : fontFamily,
-        fontSize: ts.size,
+        fontSize: fontSizeRem[variantToSizeKey[variant]],
         lineHeight: ts.height,
         fontWeight: ts.weight,
         color: color || "var(--dominant-text)",

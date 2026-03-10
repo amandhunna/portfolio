@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Card } from "../Card";
-import { spacing } from "../../tokens/spacing";
-import { fontFamily, fontSize, fontWeight } from "../../tokens/typography";
+import { spacingRem } from "../../tokens/spacing";
+import { fontFamily, fontSizeRem, fontWeight } from "../../tokens/typography";
 
 interface Props {
   value: number;
@@ -52,10 +52,10 @@ export const StatCard: React.FC<Props> = ({ value, suffix = "", format, label })
   return (
     <Card transparent padding="sm">
       <div ref={ref} style={{ textAlign: "center" }}>
-        <div style={{ fontFamily, fontSize: fontSize.xxl, fontWeight: fontWeight.bold, color: "var(--accent-base)", letterSpacing: "-0.03em", fontVariantNumeric: "tabular-nums" }}>
+        <div style={{ fontFamily, fontSize: fontSizeRem.xxl, fontWeight: fontWeight.bold, color: "var(--accent-base)", letterSpacing: "-0.03em", fontVariantNumeric: "tabular-nums" }}>
           {display}
         </div>
-        <div style={{ fontFamily, fontSize: fontSize.xs, color: "var(--dominant-text-muted)", marginTop: spacing.xs / 2 }}>
+        <div style={{ fontFamily, fontSize: fontSizeRem.xs, color: "var(--dominant-text-muted)", marginTop: "0.25rem" }}>
           {label}
         </div>
       </div>
