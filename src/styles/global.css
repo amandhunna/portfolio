@@ -1,0 +1,74 @@
+/* Global styles — design system baseline */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--dominant-bg);
+  color: var(--dominant-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+a { color: var(--accent-base); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--accent-hover); }
+
+/* Utility classes aligned to 8pt grid */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+.section { padding: 80px 32px; position: relative; z-index: 1; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+
+/* Button hover states */
+.btn:hover { transform: translateY(-1px); }
+.btn-primary:hover { box-shadow: 0 4px 16px var(--accent-glow); }
+.btn-secondary:hover { border-color: var(--accent-base); color: var(--accent-base); }
+
+/* Tech pills — 8pt grid (Rule 2) */
+.tech-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 4px 8px; background: var(--accent-light);
+  border-radius: 6px; font-size: 11px; font-weight: 500; color: var(--accent-base);
+}
+
+/* Hero badge dot pulse */
+@keyframes hero-badge-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.hero-badge-dot {
+  animation: hero-badge-pulse 2s ease-in-out infinite;
+}
+
+/* Scroll reveal */
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.reveal-item { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.reveal-item.visible { opacity: 1; transform: translateY(0); }
+.fade-up.visible .reveal-item:nth-child(1) { transition-delay: 0.05s; }
+.fade-up.visible .reveal-item:nth-child(2) { transition-delay: 0.1s; }
+.fade-up.visible .reveal-item:nth-child(3) { transition-delay: 0.15s; }
+.fade-up.visible .reveal-item:nth-child(4) { transition-delay: 0.2s; }
+.fade-up.visible .reveal-item:nth-child(5) { transition-delay: 0.25s; }
+.fade-up.visible .reveal-item:nth-child(6) { transition-delay: 0.3s; }
+
+/* Nav */
+.nav-links a:hover { color: var(--accent-base); }
+.theme-toggle:hover { border-color: var(--accent-base); color: var(--accent-base); }
+
+/* Globe — darker theme = slightly more visible */
+[data-theme="dark"] #globe-container { opacity: 0.5; }
+
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+  .section { padding: 48px 16px; }
+  #globe-container { opacity: 0.18; }
+  [data-theme="dark"] #globe-container { opacity: 0.25; }
+  .nav-links { display: none; }
+  .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--secondary-bg); border-bottom: 1px solid var(--secondary-border); padding: 24px 32px; gap: 16px; }
+  .hamburger { display: flex; }
+}
