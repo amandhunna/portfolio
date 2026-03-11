@@ -19,6 +19,7 @@ Education: B.Tech IT, GTBIT Delhi (2018)
 A React (Vite + TypeScript) portfolio site built on a **Mathematical UI Framework for SaaS**. It enforces design tokens that map 1:1 to Figma variables via Tokens Studio.
 
 The project serves two purposes:
+
 1. **Live portfolio** — deployed as a personal site
 2. **Design system reference** — tokens and components importable into Figma
 
@@ -28,17 +29,17 @@ The project serves two purposes:
 
 Full rules in **docs/ai/rules.md**.
 
-| Rule | Standard |
-|------|----------|
-| Spacing | 8pt grid only: 8, 16, 24, 32, 40, 48, 64. Never 4, 6, 10, 12, 20. |
-| Typography | Modular scale 1.25x. Base 16px. Font: DM Sans. |
-| Component sizes | Buttons: 32/40/48px. Inputs: 40/48px. Touch targets: ≥44px. |
-| Border radius | 8px or 16px only. |
-| Color | 60% dominant, 30% secondary, 10% accent. CSS variables. Light theme: pastel palette. |
-| Layout | 60/40 or golden ratio for two-col. 3-col for cards. |
-| Accessibility | Contrast ≥ 4.5:1. Touch ≥ 44px. Semantic HTML. |
-| Mobile-first | Base CSS = mobile; use `min-width` breakpoints (768px, 1024px). See Rule 12 in rules.md. |
-| Special characters | Use hex entities (e.g. `&#x2014;`) or `\uNNNN` in strings (see Rule 11 in rules.md). |
+| Rule               | Standard                                                                                 |
+| ------------------ | ---------------------------------------------------------------------------------------- |
+| Spacing            | 8pt grid only: 8, 16, 24, 32, 40, 48, 64. Never 4, 6, 10, 12, 20.                        |
+| Typography         | Modular scale 1.25x. Base 16px. Font: DM Sans.                                           |
+| Component sizes    | Buttons: 32/40/48px. Inputs: 40/48px. Touch targets: ≥44px.                              |
+| Border radius      | 8px or 16px only.                                                                        |
+| Color              | 60% dominant, 30% secondary, 10% accent. CSS variables. Light theme: pastel palette.     |
+| Layout             | 60/40 or golden ratio for two-col. 3-col for cards.                                      |
+| Accessibility      | Contrast ≥ 4.5:1. Touch ≥ 44px. Semantic HTML.                                           |
+| Mobile-first       | Base CSS = mobile; use `min-width` breakpoints (768px, 1024px). See Rule 12 in rules.md. |
+| Special characters | Use hex entities (e.g. `&#x2014;`) or `\uNNNN` in strings (see Rule 11 in rules.md).     |
 
 ---
 
@@ -72,7 +73,7 @@ portfolio-design-system/
 2. About — 60/40 layout, 3 StatCards (Years, Assets, DAU)
 3. Spatial & GIS — 3-col cards (QGIS, Pipelines, Web Mapping)
 4. Experience — Timeline, 4 jobs (AiDash, Swiggy, Jio, Successive)
-5. Projects — 3 cards (CRIS, Asset Inspection, AiDash Maptiler)
+5. Projects — 3 cards (CRIS, Asset Inspection, Maptiler)
 6. Creative & MCP — 3 cards (AI RCA, QGIS MCP, Agent Skills)
 7. Skills — 6 SkillGroups in grid
 8. HTB Badges — 9 badges, green accent

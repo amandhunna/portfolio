@@ -498,7 +498,7 @@ function Portfolio() {
             </Card>
             <Card transparent>
               <Typography variant="h4" style={{ marginBottom: spacingRem.xs }}>
-                AiDash Maptiler
+                Maptiler
               </Typography>
               <Typography
                 variant="mono"
