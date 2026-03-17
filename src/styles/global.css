@@ -20,39 +20,139 @@ body {
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-  background: var(--dominant-bg);
+  background-color: var(--dominant-bg);
+  /* Dotted pattern — kept for both themes; dot color follows accent */
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    var(--accent-base) 0.5px,
+    transparent 0
+  );
+  background-size: 24px 24px;
+  background-position: 0 0;
   color: var(--dominant-text);
   line-height: 1.5;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   transition:
-    background 0.3s ease,
+    background-color 0.3s ease,
     color 0.3s ease;
   overflow-x: hidden;
+  position: relative;
 }
 
-/* Dark theme: dotted background using accent color */
-[data-theme="dark"] body {
-  background-color: var(--dominant-bg);
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    var(--accent-base) 0.5px,
-    transparent 0
-  );
-  background-size: 24px 24px;
-  background-position: 0 0;
+/* Starfield — dense layer, mixed sizes (small / medium / big), gentle twinkle */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  --star: rgba(255, 255, 255, 0.65);
+  background-image:
+    radial-gradient(0.5px circle at 6% 4%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 14% 9%, var(--star) 0%, transparent 100%),
+    radial-gradient(2px circle at 22% 3%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 30% 14%, var(--star) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 38% 7%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 46% 18%, var(--star) 0%, transparent 100%),
+    radial-gradient(2.5px circle at 54% 5%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 62% 12%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 70% 20%, var(--star) 0%, transparent 100%),
+    radial-gradient(2px circle at 78% 8%, var(--star) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 86% 15%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 94% 6%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 3% 22%, var(--star) 0%, transparent 100%),
+    radial-gradient(2px circle at 10% 28%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 18% 35%, var(--star) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 26% 24%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 34% 42%, var(--star) 0%, transparent 100%),
+    radial-gradient(2.5px circle at 42% 32%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 50% 38%, var(--star) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 58% 26%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 66% 44%, var(--star) 0%, transparent 100%),
+    radial-gradient(2px circle at 74% 34%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 82% 48%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 90% 36%, var(--star) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 98% 42%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 8% 52%, var(--star) 0%, transparent 100%),
+    radial-gradient(2px circle at 16% 58%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 24% 46%, var(--star) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 32% 54%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 40% 62%, var(--star) 0%, transparent 100%),
+    radial-gradient(2.5px circle at 48% 52%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 56% 68%, var(--star) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 64% 58%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 72% 72%, var(--star) 0%, transparent 100%),
+    radial-gradient(2px circle at 80% 64%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 88% 78%, var(--star) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 96% 68%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 4% 76%, var(--star) 0%, transparent 100%),
+    radial-gradient(2px circle at 12% 82%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 20% 88%, var(--star) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 28% 76%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 36% 92%, var(--star) 0%, transparent 100%),
+    radial-gradient(2.5px circle at 44% 84%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 52% 92%, var(--star) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 60% 82%, var(--star) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 68% 96%, var(--star) 0%, transparent 100%),
+    radial-gradient(2px circle at 76% 88%, var(--star) 0%, transparent 100%),
+    radial-gradient(1px circle at 84% 94%, var(--star) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 92% 86%, var(--star) 0%, transparent 100%);
+  opacity: 0.9;
+  animation: star-twinkle 5s ease-in-out infinite;
 }
 
-/* Light theme: same dotted pattern using accent color */
-[data-theme="light"] body {
-  background-color: var(--dominant-bg);
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    var(--accent-base) 0.5px,
-    transparent 0
-  );
-  background-size: 24px 24px;
-  background-position: 0 0;
+/* Blinking stars layer — different positions, on/off blink */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  --star-blink: rgba(255, 255, 255, 0.9);
+  background-image:
+    radial-gradient(1.5px circle at 9% 18%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(1px circle at 52% 12%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(2px circle at 75% 42%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 18% 68%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 88% 72%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(1px circle at 35% 48%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(2px circle at 62% 78%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 95% 28%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 42% 8%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(1px circle at 7% 56%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(2px circle at 28% 92%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(0.5px circle at 68% 22%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(1.5px circle at 82% 56%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(1px circle at 15% 82%, var(--star-blink) 0%, transparent 100%),
+    radial-gradient(2px circle at 55% 62%, var(--star-blink) 0%, transparent 100%);
+  animation: star-blink 2.2s ease-in-out infinite;
+}
+
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+@keyframes star-blink {
+  0%, 45%, 55%, 100% { opacity: 0.15; }
+  50% { opacity: 1; }
+}
+
+[data-theme="dark"] body::before {
+  --star: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] body::after {
+  --star-blink: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="light"] body::before {
+  --star: rgba(107, 143, 212, 0.5);
+}
+
+[data-theme="light"] body::after {
+  --star-blink: rgba(107, 143, 212, 0.7);
 }
 
 a {
@@ -83,12 +183,11 @@ a:hover {
   gap: 1rem; /* spacing.sm */
 }
 
-/* Nav: mobile = hamburger, links hidden by default */
+/* Nav: mobile = hamburger, links hidden; desktop = horizontal */
 .nav-links {
   display: none;
 }
 
-/* Dropdown: full width below bar */
 .nav-links.open {
   display: flex;
   flex-direction: column;
@@ -276,7 +375,6 @@ a:hover {
   transition-delay: 0.3s;
 }
 
-/* Nav */
 .nav-links a:hover {
   color: var(--accent-base);
 }
@@ -285,7 +383,7 @@ a:hover {
   color: var(--accent-base);
 }
 
-/* Nav container: mobile-first padding (Rule 13: rem) */
+/* Nav container: mobile-first padding */
 .nav-container {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -341,15 +439,9 @@ a:hover {
   }
 }
 
-/* Vertical line: align with dot center (dot left edge -1.5rem / -2rem, width ~1rem) */
+/* Vertical line: align with dot center */
 .timeline-wrap .timeline-line {
   left: 0.5rem !important;
-}
-
-@media (min-width: 48rem) {
-  .timeline-wrap .timeline-line {
-    left: 0.5rem !important;
-  }
 }
 
 .timeline-wrap .timeline-dot {

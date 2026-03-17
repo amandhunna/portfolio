@@ -3,7 +3,7 @@ import { useTheme } from "../ThemeProvider";
 import { useActiveSection } from "../../hooks/useActiveSection";
 import { spacingRem } from "../../tokens/spacing";
 import { radiiRem } from "../../tokens/radii";
-import { layout, layoutRem } from "../../tokens/layout";
+import { layoutRem } from "../../tokens/layout";
 import { componentSizesRem } from "../../tokens/componentSizes";
 
 const LINKS: { href: string; label: string }[] = [
