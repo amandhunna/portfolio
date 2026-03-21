@@ -8,5 +8,5 @@ export { Timeline, TimelineItem } from "./Timeline";
 export { Badge } from "./Badge";
 export { BlogCard } from "./BlogCard";
 export { SkillGroup } from "./SkillGroup";
-export { Globe } from "./Globe";
+export { MitmCodeBackdrop } from "./MitmCodeBackdrop";
 export { Nav } from "./Nav";

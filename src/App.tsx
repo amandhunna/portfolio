@@ -23,7 +23,7 @@ import { Layout } from "./components/Layout";
 import { Timeline, TimelineItem } from "./components/Timeline";
 import { BlogCard } from "./components/BlogCard";
 import { SkillGroup } from "./components/SkillGroup";
-import { Globe } from "./components/Globe";
+import { MitmCodeBackdrop } from "./components/MitmCodeBackdrop";
 import { Nav } from "./components/Nav";
 import { useScrollReveal } from "./hooks/useScrollReveal";
 import { spacingRem } from "./tokens/spacing";
@@ -44,7 +44,7 @@ function Portfolio() {
 
   return (
     <>
-      <Globe />
+      <MitmCodeBackdrop />
       <Nav />
 
       <section
@@ -118,9 +118,10 @@ function Portfolio() {
             <Button
               variant="secondary"
               size="lg"
-              href="#"
+              href="https://github.com/prabhdeep1"
+              target="_blank"
+              rel="noopener noreferrer"
               icon={<FaGithub size={18} />}
-              aria-label="GitHub (add profile URL)"
             >
               GitHub
             </Button>
@@ -687,9 +688,10 @@ function Portfolio() {
             <Button
               variant="secondary"
               size="md"
-              href="#"
+              href="https://github.com/prabhdeep1"
+              target="_blank"
+              rel="noopener noreferrer"
               icon={<FaGithub size={16} />}
-              aria-label="GitHub (add profile URL)"
             >
               GitHub
             </Button>

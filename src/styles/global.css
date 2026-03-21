@@ -40,6 +40,13 @@ body {
   position: relative;
 }
 
+/* Dot grid: hide on small viewports (less visual noise, better performance) */
+@media (max-width: 47.99rem) {
+  body {
+    background-image: none;
+  }
+}
+
 /* Starfield — dense layer, mixed sizes (small / medium / big), gentle twinkle */
 body::before {
   content: "";
@@ -242,15 +249,6 @@ a:hover {
   transform: translateY(-0.4375rem) rotate(-45deg);
 }
 
-/* Globe: lower opacity on small viewport */
-#globe-container {
-  opacity: 0.28;
-}
-
-[data-theme="dark"] #globe-container {
-  opacity: 0.4;
-}
-
 /* Tablet and up (min-width: 768px) */
 @media (min-width: 48rem) {
   .container {
@@ -283,14 +281,6 @@ a:hover {
 
   .hamburger {
     display: none;
-  }
-
-  #globe-container {
-    opacity: 0.48;
-  }
-
-  [data-theme="dark"] #globe-container {
-    opacity: 0.6;
   }
 }
 

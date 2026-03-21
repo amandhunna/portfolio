@@ -7,7 +7,6 @@ export const lightColors = {
   secondary: { bg: "#FDFCFF", border: "#E5E0ED" },
   accent: { base: "#6B8FD4", hover: "#5A7BC4", light: "#E8EEFA", glow: "rgba(107,143,212,0.2)" },
   semantic: { error: "#D4A0A0", success: "#8FC99F", warning: "#D4C078" },
-  globe: { wire: "#7B9EE8", node: "#7B9EE8", arc: "#A78BCC" },
 };
 
 export const darkColors = {
@@ -15,7 +14,6 @@ export const darkColors = {
   secondary: { bg: "#12161E", border: "#1E2330" },
   accent: { base: "#38BDF8", hover: "#7DD3FC", light: "rgba(56,189,248,0.12)", glow: "rgba(56,189,248,0.25)" },
   semantic: { error: "#F87171", success: "#4ADE80", warning: "#FBBF24" },
-  globe: { wire: "#38BDF8", node: "#38BDF8", arc: "#A78BFA" },
 };
 
 // CSS custom properties mapping (set by ThemeProvider)

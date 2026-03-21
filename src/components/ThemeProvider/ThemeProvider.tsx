@@ -22,9 +22,6 @@ function applyTheme(theme: Theme) {
   root.style.setProperty("--error", c.semantic.error);
   root.style.setProperty("--success", c.semantic.success);
   root.style.setProperty("--warning", c.semantic.warning);
-  root.style.setProperty("--globe-wire", c.globe.wire);
-  root.style.setProperty("--globe-node", c.globe.node);
-  root.style.setProperty("--globe-arc", c.globe.arc);
 }
 
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {

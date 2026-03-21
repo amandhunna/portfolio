@@ -1,0 +1,228 @@
+/* OWASP Top 10:2025 themed backdrop — fixed, z-index 0, pointer-events none */
+
+.mitm-code-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.35) 12%,
+    rgba(0, 0, 0, 0.65) 45%,
+    rgba(0, 0, 0, 0.4) 88%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.35) 12%,
+    rgba(0, 0, 0, 0.65) 45%,
+    rgba(0, 0, 0, 0.4) 88%,
+    transparent 100%
+  );
+}
+
+.mitm-code-cols {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  opacity: 0.14;
+}
+
+[data-theme="dark"] .mitm-code-cols {
+  opacity: 0.18;
+}
+
+.mitm-code-col {
+  flex: 1;
+  max-width: 7rem;
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  font-size: 0.65rem;
+  line-height: 1.45;
+  color: var(--accent-base);
+  white-space: pre-wrap;
+  word-break: break-all;
+  animation: mitm-code-scroll linear infinite;
+  will-change: transform;
+}
+
+.mitm-code-line {
+  margin-bottom: 0.35rem;
+  opacity: 0.85;
+}
+
+.mitm-code-line:nth-child(3n) {
+  opacity: 0.55;
+  color: var(--dominant-text-muted);
+}
+
+@keyframes mitm-code-scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* Mini attack flow diagrams */
+.attack-diagram {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.32;
+  width: min(13rem, 30vw);
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.12));
+}
+
+[data-theme="dark"] .attack-diagram {
+  opacity: 0.38;
+}
+
+.attack-diagram--tl {
+  top: 9%;
+  left: 2%;
+}
+
+.attack-diagram--tr {
+  top: 10%;
+  right: 2%;
+}
+
+.attack-diagram--tc {
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(14.5rem, 38vw);
+  opacity: 0.28;
+}
+
+.attack-diagram--bl {
+  bottom: 20%;
+  left: 2%;
+}
+
+.attack-diagram--bm {
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(11.5rem, 34vw);
+  opacity: 0.26;
+}
+
+.attack-diagram--br {
+  bottom: 5%;
+  right: 2%;
+  width: min(21rem, 42vw);
+  opacity: 0.4;
+}
+
+[data-theme="dark"] .attack-diagram--br {
+  opacity: 0.46;
+}
+
+.attack-diagram-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mitm-link {
+  fill: none;
+  stroke: var(--accent-base);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: 6 5;
+  animation: mitm-dash 2.2s linear infinite;
+}
+
+.mitm-link--warn {
+  stroke: var(--warning);
+  stroke-dasharray: 4 6;
+  animation-duration: 1.6s;
+}
+
+@keyframes mitm-dash {
+  to {
+    stroke-dashoffset: -22;
+  }
+}
+
+.attack-node-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 7px;
+  fill: var(--dominant-text-muted);
+  text-anchor: middle;
+}
+
+.attack-node-title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 8px;
+  font-weight: 600;
+  fill: var(--dominant-text);
+  text-anchor: middle;
+}
+
+.attack-diagram-caption {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 7px;
+  fill: var(--dominant-text-muted);
+  text-anchor: middle;
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mitm-code-col {
+    animation: none;
+  }
+
+  .mitm-link {
+    animation: none;
+  }
+}
+
+@media (max-width: 48rem) {
+  .mitm-code-cols {
+    opacity: 0.09;
+  }
+
+  .attack-diagram--tl,
+  .attack-diagram--tc,
+  .attack-diagram--bm {
+    display: none;
+  }
+
+  .attack-diagram--tr {
+    width: min(10rem, 40vw);
+    top: 12%;
+    opacity: 0.28;
+  }
+
+  .attack-diagram--bl {
+    bottom: 16%;
+    width: min(11rem, 48vw);
+    opacity: 0.28;
+  }
+
+  .attack-diagram--br {
+    width: min(16rem, 78vw);
+    right: 1%;
+    bottom: 4%;
+    opacity: 0.34;
+  }
+}
+
+@media (max-width: 30rem) {
+  .attack-diagram--tr,
+  .attack-diagram--bl {
+    display: none;
+  }
+
+  .attack-diagram--br {
+    width: min(95vw, 20rem);
+  }
+}
