@@ -8,12 +8,10 @@ import { componentSizesRem } from "../../tokens/componentSizes";
 
 const LINKS: { href: string; label: string }[] = [
   { href: "#about", label: "About" },
-  { href: "#spatial", label: "Spatial & GIS" },
+  { href: "#expertise", label: "Expertise" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
-  { href: "#creative", label: "Creative & MCP" },
-  { href: "#skills", label: "Skills" },
-  { href: "#badges", label: "Badges" },
+  { href: "#toolkit", label: "Toolkit" },
   { href: "#blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
 ];
@@ -59,7 +57,7 @@ export function Nav() {
             letterSpacing: "-0.02em",
           }}
         >
-          AS<span style={{ color: "var(--accent-base)" }}>.</span>
+          PT<span style={{ color: "var(--accent-base)" }}>.</span>
         </a>
 
         <div style={{ display: "flex", alignItems: "center", gap: spacingRem.sm }}>

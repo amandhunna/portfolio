@@ -1,14 +1,21 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Card } from "../Card";
 import { spacingRem } from "../../tokens/spacing";
 import { fontFamily, fontSizeRem, fontWeight } from "../../tokens/typography";
 
-interface Props {
+export type AnimatedStatCardProps = {
+  label: string;
   value: number;
   suffix?: string;
-  format?: string; // e.g. "1.5M"
+  format?: string;
+};
+
+export type StaticStatCardProps = {
   label: string;
-}
+  staticDisplay: string;
+};
+
+export type StatCardProps = AnimatedStatCardProps | StaticStatCardProps;
 
 function formatNum(n: number, target: number, fmt?: string): string {
   if (fmt && target >= 1_000_000) {
@@ -21,7 +28,7 @@ function formatNum(n: number, target: number, fmt?: string): string {
   return Math.floor(n).toString();
 }
 
-export const StatCard: React.FC<Props> = ({ value, suffix = "", format, label }) => {
+function StatCardAnimated({ label, value, suffix = "", format }: AnimatedStatCardProps) {
   const [display, setDisplay] = useState("0" + suffix);
   const ref = useRef<HTMLDivElement>(null);
   const animated = useRef(false);
@@ -52,13 +59,53 @@ export const StatCard: React.FC<Props> = ({ value, suffix = "", format, label })
   return (
     <Card transparent padding="sm">
       <div ref={ref} style={{ textAlign: "center" }}>
-        <div style={{ fontFamily, fontSize: fontSizeRem.xxl, fontWeight: fontWeight.bold, color: "var(--accent-base)", letterSpacing: "-0.03em", fontVariantNumeric: "tabular-nums" }}>
+        <div
+          style={{
+            fontFamily,
+            fontSize: fontSizeRem.xxl,
+            fontWeight: fontWeight.bold,
+            color: "var(--accent-base)",
+            letterSpacing: "-0.03em",
+            fontVariantNumeric: "tabular-nums",
+          }}
+        >
           {display}
         </div>
-        <div style={{ fontFamily, fontSize: fontSizeRem.xs, color: "var(--dominant-text-muted)", marginTop: "0.25rem" }}>
+        <div style={{ fontFamily, fontSize: fontSizeRem.xs, color: "var(--dominant-text-muted)", marginTop: spacingRem.xs }}>
           {label}
         </div>
       </div>
     </Card>
   );
-};
+}
+
+function StatCardStatic({ label, staticDisplay }: StaticStatCardProps) {
+  return (
+    <Card transparent padding="sm">
+      <div style={{ textAlign: "center" }}>
+        <div
+          style={{
+            fontFamily,
+            fontSize: fontSizeRem.lg,
+            fontWeight: fontWeight.bold,
+            color: "var(--accent-base)",
+            letterSpacing: "-0.03em",
+            lineHeight: 1.3,
+          }}
+        >
+          {staticDisplay}
+        </div>
+        <div style={{ fontFamily, fontSize: fontSizeRem.xs, color: "var(--dominant-text-muted)", marginTop: spacingRem.xs }}>
+          {label}
+        </div>
+      </div>
+    </Card>
+  );
+}
+
+export function StatCard(props: StatCardProps) {
+  if ("staticDisplay" in props) {
+    return <StatCardStatic {...props} />;
+  }
+  return <StatCardAnimated {...props} />;
+}
