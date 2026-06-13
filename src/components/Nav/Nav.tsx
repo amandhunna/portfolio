@@ -8,13 +8,8 @@ import { componentSizesRem } from "../../tokens/componentSizes";
 
 const LINKS: { href: string; label: string }[] = [
   { href: "#about", label: "About" },
-  { href: "#spatial", label: "Spatial & GIS" },
   { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#creative", label: "Creative & MCP" },
-  { href: "#skills", label: "Skills" },
-  { href: "#badges", label: "Badges" },
-  { href: "#blog", label: "Blog" },
+  { href: "#ai-workflow", label: "AI & Workflow" },
   { href: "#contact", label: "Contact" },
 ];
 

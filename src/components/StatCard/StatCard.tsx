@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Card } from "../Card";
-import { spacingRem } from "../../tokens/spacing";
 import { fontFamily, fontSizeRem, fontWeight } from "../../tokens/typography";
 
 interface Props {

@@ -1,0 +1,7 @@
+---
+description: React patterns — component structure, imports, App.tsx sections
+globs: src/**/*.{tsx,ts}
+alwaysApply: false
+---
+
+Read `.agent/rules/react-patterns.md` for component folder structure and import order.

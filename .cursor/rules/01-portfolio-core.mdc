@@ -1,0 +1,9 @@
+---
+description: Portfolio core — read CLAUDE.md and .agent/README.md, design tokens, no any
+alwaysApply: true
+---
+
+Read `CLAUDE.md` and `.agent/README.md` for orientation, npm commands, and skill selection.
+Read `.agent/AI_SOURCES.md` for layer index.
+Read `.agent/rules/design-system.md` for token and layout standards.
+TypeScript: no `any`; run `npm run typecheck` before finishing.

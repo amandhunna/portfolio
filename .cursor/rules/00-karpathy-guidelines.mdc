@@ -1,0 +1,10 @@
+---
+description: Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.
+alwaysApply: true
+---
+
+Read `.agent/sources/karpathy/CLAUDE.md` for full Karpathy behavioral guidelines (Layer 0 — Global).
+
+**Tradeoff:** Caution over speed. For trivial tasks, use judgment.
+
+**Key principles:** Think before coding · Simplicity first · Surgical changes · Goal-driven execution with verifiable success criteria.

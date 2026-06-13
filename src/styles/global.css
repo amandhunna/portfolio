@@ -331,6 +331,150 @@ a:hover {
 }
 .hero-badge-dot {
   animation: hero-badge-pulse 2s ease-in-out infinite;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--success);
+  flex-shrink: 0;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-light);
+  color: var(--accent-base);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.hero-title-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--accent-base),
+    var(--accent-gradient-end)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tech-pill-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.tech-pill-row--md {
+  margin-top: 1rem;
+}
+
+.btn-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-row--spaced {
+  margin-bottom: 1.5rem;
+}
+
+.section-header__title {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-header__intro {
+  margin-bottom: 2rem;
+}
+
+.section-header__intro--wide {
+  max-width: 50ch;
+}
+
+.section-header__intro--narrow {
+  max-width: 40ch;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+  gap: 1rem;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--dominant-text-muted);
+  font-size: 0.8125rem;
+  border-top: 1px solid var(--secondary-border);
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.text-accent {
+  color: var(--accent-base);
+}
+
+.job-highlight-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.job-highlight-body {
+  margin-bottom: 1rem;
+}
+
+.location-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-lede {
+  max-width: 35rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-heading {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-heading {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-heading {
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  margin-bottom: 0.5rem;
+}
+
+.card-action {
+  margin-top: 1rem;
 }
 
 /* Scroll reveal */

@@ -1,0 +1,8 @@
+---
+description: Design system tokens — 8pt grid, rem, CSS variables, Typography component
+globs: src/**/*.{tsx,ts,css}
+alwaysApply: false
+---
+
+Read `.agent/rules/design-system.md` for spacing, typography, color, layout, and rem units.
+Figma parity: `.agent/figma-standards.md`.
