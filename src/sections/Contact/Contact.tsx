@@ -1,4 +1,5 @@
 import {
+  FaDownload,
   FaEnvelope,
   FaGithub,
   FaLinkedin,
@@ -29,6 +30,16 @@ export function Contact() {
           who architects infrastructure &#x2014; let&apos;s talk.
         </Typography>
         <div className="btn-row btn-row--spaced">
+          <Button
+            variant="primary"
+            size="md"
+            href="/resume.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            icon={<FaDownload size={14} />}
+          >
+            Download Resume
+          </Button>
           <Button
             variant="secondary"
             size="md"

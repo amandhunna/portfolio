@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-size: 11pt;
+  line-height: 1.55;
+  color: #111;
+  background: #f5f5f5;
+}
+
+/* ── Page wrapper ── */
+.resume {
+  max-width: 800px;
+  margin: 2rem auto 4rem;
+  background: #fff;
+  padding: 3rem 3.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Toolbar (screen only) ── */
+.resume-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.resume-toolbar a {
+  font-size: 0.82rem;
+  color: #007595;
+  text-decoration: none;
+}
+
+.resume-toolbar a:hover {
+  text-decoration: underline;
+}
+
+.resume-print-btn {
+  background: #013e51;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+
+.resume-print-btn:hover {
+  background: #007595;
+}
+
+/* ── Header ── */
+.resume-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid #013e51;
+}
+
+.resume-header h1 {
+  font-size: 22pt;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #013e51;
+  line-height: 1.1;
+}
+
+.resume-title {
+  font-size: 11pt;
+  font-weight: 500;
+  color: #444;
+  margin-top: 0.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  font-size: 9pt;
+  color: #555;
+}
+
+.resume-contact a {
+  color: #007595;
+  text-decoration: none;
+}
+
+.resume-contact a:hover {
+  text-decoration: underline;
+}
+
+/* ── Section ── */
+.resume-section {
+  margin-bottom: 1.4rem;
+}
+
+.resume-section h2 {
+  font-size: 8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #007595;
+  border-bottom: 1px solid #c1e5ed;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Summary ── */
+.resume-summary {
+  font-size: 10pt;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ── Experience ── */
+.resume-job {
+  margin-bottom: 1.1rem;
+  break-inside: avoid;
+}
+
+.resume-job-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.resume-job-header strong {
+  font-size: 10.5pt;
+  font-weight: 600;
+  color: #111;
+}
+
+.resume-job-company {
+  font-size: 10pt;
+  color: #444;
+}
+
+.resume-job-company::before {
+  content: "·";
+  margin-right: 0.5rem;
+  color: #aaa;
+}
+
+.resume-date {
+  font-size: 9pt;
+  color: #777;
+  margin-left: auto;
+}
+
+.resume-summary-text {
+  font-size: 9.5pt;
+  color: #444;
+  margin-bottom: 0.4rem;
+}
+
+.resume-highlights {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-highlights li {
+  font-size: 9.5pt;
+  color: #333;
+  padding-left: 1em;
+  position: relative;
+  margin-bottom: 0.2rem;
+  line-height: 1.5;
+}
+
+.resume-highlights li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #007595;
+}
+
+.resume-highlights li strong {
+  font-weight: 600;
+  color: #111;
+}
+
+.resume-pills {
+  font-size: 8.5pt;
+  color: #007595;
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+
+/* ── Skills ── */
+.resume-skill-row {
+  font-size: 9.5pt;
+  margin-bottom: 0.2rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.resume-skill-row strong {
+  color: #111;
+  font-weight: 600;
+}
+
+/* ── Writing ── */
+.resume-blog-item {
+  font-size: 9.5pt;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.resume-blog-item a {
+  color: #007595;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resume-blog-item a:hover {
+  text-decoration: underline;
+}
+
+/* ── Print ── */
+@page {
+  size: A4;
+  margin: 1.5cm 2cm;
+}
+
+@media print {
+  body {
+    background: #fff;
+    font-size: 10pt;
+  }
+
+  .resume {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .resume-job {
+    break-inside: avoid;
+  }
+
+  .resume-section {
+    break-inside: avoid;
+  }
+}
