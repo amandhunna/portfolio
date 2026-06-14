@@ -19,6 +19,7 @@ function applyTheme(theme: Theme) {
   root.style.setProperty("--accent-hover", c.accent.hover);
   root.style.setProperty("--accent-light", c.accent.light);
   root.style.setProperty("--accent-glow", c.accent.glow);
+  root.style.setProperty("--accent-gradient-end", c.accent.gradientEnd);
   root.style.setProperty("--error", c.semantic.error);
   root.style.setProperty("--success", c.semantic.success);
   root.style.setProperty("--warning", c.semantic.warning);

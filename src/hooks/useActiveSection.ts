@@ -6,7 +6,7 @@ const SECTION_IDS = [
   "spatial",
   "experience",
   "projects",
-  "creative",
+  "ai-workflow",
   "skills",
   "badges",
   "blog",

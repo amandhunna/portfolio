@@ -1,0 +1,7 @@
+---
+description: Accessibility — WCAG contrast, aria-label, semantic HTML, 44px touch
+globs: src/**/*.{tsx,ts}
+alwaysApply: false
+---
+
+Read `.agent/rules/accessibility.md` for a11y standards.

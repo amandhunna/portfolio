@@ -1,0 +1,7 @@
+---
+description: TypeScript — no any, complexity limits, explicit types
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+Read `.agent/rules/typescript-standards.md` for all TypeScript standards.

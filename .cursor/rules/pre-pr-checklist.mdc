@@ -1,0 +1,7 @@
+---
+description: Pre-PR checklist — typecheck, build, token compliance
+globs: src/**/*.{tsx,ts}
+alwaysApply: false
+---
+
+Before opening a PR, read `.agent/rules/pre-pr-checklist.md` and run `npm run typecheck` + `npm run build`.

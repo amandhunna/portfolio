@@ -1,0 +1,7 @@
+---
+description: Security — no secrets, no innerHTML, safe external links, supply-chain awareness
+globs: src/**/*.{tsx,ts}
+alwaysApply: false
+---
+
+Read `.agent/rules/security.md` for portfolio security standards (Layer 4 — Security).

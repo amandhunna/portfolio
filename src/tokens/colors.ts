@@ -5,7 +5,13 @@
 export const lightColors = {
   dominant: { bg: "#F5F3F9", text: "#2D2A38", textMuted: "#6B6780" },
   secondary: { bg: "#FDFCFF", border: "#E5E0ED" },
-  accent: { base: "#6B8FD4", hover: "#5A7BC4", light: "#E8EEFA", glow: "rgba(107,143,212,0.2)" },
+  accent: {
+    base: "#6B8FD4",
+    hover: "#5A7BC4",
+    light: "#E8EEFA",
+    glow: "rgba(107,143,212,0.2)",
+    gradientEnd: "#A78BCC",
+  },
   semantic: { error: "#D4A0A0", success: "#8FC99F", warning: "#D4C078" },
   globe: { wire: "#7B9EE8", node: "#7B9EE8", arc: "#A78BCC" },
 };
@@ -13,7 +19,13 @@ export const lightColors = {
 export const darkColors = {
   dominant: { bg: "#0A0D12", text: "#E6EDF3", textMuted: "#8B949E" },
   secondary: { bg: "#12161E", border: "#1E2330" },
-  accent: { base: "#38BDF8", hover: "#7DD3FC", light: "rgba(56,189,248,0.12)", glow: "rgba(56,189,248,0.25)" },
+  accent: {
+    base: "#38BDF8",
+    hover: "#7DD3FC",
+    light: "rgba(56,189,248,0.12)",
+    glow: "rgba(56,189,248,0.25)",
+    gradientEnd: "#A78BFA",
+  },
   semantic: { error: "#F87171", success: "#4ADE80", warning: "#FBBF24" },
   globe: { wire: "#38BDF8", node: "#38BDF8", arc: "#A78BFA" },
 };
@@ -29,6 +41,7 @@ export const cssVars = {
   "--accent-hover": "accent.hover",
   "--accent-light": "accent.light",
   "--accent-glow": "accent.glow",
+  "--accent-gradient-end": "accent.gradientEnd",
   "--error": "semantic.error",
   "--success": "semantic.success",
   "--warning": "semantic.warning",
